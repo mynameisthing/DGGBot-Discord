@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using DGGBot.Models;
+using DGGBot.Utilities;
 using Discord;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
@@ -16,15 +17,15 @@ namespace DGGBot.Services.Twitch
         private readonly DiscordSocketClient _client;
         private readonly IConfiguration _config;
         private readonly HttpClient _httpClient;
-        private readonly string _url = "https://api.twitch.tv/kraken/streams/";
+        private readonly string _streamUrl = "https://api.twitch.tv/kraken/streams/";
+        private readonly string _userUrl = "https://api.twitch.tv/kraken/users";
 
         public TwitchService(DiscordSocketClient client, IConfiguration config, HttpClient httpClient)
         {
             _client = client;
             _config = config;
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri(_url);
-            _httpClient.Timeout = new TimeSpan(0, 0, 8);
+         
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/vnd.twitchtv.v5+json"));
@@ -33,74 +34,22 @@ namespace DGGBot.Services.Twitch
 
         public async Task<TwitchStream> GetTwitchStreamAsync(long userId)
         {
+            _httpClient.BaseAddress = new Uri(_streamUrl);
+            _httpClient.Timeout = new TimeSpan(0, 0, 8);
             var response = await _httpClient.GetAsync(userId.ToString());
             var responseString = await response.Content.ReadAsStringAsync();
-            var streamResponse = JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, GetJsonSettings());
-            //streamResponse.Stream = null;
+            var streamResponse = JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse?.Stream;
         }
-
-        public Embed CreateEmbed(TwitchStream stream, uint inColor)
+        public async Task<TwitchUserResponse> GetTwitchUserAsync(string userName)
         {
-            var now = DateTime.UtcNow;
-            var cacheBuster =
-                now.Year +
-                now.Month.ToString() +
-                now.Day +
-                now.Hour +
-                now.Minute / 10 % 10;
-
-            var embed = new EmbedBuilder();
-            var color = new Color(inColor);
-            var author = new EmbedAuthorBuilder();
-            var imgUrl = stream.Preview.Template.Replace("{width}", "640").Replace("{height}", "360") + "?" +
-                         cacheBuster;
-
-            author.Name = stream.Channel.DisplayName ?? stream.Channel.Name;
-            author.Url = stream.Channel.Url;
-            author.IconUrl = stream.Channel.Logo;
-
-            var streamPlayingField = new EmbedFieldBuilder
-            {
-                Name = "Playing",
-                Value = !string.IsNullOrWhiteSpace(stream.Game) ? stream.Game : "(no game)",
-                IsInline = true
-            };
-
-            var streamViewersField = new EmbedFieldBuilder
-            {
-                Name = "Viewers",
-                Value = stream.Viewers.ToString(),
-                IsInline = true
-            };
-
-            embed.Color = color;
-            embed.ImageUrl = imgUrl;
-            embed.Title = !string.IsNullOrWhiteSpace(stream.Channel.Status) ? stream.Channel.Status : "(no title)";
-            embed.Url = stream.Channel.Url;
-            embed.Author = author;
-
-            embed.AddField(streamPlayingField);
-            embed.AddField(streamViewersField);
-
-            return embed.Build();
+            _httpClient.BaseAddress = new Uri(_userUrl);
+            _httpClient.Timeout = new TimeSpan(0, 0, 8);
+            var response = await _httpClient.GetAsync($"?login={userName}");
+            var responseString = await response.Content.ReadAsStringAsync();
+            var streamResponse = JsonConvert.DeserializeObject<TwitchUserResponse>(responseString, Helpers.GetJsonSettings());
+            return streamResponse;
         }
-
-        public static JsonSerializerSettings GetJsonSettings()
-        {
-            return new JsonSerializerSettings
-            {
-                ContractResolver = new DefaultContractResolver
-                {
-                    NamingStrategy = new SnakeCaseNamingStrategy(true, false)
-                },
-                DateFormatHandling = DateFormatHandling.IsoDateFormat,
-                DateTimeZoneHandling = DateTimeZoneHandling.Utc,
-                Formatting = Formatting.Indented,
-                MissingMemberHandling = MissingMemberHandling.Ignore,
-                NullValueHandling = NullValueHandling.Ignore,
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-            };
-        }
+       
     }
 }

@@ -10,6 +10,7 @@ using Discord.WebSocket;
 using FluentScheduler;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace DGGBot.Services.Youtube
 {
@@ -38,6 +39,7 @@ namespace DGGBot.Services.Youtube
 
         public void Execute()
         {
+            Log.Information("Checking youtube updates for {channel}",_youTubeToCheck.FriendlyUsername);
             var videos = _youtubeService.GetYouTubeVideoListAsync(_youTubeToCheck.ChannelId).GetAwaiter()
                 .GetResult();
             if (videos.Items is null)

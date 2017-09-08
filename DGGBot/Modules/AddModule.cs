@@ -3,7 +3,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Data.Enitities;
+using DGGBot.Data.Enitities.Twitch;
 using DGGBot.Data.Enitities.Youtube;
+using DGGBot.Services.Twitch;
 using DGGBot.Services.Twitter;
 using DGGBot.Services.Youtube;
 using DGGBot.Utilities;
@@ -21,12 +23,14 @@ namespace DGGBot.Modules
         private readonly IConfiguration _config;
         private readonly TwitterService _twitterService;
         private readonly YoutubeService _youtubeService;
+        private readonly TwitchService _twitchService;
 
-        public AddModule(IConfiguration config, TwitterService twitterService,YoutubeService youtubeService)
+        public AddModule(IConfiguration config, TwitterService twitterService,YoutubeService youtubeService,TwitchService twitchService)
         {
             _config = config;
             _twitterService = twitterService;
             _youtubeService = youtubeService;
+            _twitchService = twitchService;
         }
 
         [Command("trusted")]
@@ -81,7 +85,6 @@ namespace DGGBot.Modules
         [Command("youtube")]
         public async Task Youtube(string youtubeName, long channelId)
         {
-
             var channels= await _youtubeService.GetYouTubeVideoChannelInfoAsync(youtubeName);
             if (channels.Items is null)
             {
@@ -118,10 +121,47 @@ namespace DGGBot.Modules
                 }
                 await ReplyAsync("Youtube account already exists in the Database");
             }
-
-
         }
 
+        [Command("twitch")]
+        public async Task Twitch(string twitchName, long channelId)
+        {
+            var response = await _twitchService.GetTwitchUserAsync(twitchName);
+            if (response.Users is null)
+            {
+                await ReplyAsync("Unable to get info from Twitch API");
+                return;
+            }
+            using (var context = new DggContext())
+            {
+                var user = response.Users.FirstOrDefault();
+                if (await context.StreamsToCheck.FirstOrDefaultAsync(x => x.UserId == user.Id) is null)
+                {
+                    var streamToCheck = new StreamToCheck
+                    {
+                        DiscordChannelId = channelId,
+                        DiscordServerId = (long)Context.Guild.Id,
+                        UserId = user.Id,
+                        Frequency = 150,
+                        FriendlyUsername = user.Name
 
+                    };
+
+                    await context.StreamsToCheck.AddAsync(streamToCheck);
+                    var changes = await context.SaveChangesAsync();
+                    if (changes > 0)
+                    {
+                        await ReplyAsync($"{user.Name} added to the database");
+                        JobManager.AddJob(new TwitchJob(Context.SocketClient,_twitchService,streamToCheck), (s) => s.ToRunEvery(streamToCheck.Frequency).Seconds());
+                        return;
+                    }
+
+                    await ReplyAsync($"Unable to save youtube to database");
+                    return;
+
+                }
+                await ReplyAsync("Youtube account already exists in the Database");
+            }
+        }
     }
 }
