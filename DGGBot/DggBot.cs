@@ -47,8 +47,6 @@ namespace SenpaiBot
             await InstallCommands();
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
-
-
             await Task.Delay(-1);
         }
 
@@ -147,7 +145,7 @@ namespace SenpaiBot
 
             var discordConfig = new DiscordSocketConfig
             {
-                LogLevel = LogSeverity.Debug
+                LogLevel = LogSeverity.Info
             };
             var client = new DiscordSocketClient(discordConfig);
             var services = new ServiceCollection();

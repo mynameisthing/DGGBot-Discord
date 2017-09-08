@@ -1,0 +1,13 @@
+{
+  "Twitter": {
+    "ConsumerKey": "",
+    "ConsumerSecret": "",
+    "Token": "",
+    "TokenSecret":""
+  },
+
+  "YoutubeKey": "",
+  "TwitchClientId": "",
+  "DiscordToken": "",
+  "ImgurClientId": ""
+}
