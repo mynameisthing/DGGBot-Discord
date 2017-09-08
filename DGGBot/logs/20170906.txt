@@ -1,0 +1,492 @@
+2017-09-06 20:08:06.109 -05:00 [Information] 20:08:06 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:08:07.263 -05:00 [Information] 20:08:07 Gateway     Connecting
+2017-09-06 20:08:07.272 -05:00 [Debug] 20:08:07 Gateway     Connecting ApiClient
+2017-09-06 20:08:07.645 -05:00 [Debug] 20:08:07 Gateway     Identifying
+2017-09-06 20:08:07.693 -05:00 [Debug] 20:08:07 Gateway     Sent Identify
+2017-09-06 20:08:07.769 -05:00 [Debug] 20:08:07 Gateway     Received Hello
+2017-09-06 20:08:07.778 -05:00 [Debug] 20:08:07 Gateway     Heartbeat Started
+2017-09-06 20:08:07.781 -05:00 [Debug] 20:08:07 Gateway     Sent Heartbeat
+2017-09-06 20:08:07.801 -05:00 [Debug] 20:08:07 Gateway     Received Dispatch (READY)
+2017-09-06 20:08:07.839 -05:00 [Debug] 20:08:07 Gateway     GuildDownloader Started
+2017-09-06 20:08:07.842 -05:00 [Debug] 20:08:07 Gateway     Sending Status
+2017-09-06 20:08:07.856 -05:00 [Debug] 20:08:07 Gateway     Sent StatusUpdate
+2017-09-06 20:08:07.856 -05:00 [Information] 20:08:07 Gateway     Connected
+2017-09-06 20:08:07.857 -05:00 [Debug] 20:08:07 Gateway     Raising Event
+2017-09-06 20:08:07.885 -05:00 [Debug] 20:08:07 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:08:07.909 -05:00 [Debug] 20:08:07 Gateway     Received HeartbeatAck
+2017-09-06 20:08:07.915 -05:00 [Debug] 20:08:07 Gateway     Latency = 141 ms
+2017-09-06 20:08:08.340 -05:00 [Debug] 20:08:08 Gateway     GuildDownloader Stopped
+2017-09-06 20:08:08.342 -05:00 [Information] 20:08:08 Gateway     Ready
+2017-09-06 20:08:15.327 -05:00 [Debug] 20:08:15 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:08:17.903 -05:00 [Debug] 20:08:17 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:08:19.135 -05:00 [Debug] 20:08:19 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:08:19.143 -05:00 [Debug] 20:08:19 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 20:08:22.952 -05:00 [Debug] 20:08:22 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:08:31.961 -05:00 [Debug] 20:08:31 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:08:33.583 -05:00 [Debug] 20:08:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:08:49.036 -05:00 [Debug] 20:08:49 Gateway     Sent Heartbeat
+2017-09-06 20:08:49.122 -05:00 [Debug] 20:08:49 Gateway     Received HeartbeatAck
+2017-09-06 20:08:49.134 -05:00 [Debug] 20:08:49 Gateway     Latency = 93 ms
+2017-09-06 20:08:56.895 -05:00 [Debug] 20:08:56 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:08:59.971 -05:00 [Debug] 20:08:59 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:09:00.182 -05:00 [Debug] 20:09:00 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:09:00.190 -05:00 [Debug] 20:09:00 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 20:09:31.886 -05:00 [Information] 20:09:31 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:09:32.466 -05:00 [Information] 20:09:32 Gateway     Connecting
+2017-09-06 20:09:33.089 -05:00 [Information] 20:09:33 Gateway     Connected
+2017-09-06 20:09:33.578 -05:00 [Information] 20:09:33 Gateway     Ready
+2017-09-06 20:12:29.126 -05:00 [Information] 20:12:29 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:12:29.775 -05:00 [Information] 20:12:29 Gateway     Connecting
+2017-09-06 20:12:29.782 -05:00 [Debug] 20:12:29 Gateway     Connecting ApiClient
+2017-09-06 20:12:30.865 -05:00 [Debug] 20:12:30 Gateway     Identifying
+2017-09-06 20:12:30.937 -05:00 [Debug] 20:12:30 Gateway     Sent Identify
+2017-09-06 20:12:31.019 -05:00 [Debug] 20:12:31 Gateway     Received Hello
+2017-09-06 20:12:31.028 -05:00 [Debug] 20:12:31 Gateway     Heartbeat Started
+2017-09-06 20:12:31.031 -05:00 [Debug] 20:12:31 Gateway     Sent Heartbeat
+2017-09-06 20:12:31.067 -05:00 [Debug] 20:12:31 Gateway     Received Dispatch (READY)
+2017-09-06 20:12:31.105 -05:00 [Debug] 20:12:31 Gateway     GuildDownloader Started
+2017-09-06 20:12:31.108 -05:00 [Debug] 20:12:31 Gateway     Sending Status
+2017-09-06 20:12:31.118 -05:00 [Debug] 20:12:31 Gateway     Sent StatusUpdate
+2017-09-06 20:12:31.118 -05:00 [Information] 20:12:31 Gateway     Connected
+2017-09-06 20:12:31.118 -05:00 [Debug] 20:12:31 Gateway     Raising Event
+2017-09-06 20:12:31.153 -05:00 [Debug] 20:12:31 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:12:31.177 -05:00 [Debug] 20:12:31 Gateway     Received HeartbeatAck
+2017-09-06 20:12:31.183 -05:00 [Debug] 20:12:31 Gateway     Latency = 156 ms
+2017-09-06 20:12:31.606 -05:00 [Debug] 20:12:31 Gateway     GuildDownloader Stopped
+2017-09-06 20:12:31.615 -05:00 [Information] 20:12:31 Gateway     Ready
+2017-09-06 20:13:46.492 -05:00 [Information] 20:13:46 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:13:47.103 -05:00 [Information] 20:13:47 Gateway     Connecting
+2017-09-06 20:13:47.109 -05:00 [Debug] 20:13:47 Gateway     Connecting ApiClient
+2017-09-06 20:13:47.457 -05:00 [Debug] 20:13:47 Gateway     Identifying
+2017-09-06 20:13:47.520 -05:00 [Debug] 20:13:47 Gateway     Sent Identify
+2017-09-06 20:13:47.618 -05:00 [Debug] 20:13:47 Gateway     Received Hello
+2017-09-06 20:13:47.628 -05:00 [Debug] 20:13:47 Gateway     Heartbeat Started
+2017-09-06 20:13:47.631 -05:00 [Debug] 20:13:47 Gateway     Sent Heartbeat
+2017-09-06 20:13:47.640 -05:00 [Debug] 20:13:47 Gateway     Received Dispatch (READY)
+2017-09-06 20:13:47.684 -05:00 [Debug] 20:13:47 Gateway     GuildDownloader Started
+2017-09-06 20:13:47.687 -05:00 [Debug] 20:13:47 Gateway     Sending Status
+2017-09-06 20:13:47.696 -05:00 [Debug] 20:13:47 Gateway     Sent StatusUpdate
+2017-09-06 20:13:47.696 -05:00 [Information] 20:13:47 Gateway     Connected
+2017-09-06 20:13:47.697 -05:00 [Debug] 20:13:47 Gateway     Raising Event
+2017-09-06 20:13:47.739 -05:00 [Debug] 20:13:47 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:13:47.764 -05:00 [Debug] 20:13:47 Gateway     Received HeartbeatAck
+2017-09-06 20:13:47.770 -05:00 [Debug] 20:13:47 Gateway     Latency = 140 ms
+2017-09-06 20:13:48.185 -05:00 [Debug] 20:13:48 Gateway     GuildDownloader Stopped
+2017-09-06 20:13:48.187 -05:00 [Information] 20:13:48 Gateway     Ready
+2017-09-06 20:14:04.478 -05:00 [Debug] An error just happened with a scheduled job: System.Exception: test
+   at DGGBot.Services.Twitter.TwitterJob.Execute() in C:\Users\adamk\Documents\Visual Studio 2017\Projects\DGGBot\DGGBot\Services\Twitter\TwitterJob.cs:line 28
+   at FluentScheduler.JobManager.<>c__DisplayClass14_0.<GetJobAction>b__0()
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+2017-09-06 20:14:09.708 -05:00 [Debug] An error just happened with a scheduled job: System.Exception: test
+   at DGGBot.Services.Twitter.TwitterJob.Execute() in C:\Users\adamk\Documents\Visual Studio 2017\Projects\DGGBot\DGGBot\Services\Twitter\TwitterJob.cs:line 28
+   at FluentScheduler.JobManager.<>c__DisplayClass14_0.<GetJobAction>b__0()
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+2017-09-06 20:19:26.896 -05:00 [Information] 20:19:26 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:19:27.461 -05:00 [Information] 20:19:27 Gateway     Connecting
+2017-09-06 20:19:27.469 -05:00 [Debug] 20:19:27 Gateway     Connecting ApiClient
+2017-09-06 20:19:28.176 -05:00 [Debug] 20:19:28 Gateway     Identifying
+2017-09-06 20:19:28.232 -05:00 [Debug] 20:19:28 Gateway     Sent Identify
+2017-09-06 20:19:28.317 -05:00 [Debug] 20:19:28 Gateway     Received Hello
+2017-09-06 20:19:28.327 -05:00 [Debug] 20:19:28 Gateway     Heartbeat Started
+2017-09-06 20:19:28.330 -05:00 [Debug] 20:19:28 Gateway     Sent Heartbeat
+2017-09-06 20:19:28.501 -05:00 [Debug] 20:19:28 Gateway     Received HeartbeatAck
+2017-09-06 20:19:28.510 -05:00 [Debug] 20:19:28 Gateway     Latency = 172 ms
+2017-09-06 20:19:28.518 -05:00 [Debug] 20:19:28 Gateway     Received Dispatch (READY)
+2017-09-06 20:19:28.564 -05:00 [Debug] 20:19:28 Gateway     GuildDownloader Started
+2017-09-06 20:19:28.568 -05:00 [Debug] 20:19:28 Gateway     Sending Status
+2017-09-06 20:19:28.581 -05:00 [Debug] 20:19:28 Gateway     Sent StatusUpdate
+2017-09-06 20:19:28.582 -05:00 [Information] 20:19:28 Gateway     Connected
+2017-09-06 20:19:28.582 -05:00 [Debug] 20:19:28 Gateway     Raising Event
+2017-09-06 20:19:28.632 -05:00 [Debug] 20:19:28 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:19:29.066 -05:00 [Debug] 20:19:29 Gateway     GuildDownloader Stopped
+2017-09-06 20:19:29.069 -05:00 [Information] 20:19:29 Gateway     Ready
+2017-09-06 20:19:32.700 -05:00 [Debug] 20:19:32 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:19:33.466 -05:00 [Debug] 20:19:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:19:33.809 -05:00 [Debug] 20:19:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:20:05.097 -05:00 [Information] 20:20:05 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:20:05.699 -05:00 [Information] 20:20:05 Gateway     Connecting
+2017-09-06 20:20:05.707 -05:00 [Debug] 20:20:05 Gateway     Connecting ApiClient
+2017-09-06 20:20:06.308 -05:00 [Debug] 20:20:06 Gateway     Identifying
+2017-09-06 20:20:06.390 -05:00 [Debug] 20:20:06 Gateway     Sent Identify
+2017-09-06 20:20:06.500 -05:00 [Debug] 20:20:06 Gateway     Received Hello
+2017-09-06 20:20:06.512 -05:00 [Debug] 20:20:06 Gateway     Heartbeat Started
+2017-09-06 20:20:06.515 -05:00 [Debug] 20:20:06 Gateway     Sent Heartbeat
+2017-09-06 20:20:06.537 -05:00 [Debug] 20:20:06 Gateway     Received Dispatch (READY)
+2017-09-06 20:20:06.581 -05:00 [Debug] 20:20:06 Gateway     GuildDownloader Started
+2017-09-06 20:20:06.587 -05:00 [Debug] 20:20:06 Gateway     Sending Status
+2017-09-06 20:20:06.601 -05:00 [Debug] 20:20:06 Gateway     Sent StatusUpdate
+2017-09-06 20:20:06.602 -05:00 [Information] 20:20:06 Gateway     Connected
+2017-09-06 20:20:06.602 -05:00 [Debug] 20:20:06 Gateway     Raising Event
+2017-09-06 20:20:06.652 -05:00 [Debug] 20:20:06 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:20:06.684 -05:00 [Debug] 20:20:06 Gateway     Received HeartbeatAck
+2017-09-06 20:20:06.691 -05:00 [Debug] 20:20:06 Gateway     Latency = 172 ms
+2017-09-06 20:20:07.082 -05:00 [Debug] 20:20:07 Gateway     GuildDownloader Stopped
+2017-09-06 20:20:07.084 -05:00 [Information] 20:20:07 Gateway     Ready
+2017-09-06 20:20:28.157 -05:00 [Information] 20:20:28 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:20:28.810 -05:00 [Information] 20:20:28 Gateway     Connecting
+2017-09-06 20:20:28.819 -05:00 [Debug] 20:20:28 Gateway     Connecting ApiClient
+2017-09-06 20:20:29.213 -05:00 [Debug] 20:20:29 Gateway     Identifying
+2017-09-06 20:20:29.268 -05:00 [Debug] 20:20:29 Gateway     Sent Identify
+2017-09-06 20:20:29.351 -05:00 [Debug] 20:20:29 Gateway     Received Hello
+2017-09-06 20:20:29.360 -05:00 [Debug] 20:20:29 Gateway     Heartbeat Started
+2017-09-06 20:20:29.362 -05:00 [Debug] 20:20:29 Gateway     Sent Heartbeat
+2017-09-06 20:20:29.382 -05:00 [Debug] 20:20:29 Gateway     Received Dispatch (READY)
+2017-09-06 20:20:29.419 -05:00 [Debug] 20:20:29 Gateway     GuildDownloader Started
+2017-09-06 20:20:29.423 -05:00 [Debug] 20:20:29 Gateway     Sending Status
+2017-09-06 20:20:29.433 -05:00 [Debug] 20:20:29 Gateway     Sent StatusUpdate
+2017-09-06 20:20:29.434 -05:00 [Information] 20:20:29 Gateway     Connected
+2017-09-06 20:20:29.434 -05:00 [Debug] 20:20:29 Gateway     Raising Event
+2017-09-06 20:20:29.486 -05:00 [Debug] 20:20:29 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:20:29.518 -05:00 [Debug] 20:20:29 Gateway     Received HeartbeatAck
+2017-09-06 20:20:29.526 -05:00 [Debug] 20:20:29 Gateway     Latency = 172 ms
+2017-09-06 20:20:29.921 -05:00 [Debug] 20:20:29 Gateway     GuildDownloader Stopped
+2017-09-06 20:20:29.924 -05:00 [Information] 20:20:29 Gateway     Ready
+2017-09-06 20:20:31.990 -05:00 [Debug] 20:20:31 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:20:32.953 -05:00 [Debug] 20:20:32 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:20:33.304 -05:00 [Debug] 20:20:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:21:10.627 -05:00 [Debug] 20:21:10 Gateway     Sent Heartbeat
+2017-09-06 20:21:10.736 -05:00 [Debug] 20:21:10 Gateway     Received HeartbeatAck
+2017-09-06 20:21:10.737 -05:00 [Debug] 20:21:10 Gateway     Latency = 109 ms
+2017-09-06 20:21:29.422 -05:00 [Debug] 20:21:29 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 20:21:29.585 -05:00 [Debug] 20:21:29 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 20:25:03.355 -05:00 [Information] 20:25:03 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:25:03.955 -05:00 [Information] 20:25:03 Gateway     Connecting
+2017-09-06 20:25:03.961 -05:00 [Debug] 20:25:03 Gateway     Connecting ApiClient
+2017-09-06 20:25:04.384 -05:00 [Debug] 20:25:04 Gateway     Identifying
+2017-09-06 20:25:04.442 -05:00 [Debug] 20:25:04 Gateway     Sent Identify
+2017-09-06 20:25:04.523 -05:00 [Debug] 20:25:04 Gateway     Received Hello
+2017-09-06 20:25:04.532 -05:00 [Debug] 20:25:04 Gateway     Heartbeat Started
+2017-09-06 20:25:04.535 -05:00 [Debug] 20:25:04 Gateway     Sent Heartbeat
+2017-09-06 20:25:04.574 -05:00 [Debug] 20:25:04 Gateway     Received Dispatch (READY)
+2017-09-06 20:25:04.628 -05:00 [Debug] 20:25:04 Gateway     GuildDownloader Started
+2017-09-06 20:25:04.631 -05:00 [Debug] 20:25:04 Gateway     Sending Status
+2017-09-06 20:25:04.640 -05:00 [Debug] 20:25:04 Gateway     Sent StatusUpdate
+2017-09-06 20:25:04.640 -05:00 [Information] 20:25:04 Gateway     Connected
+2017-09-06 20:25:04.640 -05:00 [Debug] 20:25:04 Gateway     Raising Event
+2017-09-06 20:25:04.676 -05:00 [Debug] 20:25:04 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:25:04.702 -05:00 [Debug] 20:25:04 Gateway     Received HeartbeatAck
+2017-09-06 20:25:04.708 -05:00 [Debug] 20:25:04 Gateway     Latency = 172 ms
+2017-09-06 20:25:05.130 -05:00 [Debug] 20:25:05 Gateway     GuildDownloader Stopped
+2017-09-06 20:25:05.135 -05:00 [Information] 20:25:05 Gateway     Ready
+2017-09-06 20:25:08.235 -05:00 [Debug] 20:25:08 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:25:10.044 -05:00 [Debug] 20:25:10 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:25:10.345 -05:00 [Debug] 20:25:10 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:25:34.473 -05:00 [Debug] 20:25:34 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:25:34.531 -05:00 [Debug] 20:25:34 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 20:25:34.650 -05:00 [Debug] 20:25:34 Gateway     Ignored Dispatch (CHANNEL_PINS_ACK)
+2017-09-06 20:25:34.653 -05:00 [Debug] 20:25:34 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 20:25:34.654 -05:00 [Debug] 20:25:34 Gateway     Ignored Dispatch (CHANNEL_PINS_UPDATE)
+2017-09-06 20:25:34.660 -05:00 [Debug] 20:25:34 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:25:45.785 -05:00 [Debug] 20:25:45 Gateway     Sent Heartbeat
+2017-09-06 20:25:45.888 -05:00 [Debug] 20:25:45 Gateway     Received HeartbeatAck
+2017-09-06 20:25:45.890 -05:00 [Debug] 20:25:45 Gateway     Latency = 93 ms
+2017-09-06 20:36:44.781 -05:00 [Information] 20:36:44 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:36:45.323 -05:00 [Information] 20:36:45 Gateway     Connecting
+2017-09-06 20:36:45.328 -05:00 [Debug] 20:36:45 Gateway     Connecting ApiClient
+2017-09-06 20:36:45.729 -05:00 [Debug] 20:36:45 Gateway     Identifying
+2017-09-06 20:36:45.790 -05:00 [Debug] 20:36:45 Gateway     Sent Identify
+2017-09-06 20:36:45.890 -05:00 [Debug] 20:36:45 Gateway     Received Hello
+2017-09-06 20:36:45.901 -05:00 [Debug] 20:36:45 Gateway     Heartbeat Started
+2017-09-06 20:36:45.904 -05:00 [Debug] 20:36:45 Gateway     Sent Heartbeat
+2017-09-06 20:36:45.944 -05:00 [Debug] 20:36:45 Gateway     Received Dispatch (READY)
+2017-09-06 20:36:45.992 -05:00 [Debug] 20:36:45 Gateway     GuildDownloader Started
+2017-09-06 20:36:45.996 -05:00 [Debug] 20:36:45 Gateway     Sending Status
+2017-09-06 20:36:46.008 -05:00 [Debug] 20:36:46 Gateway     Sent StatusUpdate
+2017-09-06 20:36:46.008 -05:00 [Information] 20:36:46 Gateway     Connected
+2017-09-06 20:36:46.008 -05:00 [Debug] 20:36:46 Gateway     Raising Event
+2017-09-06 20:36:46.049 -05:00 [Debug] 20:36:46 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:36:46.078 -05:00 [Debug] 20:36:46 Gateway     Received HeartbeatAck
+2017-09-06 20:36:46.084 -05:00 [Debug] 20:36:46 Gateway     Latency = 172 ms
+2017-09-06 20:36:46.493 -05:00 [Debug] 20:36:46 Gateway     GuildDownloader Stopped
+2017-09-06 20:36:46.496 -05:00 [Information] 20:36:46 Gateway     Ready
+2017-09-06 20:36:55.347 -05:00 [Debug] 20:36:55 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:36:56.624 -05:00 [Debug] 20:36:56 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:39:20.111 -05:00 [Information] 20:39:20 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:39:20.650 -05:00 [Information] 20:39:20 Gateway     Connecting
+2017-09-06 20:39:20.658 -05:00 [Debug] 20:39:20 Gateway     Connecting ApiClient
+2017-09-06 20:39:21.011 -05:00 [Debug] 20:39:21 Gateway     Identifying
+2017-09-06 20:39:21.063 -05:00 [Debug] 20:39:21 Gateway     Sent Identify
+2017-09-06 20:39:21.153 -05:00 [Debug] 20:39:21 Gateway     Received Hello
+2017-09-06 20:39:21.162 -05:00 [Debug] 20:39:21 Gateway     Heartbeat Started
+2017-09-06 20:39:21.165 -05:00 [Debug] 20:39:21 Gateway     Sent Heartbeat
+2017-09-06 20:39:21.190 -05:00 [Debug] 20:39:21 Gateway     Received Dispatch (READY)
+2017-09-06 20:39:21.235 -05:00 [Debug] 20:39:21 Gateway     GuildDownloader Started
+2017-09-06 20:39:21.238 -05:00 [Debug] 20:39:21 Gateway     Sending Status
+2017-09-06 20:39:21.248 -05:00 [Debug] 20:39:21 Gateway     Sent StatusUpdate
+2017-09-06 20:39:21.249 -05:00 [Information] 20:39:21 Gateway     Connected
+2017-09-06 20:39:21.249 -05:00 [Debug] 20:39:21 Gateway     Raising Event
+2017-09-06 20:39:21.293 -05:00 [Debug] 20:39:21 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:39:21.323 -05:00 [Debug] 20:39:21 Gateway     Received HeartbeatAck
+2017-09-06 20:39:21.330 -05:00 [Debug] 20:39:21 Gateway     Latency = 156 ms
+2017-09-06 20:39:21.736 -05:00 [Debug] 20:39:21 Gateway     GuildDownloader Stopped
+2017-09-06 20:39:21.738 -05:00 [Information] 20:39:21 Gateway     Ready
+2017-09-06 20:39:24.381 -05:00 [Debug] 20:39:24 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:39:24.782 -05:00 [Debug] 20:39:24 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 20:40:44.338 -05:00 [Information] 20:40:44 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 20:40:44.864 -05:00 [Information] 20:40:44 Gateway     Connecting
+2017-09-06 20:40:44.870 -05:00 [Debug] 20:40:44 Gateway     Connecting ApiClient
+2017-09-06 20:40:45.292 -05:00 [Debug] 20:40:45 Gateway     Identifying
+2017-09-06 20:40:45.364 -05:00 [Debug] 20:40:45 Gateway     Sent Identify
+2017-09-06 20:40:45.450 -05:00 [Debug] 20:40:45 Gateway     Received Hello
+2017-09-06 20:40:45.460 -05:00 [Debug] 20:40:45 Gateway     Heartbeat Started
+2017-09-06 20:40:45.463 -05:00 [Debug] 20:40:45 Gateway     Sent Heartbeat
+2017-09-06 20:40:45.491 -05:00 [Debug] 20:40:45 Gateway     Received Dispatch (READY)
+2017-09-06 20:40:45.531 -05:00 [Debug] 20:40:45 Gateway     GuildDownloader Started
+2017-09-06 20:40:45.534 -05:00 [Debug] 20:40:45 Gateway     Sending Status
+2017-09-06 20:40:45.547 -05:00 [Debug] 20:40:45 Gateway     Sent StatusUpdate
+2017-09-06 20:40:45.547 -05:00 [Information] 20:40:45 Gateway     Connected
+2017-09-06 20:40:45.547 -05:00 [Debug] 20:40:45 Gateway     Raising Event
+2017-09-06 20:40:45.600 -05:00 [Debug] 20:40:45 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 20:40:45.629 -05:00 [Debug] 20:40:45 Gateway     Received HeartbeatAck
+2017-09-06 20:40:45.636 -05:00 [Debug] 20:40:45 Gateway     Latency = 172 ms
+2017-09-06 20:40:45.636 -05:00 [Debug] 20:40:45 Gateway     Received Dispatch (TYPING_START)
+2017-09-06 20:40:46.032 -05:00 [Debug] 20:40:46 Gateway     GuildDownloader Stopped
+2017-09-06 20:40:46.035 -05:00 [Information] 20:40:46 Gateway     Ready
+2017-09-06 20:40:47.035 -05:00 [Debug] 20:40:47 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-06 21:01:41.128 -05:00 [Information] 21:01:41 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-06 21:01:41.659 -05:00 [Information] 21:01:41 Gateway     Connecting
+2017-09-06 21:01:41.665 -05:00 [Debug] 21:01:41 Gateway     Connecting ApiClient
+2017-09-06 21:01:42.070 -05:00 [Debug] 21:01:42 Gateway     Identifying
+2017-09-06 21:01:42.122 -05:00 [Debug] 21:01:42 Gateway     Sent Identify
+2017-09-06 21:01:42.211 -05:00 [Debug] 21:01:42 Gateway     Received Hello
+2017-09-06 21:01:42.220 -05:00 [Debug] 21:01:42 Gateway     Heartbeat Started
+2017-09-06 21:01:42.223 -05:00 [Debug] 21:01:42 Gateway     Sent Heartbeat
+2017-09-06 21:01:42.263 -05:00 [Debug] 21:01:42 Gateway     Received Dispatch (READY)
+2017-09-06 21:01:42.302 -05:00 [Debug] 21:01:42 Gateway     GuildDownloader Started
+2017-09-06 21:01:42.305 -05:00 [Debug] 21:01:42 Gateway     Sending Status
+2017-09-06 21:01:42.315 -05:00 [Debug] 21:01:42 Gateway     Sent StatusUpdate
+2017-09-06 21:01:42.315 -05:00 [Information] 21:01:42 Gateway     Connected
+2017-09-06 21:01:42.316 -05:00 [Debug] 21:01:42 Gateway     Raising Event
+2017-09-06 21:01:42.355 -05:00 [Debug] 21:01:42 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-06 21:01:42.380 -05:00 [Debug] 21:01:42 Gateway     Received HeartbeatAck
+2017-09-06 21:01:42.386 -05:00 [Debug] 21:01:42 Gateway     Latency = 172 ms
+2017-09-06 21:01:42.804 -05:00 [Debug] 21:01:42 Gateway     GuildDownloader Stopped
+2017-09-06 21:01:42.806 -05:00 [Information] 21:01:42 Gateway     Ready
+2017-09-06 21:02:23.474 -05:00 [Debug] 21:02:23 Gateway     Sent Heartbeat
+2017-09-06 21:02:23.568 -05:00 [Debug] 21:02:23 Gateway     Received HeartbeatAck
+2017-09-06 21:02:23.568 -05:00 [Debug] 21:02:23 Gateway     Latency = 93 ms
+2017-09-06 21:02:42.553 -05:00 [Debug] 21:02:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:02:42.770 -05:00 [Debug] 21:02:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:03:04.739 -05:00 [Debug] 21:03:04 Gateway     Sent Heartbeat
+2017-09-06 21:03:04.854 -05:00 [Debug] 21:03:04 Gateway     Received HeartbeatAck
+2017-09-06 21:03:04.854 -05:00 [Debug] 21:03:04 Gateway     Latency = 110 ms
+2017-09-06 21:03:42.400 -05:00 [Debug] 21:03:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:03:42.419 -05:00 [Debug] 21:03:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:03:46.005 -05:00 [Debug] 21:03:46 Gateway     Sent Heartbeat
+2017-09-06 21:03:46.101 -05:00 [Debug] 21:03:46 Gateway     Received HeartbeatAck
+2017-09-06 21:03:46.101 -05:00 [Debug] 21:03:46 Gateway     Latency = 94 ms
+2017-09-06 21:04:27.269 -05:00 [Debug] 21:04:27 Gateway     Sent Heartbeat
+2017-09-06 21:04:27.413 -05:00 [Debug] 21:04:27 Gateway     Received HeartbeatAck
+2017-09-06 21:04:27.414 -05:00 [Debug] 21:04:27 Gateway     Latency = 140 ms
+2017-09-06 21:04:41.499 -05:00 [Debug] 21:04:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:04:41.508 -05:00 [Debug] 21:04:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:05:08.521 -05:00 [Debug] 21:05:08 Gateway     Sent Heartbeat
+2017-09-06 21:05:08.622 -05:00 [Debug] 21:05:08 Gateway     Received HeartbeatAck
+2017-09-06 21:05:08.623 -05:00 [Debug] 21:05:08 Gateway     Latency = 93 ms
+2017-09-06 21:05:42.359 -05:00 [Debug] 21:05:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:05:42.375 -05:00 [Debug] 21:05:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:05:49.771 -05:00 [Debug] 21:05:49 Gateway     Sent Heartbeat
+2017-09-06 21:05:49.873 -05:00 [Debug] 21:05:49 Gateway     Received HeartbeatAck
+2017-09-06 21:05:49.874 -05:00 [Debug] 21:05:49 Gateway     Latency = 93 ms
+2017-09-06 21:06:31.022 -05:00 [Debug] 21:06:31 Gateway     Sent Heartbeat
+2017-09-06 21:06:31.120 -05:00 [Debug] 21:06:31 Gateway     Received HeartbeatAck
+2017-09-06 21:06:31.121 -05:00 [Debug] 21:06:31 Gateway     Latency = 93 ms
+2017-09-06 21:06:41.971 -05:00 [Debug] 21:06:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:06:41.988 -05:00 [Debug] 21:06:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:07:12.284 -05:00 [Debug] 21:07:12 Gateway     Sent Heartbeat
+2017-09-06 21:07:12.378 -05:00 [Debug] 21:07:12 Gateway     Received HeartbeatAck
+2017-09-06 21:07:12.379 -05:00 [Debug] 21:07:12 Gateway     Latency = 94 ms
+2017-09-06 21:07:41.432 -05:00 [Debug] 21:07:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:07:41.446 -05:00 [Debug] 21:07:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:07:53.552 -05:00 [Debug] 21:07:53 Gateway     Sent Heartbeat
+2017-09-06 21:07:53.655 -05:00 [Debug] 21:07:53 Gateway     Received HeartbeatAck
+2017-09-06 21:07:53.655 -05:00 [Debug] 21:07:53 Gateway     Latency = 94 ms
+2017-09-06 21:08:34.803 -05:00 [Debug] 21:08:34 Gateway     Sent Heartbeat
+2017-09-06 21:08:34.896 -05:00 [Debug] 21:08:34 Gateway     Received HeartbeatAck
+2017-09-06 21:08:34.898 -05:00 [Debug] 21:08:34 Gateway     Latency = 94 ms
+2017-09-06 21:08:41.378 -05:00 [Debug] 21:08:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:08:41.391 -05:00 [Debug] 21:08:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:09:16.065 -05:00 [Debug] 21:09:16 Gateway     Sent Heartbeat
+2017-09-06 21:09:16.162 -05:00 [Debug] 21:09:16 Gateway     Received HeartbeatAck
+2017-09-06 21:09:16.164 -05:00 [Debug] 21:09:16 Gateway     Latency = 94 ms
+2017-09-06 21:09:41.408 -05:00 [Debug] 21:09:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:09:41.412 -05:00 [Debug] 21:09:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:09:57.332 -05:00 [Debug] 21:09:57 Gateway     Sent Heartbeat
+2017-09-06 21:09:57.430 -05:00 [Debug] 21:09:57 Gateway     Received HeartbeatAck
+2017-09-06 21:09:57.431 -05:00 [Debug] 21:09:57 Gateway     Latency = 94 ms
+2017-09-06 21:10:38.597 -05:00 [Debug] 21:10:38 Gateway     Sent Heartbeat
+2017-09-06 21:10:38.704 -05:00 [Debug] 21:10:38 Gateway     Received HeartbeatAck
+2017-09-06 21:10:38.718 -05:00 [Debug] 21:10:38 Gateway     Latency = 109 ms
+2017-09-06 21:10:41.630 -05:00 [Debug] 21:10:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:10:42.290 -05:00 [Debug] 21:10:42 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:11:19.848 -05:00 [Debug] 21:11:19 Gateway     Sent Heartbeat
+2017-09-06 21:11:19.958 -05:00 [Debug] 21:11:19 Gateway     Received HeartbeatAck
+2017-09-06 21:11:19.959 -05:00 [Debug] 21:11:19 Gateway     Latency = 109 ms
+2017-09-06 21:11:41.487 -05:00 [Debug] 21:11:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:11:41.494 -05:00 [Debug] 21:11:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:12:01.113 -05:00 [Debug] 21:12:01 Gateway     Sent Heartbeat
+2017-09-06 21:12:01.230 -05:00 [Debug] 21:12:01 Gateway     Received HeartbeatAck
+2017-09-06 21:12:01.231 -05:00 [Debug] 21:12:01 Gateway     Latency = 110 ms
+2017-09-06 21:12:41.542 -05:00 [Debug] 21:12:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:12:41.558 -05:00 [Debug] 21:12:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:12:42.378 -05:00 [Debug] 21:12:42 Gateway     Sent Heartbeat
+2017-09-06 21:12:42.530 -05:00 [Debug] 21:12:42 Gateway     Received HeartbeatAck
+2017-09-06 21:12:42.530 -05:00 [Debug] 21:12:42 Gateway     Latency = 141 ms
+2017-09-06 21:13:23.631 -05:00 [Debug] 21:13:23 Gateway     Sent Heartbeat
+2017-09-06 21:13:23.726 -05:00 [Debug] 21:13:23 Gateway     Received HeartbeatAck
+2017-09-06 21:13:23.728 -05:00 [Debug] 21:13:23 Gateway     Latency = 94 ms
+2017-09-06 21:13:41.653 -05:00 [Debug] 21:13:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:13:41.668 -05:00 [Debug] 21:13:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:14:04.893 -05:00 [Debug] 21:14:04 Gateway     Sent Heartbeat
+2017-09-06 21:14:04.990 -05:00 [Debug] 21:14:04 Gateway     Received HeartbeatAck
+2017-09-06 21:14:04.990 -05:00 [Debug] 21:14:04 Gateway     Latency = 93 ms
+2017-09-06 21:14:41.491 -05:00 [Debug] 21:14:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:14:41.496 -05:00 [Debug] 21:14:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:14:46.144 -05:00 [Debug] 21:14:46 Gateway     Sent Heartbeat
+2017-09-06 21:14:46.244 -05:00 [Debug] 21:14:46 Gateway     Received HeartbeatAck
+2017-09-06 21:14:46.245 -05:00 [Debug] 21:14:46 Gateway     Latency = 93 ms
+2017-09-06 21:15:27.409 -05:00 [Debug] 21:15:27 Gateway     Sent Heartbeat
+2017-09-06 21:15:27.514 -05:00 [Debug] 21:15:27 Gateway     Received HeartbeatAck
+2017-09-06 21:15:27.515 -05:00 [Debug] 21:15:27 Gateway     Latency = 94 ms
+2017-09-06 21:15:41.440 -05:00 [Debug] 21:15:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:15:41.457 -05:00 [Debug] 21:15:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:16:08.662 -05:00 [Debug] 21:16:08 Gateway     Sent Heartbeat
+2017-09-06 21:16:08.769 -05:00 [Debug] 21:16:08 Gateway     Received HeartbeatAck
+2017-09-06 21:16:08.782 -05:00 [Debug] 21:16:08 Gateway     Latency = 110 ms
+2017-09-06 21:16:41.469 -05:00 [Debug] 21:16:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:16:41.490 -05:00 [Debug] 21:16:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:16:49.913 -05:00 [Debug] 21:16:49 Gateway     Sent Heartbeat
+2017-09-06 21:16:50.009 -05:00 [Debug] 21:16:50 Gateway     Received HeartbeatAck
+2017-09-06 21:16:50.011 -05:00 [Debug] 21:16:50 Gateway     Latency = 94 ms
+2017-09-06 21:17:31.176 -05:00 [Debug] 21:17:31 Gateway     Sent Heartbeat
+2017-09-06 21:17:31.296 -05:00 [Debug] 21:17:31 Gateway     Received HeartbeatAck
+2017-09-06 21:17:31.297 -05:00 [Debug] 21:17:31 Gateway     Latency = 109 ms
+2017-09-06 21:17:41.511 -05:00 [Debug] 21:17:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:17:41.529 -05:00 [Debug] 21:17:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:18:12.441 -05:00 [Debug] 21:18:12 Gateway     Sent Heartbeat
+2017-09-06 21:18:12.546 -05:00 [Debug] 21:18:12 Gateway     Received HeartbeatAck
+2017-09-06 21:18:12.547 -05:00 [Debug] 21:18:12 Gateway     Latency = 94 ms
+2017-09-06 21:18:41.494 -05:00 [Debug] 21:18:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:18:41.505 -05:00 [Debug] 21:18:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:18:53.694 -05:00 [Debug] 21:18:53 Gateway     Sent Heartbeat
+2017-09-06 21:18:53.786 -05:00 [Debug] 21:18:53 Gateway     Received HeartbeatAck
+2017-09-06 21:18:53.787 -05:00 [Debug] 21:18:53 Gateway     Latency = 94 ms
+2017-09-06 21:19:34.959 -05:00 [Debug] 21:19:34 Gateway     Sent Heartbeat
+2017-09-06 21:19:35.055 -05:00 [Debug] 21:19:35 Gateway     Received HeartbeatAck
+2017-09-06 21:19:35.056 -05:00 [Debug] 21:19:35 Gateway     Latency = 94 ms
+2017-09-06 21:19:41.540 -05:00 [Debug] 21:19:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:19:41.561 -05:00 [Debug] 21:19:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:20:16.222 -05:00 [Debug] 21:20:16 Gateway     Sent Heartbeat
+2017-09-06 21:20:16.322 -05:00 [Debug] 21:20:16 Gateway     Received HeartbeatAck
+2017-09-06 21:20:16.322 -05:00 [Debug] 21:20:16 Gateway     Latency = 93 ms
+2017-09-06 21:20:41.490 -05:00 [Debug] 21:20:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:20:41.644 -05:00 [Debug] 21:20:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:20:57.487 -05:00 [Debug] 21:20:57 Gateway     Sent Heartbeat
+2017-09-06 21:20:57.585 -05:00 [Debug] 21:20:57 Gateway     Received HeartbeatAck
+2017-09-06 21:20:57.585 -05:00 [Debug] 21:20:57 Gateway     Latency = 94 ms
+2017-09-06 21:21:38.739 -05:00 [Debug] 21:21:38 Gateway     Sent Heartbeat
+2017-09-06 21:21:38.834 -05:00 [Debug] 21:21:38 Gateway     Received HeartbeatAck
+2017-09-06 21:21:38.843 -05:00 [Debug] 21:21:38 Gateway     Latency = 94 ms
+2017-09-06 21:21:41.578 -05:00 [Debug] 21:21:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:21:41.580 -05:00 [Debug] 21:21:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:22:19.990 -05:00 [Debug] 21:22:19 Gateway     Sent Heartbeat
+2017-09-06 21:22:20.171 -05:00 [Debug] 21:22:20 Gateway     Received HeartbeatAck
+2017-09-06 21:22:20.172 -05:00 [Debug] 21:22:20 Gateway     Latency = 172 ms
+2017-09-06 21:22:41.540 -05:00 [Debug] 21:22:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:22:41.554 -05:00 [Debug] 21:22:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:23:01.253 -05:00 [Debug] 21:23:01 Gateway     Sent Heartbeat
+2017-09-06 21:23:01.368 -05:00 [Debug] 21:23:01 Gateway     Received HeartbeatAck
+2017-09-06 21:23:01.369 -05:00 [Debug] 21:23:01 Gateway     Latency = 109 ms
+2017-09-06 21:23:41.500 -05:00 [Debug] 21:23:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:23:41.517 -05:00 [Debug] 21:23:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:23:42.504 -05:00 [Debug] 21:23:42 Gateway     Sent Heartbeat
+2017-09-06 21:23:42.673 -05:00 [Debug] 21:23:42 Gateway     Received HeartbeatAck
+2017-09-06 21:23:42.674 -05:00 [Debug] 21:23:42 Gateway     Latency = 156 ms
+2017-09-06 21:24:23.756 -05:00 [Debug] 21:24:23 Gateway     Sent Heartbeat
+2017-09-06 21:24:23.864 -05:00 [Debug] 21:24:23 Gateway     Received HeartbeatAck
+2017-09-06 21:24:23.867 -05:00 [Debug] 21:24:23 Gateway     Latency = 109 ms
+2017-09-06 21:24:41.540 -05:00 [Debug] 21:24:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:24:41.542 -05:00 [Debug] 21:24:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:25:05.021 -05:00 [Debug] 21:25:05 Gateway     Sent Heartbeat
+2017-09-06 21:25:05.133 -05:00 [Debug] 21:25:05 Gateway     Received HeartbeatAck
+2017-09-06 21:25:05.135 -05:00 [Debug] 21:25:05 Gateway     Latency = 109 ms
+2017-09-06 21:25:41.553 -05:00 [Debug] 21:25:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:25:41.564 -05:00 [Debug] 21:25:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:25:46.271 -05:00 [Debug] 21:25:46 Gateway     Sent Heartbeat
+2017-09-06 21:25:46.372 -05:00 [Debug] 21:25:46 Gateway     Received HeartbeatAck
+2017-09-06 21:25:46.372 -05:00 [Debug] 21:25:46 Gateway     Latency = 93 ms
+2017-09-06 21:26:27.534 -05:00 [Debug] 21:26:27 Gateway     Sent Heartbeat
+2017-09-06 21:26:27.641 -05:00 [Debug] 21:26:27 Gateway     Received HeartbeatAck
+2017-09-06 21:26:27.642 -05:00 [Debug] 21:26:27 Gateway     Latency = 94 ms
+2017-09-06 21:26:41.566 -05:00 [Debug] 21:26:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:26:41.580 -05:00 [Debug] 21:26:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:27:08.785 -05:00 [Debug] 21:27:08 Gateway     Sent Heartbeat
+2017-09-06 21:27:08.897 -05:00 [Debug] 21:27:08 Gateway     Received HeartbeatAck
+2017-09-06 21:27:08.897 -05:00 [Debug] 21:27:08 Gateway     Latency = 110 ms
+2017-09-06 21:27:41.577 -05:00 [Debug] 21:27:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:27:41.595 -05:00 [Debug] 21:27:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:27:50.050 -05:00 [Debug] 21:27:50 Gateway     Sent Heartbeat
+2017-09-06 21:27:50.147 -05:00 [Debug] 21:27:50 Gateway     Received HeartbeatAck
+2017-09-06 21:27:50.149 -05:00 [Debug] 21:27:50 Gateway     Latency = 94 ms
+2017-09-06 21:28:31.317 -05:00 [Debug] 21:28:31 Gateway     Sent Heartbeat
+2017-09-06 21:28:31.456 -05:00 [Debug] 21:28:31 Gateway     Received HeartbeatAck
+2017-09-06 21:28:31.457 -05:00 [Debug] 21:28:31 Gateway     Latency = 141 ms
+2017-09-06 21:28:41.584 -05:00 [Debug] 21:28:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:28:41.599 -05:00 [Debug] 21:28:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:29:12.568 -05:00 [Debug] 21:29:12 Gateway     Sent Heartbeat
+2017-09-06 21:29:12.668 -05:00 [Debug] 21:29:12 Gateway     Received HeartbeatAck
+2017-09-06 21:29:12.669 -05:00 [Debug] 21:29:12 Gateway     Latency = 94 ms
+2017-09-06 21:29:41.651 -05:00 [Debug] 21:29:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:29:41.651 -05:00 [Debug] 21:29:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:29:53.832 -05:00 [Debug] 21:29:53 Gateway     Sent Heartbeat
+2017-09-06 21:29:53.988 -05:00 [Debug] 21:29:53 Gateway     Received HeartbeatAck
+2017-09-06 21:29:54.001 -05:00 [Debug] 21:29:54 Gateway     Latency = 156 ms
+2017-09-06 21:30:35.085 -05:00 [Debug] 21:30:35 Gateway     Sent Heartbeat
+2017-09-06 21:30:35.190 -05:00 [Debug] 21:30:35 Gateway     Received HeartbeatAck
+2017-09-06 21:30:35.192 -05:00 [Debug] 21:30:35 Gateway     Latency = 109 ms
+2017-09-06 21:30:41.660 -05:00 [Debug] 21:30:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:30:41.915 -05:00 [Debug] 21:30:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:31:16.336 -05:00 [Debug] 21:31:16 Gateway     Sent Heartbeat
+2017-09-06 21:31:16.429 -05:00 [Debug] 21:31:16 Gateway     Received HeartbeatAck
+2017-09-06 21:31:16.430 -05:00 [Debug] 21:31:16 Gateway     Latency = 94 ms
+2017-09-06 21:31:41.688 -05:00 [Debug] 21:31:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:31:41.705 -05:00 [Debug] 21:31:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:31:57.600 -05:00 [Debug] 21:31:57 Gateway     Sent Heartbeat
+2017-09-06 21:31:58.048 -05:00 [Debug] 21:31:58 Gateway     Received HeartbeatAck
+2017-09-06 21:31:58.049 -05:00 [Debug] 21:31:58 Gateway     Latency = 437 ms
+2017-09-06 21:32:38.864 -05:00 [Debug] 21:32:38 Gateway     Sent Heartbeat
+2017-09-06 21:32:38.959 -05:00 [Debug] 21:32:38 Gateway     Received HeartbeatAck
+2017-09-06 21:32:38.959 -05:00 [Debug] 21:32:38 Gateway     Latency = 94 ms
+2017-09-06 21:32:41.679 -05:00 [Debug] 21:32:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:32:41.694 -05:00 [Debug] 21:32:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:33:20.130 -05:00 [Debug] 21:33:20 Gateway     Sent Heartbeat
+2017-09-06 21:33:20.224 -05:00 [Debug] 21:33:20 Gateway     Received HeartbeatAck
+2017-09-06 21:33:20.225 -05:00 [Debug] 21:33:20 Gateway     Latency = 94 ms
+2017-09-06 21:33:41.669 -05:00 [Debug] 21:33:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:33:41.695 -05:00 [Debug] 21:33:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:34:01.394 -05:00 [Debug] 21:34:01 Gateway     Sent Heartbeat
+2017-09-06 21:34:01.492 -05:00 [Debug] 21:34:01 Gateway     Received HeartbeatAck
+2017-09-06 21:34:01.494 -05:00 [Debug] 21:34:01 Gateway     Latency = 93 ms
+2017-09-06 21:34:41.666 -05:00 [Debug] 21:34:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:34:41.684 -05:00 [Debug] 21:34:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:34:42.659 -05:00 [Debug] 21:34:42 Gateway     Sent Heartbeat
+2017-09-06 21:34:42.864 -05:00 [Debug] 21:34:42 Gateway     Received HeartbeatAck
+2017-09-06 21:34:42.867 -05:00 [Debug] 21:34:42 Gateway     Latency = 203 ms
+2017-09-06 21:35:23.910 -05:00 [Debug] 21:35:23 Gateway     Sent Heartbeat
+2017-09-06 21:35:24.100 -05:00 [Debug] 21:35:24 Gateway     Received HeartbeatAck
+2017-09-06 21:35:24.101 -05:00 [Debug] 21:35:24 Gateway     Latency = 188 ms
+2017-09-06 21:35:41.654 -05:00 [Debug] 21:35:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:35:41.663 -05:00 [Debug] 21:35:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:36:05.176 -05:00 [Debug] 21:36:05 Gateway     Sent Heartbeat
+2017-09-06 21:36:05.278 -05:00 [Debug] 21:36:05 Gateway     Received HeartbeatAck
+2017-09-06 21:36:05.279 -05:00 [Debug] 21:36:05 Gateway     Latency = 94 ms
+2017-09-06 21:36:41.685 -05:00 [Debug] 21:36:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:36:41.698 -05:00 [Debug] 21:36:41 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-06 21:36:46.428 -05:00 [Debug] 21:36:46 Gateway     Sent Heartbeat
+2017-09-06 21:36:46.525 -05:00 [Debug] 21:36:46 Gateway     Received HeartbeatAck
+2017-09-06 21:36:46.527 -05:00 [Debug] 21:36:46 Gateway     Latency = 94 ms
+2017-09-06 21:37:27.691 -05:00 [Debug] 21:37:27 Gateway     Sent Heartbeat
+2017-09-06 21:37:27.792 -05:00 [Debug] 21:37:27 Gateway     Received HeartbeatAck
+2017-09-06 21:37:27.793 -05:00 [Debug] 21:37:27 Gateway     Latency = 94 ms

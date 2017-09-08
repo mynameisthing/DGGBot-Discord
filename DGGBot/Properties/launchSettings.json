@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DGGBot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Environment": "Development"
+      }
+    }
+  }
+}

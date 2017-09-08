@@ -1,0 +1,847 @@
+2017-09-07 20:51:28.026 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 20:51:28.136 -05:00 [Information] 20:51:28 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 20:51:28.628 -05:00 [Information] 20:51:28 Gateway     Connecting
+2017-09-07 20:51:28.636 -05:00 [Debug] 20:51:28 Gateway     Connecting ApiClient
+2017-09-07 20:51:29.011 -05:00 [Debug] 20:51:29 Gateway     Identifying
+2017-09-07 20:51:29.067 -05:00 [Debug] 20:51:29 Gateway     Sent Identify
+2017-09-07 20:51:29.178 -05:00 [Debug] 20:51:29 Gateway     Received Hello
+2017-09-07 20:51:29.190 -05:00 [Debug] 20:51:29 Gateway     Heartbeat Started
+2017-09-07 20:51:29.193 -05:00 [Debug] 20:51:29 Gateway     Sent Heartbeat
+2017-09-07 20:51:29.204 -05:00 [Debug] 20:51:29 Gateway     Received Dispatch (READY)
+2017-09-07 20:51:29.253 -05:00 [Debug] 20:51:29 Gateway     GuildDownloader Started
+2017-09-07 20:51:29.256 -05:00 [Debug] 20:51:29 Gateway     Sending Status
+2017-09-07 20:51:29.267 -05:00 [Debug] 20:51:29 Gateway     Sent StatusUpdate
+2017-09-07 20:51:29.267 -05:00 [Information] 20:51:29 Gateway     Connected
+2017-09-07 20:51:29.268 -05:00 [Debug] 20:51:29 Gateway     Raising Event
+2017-09-07 20:51:29.658 -05:00 [Debug] 20:51:29 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 20:51:29.718 -05:00 [Debug] 20:51:29 Gateway     Received HeartbeatAck
+2017-09-07 20:51:29.724 -05:00 [Debug] 20:51:29 Gateway     Latency = 516 ms
+2017-09-07 20:51:29.753 -05:00 [Debug] 20:51:29 Gateway     GuildDownloader Stopped
+2017-09-07 20:51:29.756 -05:00 [Information] 20:51:29 Gateway     Ready
+2017-09-07 20:51:29.934 -05:00 [Debug] 20:51:29 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:51:30.177 -05:00 [Debug] 20:51:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:30.185 -05:00 [Debug] 20:51:30 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:30.306 -05:00 [Debug] 20:51:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:30.729 -05:00 [Debug] 20:51:30 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:32.725 -05:00 [Debug] 20:51:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:33.196 -05:00 [Debug] 20:51:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:51:33.197 -05:00 [Debug] 20:51:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:51:33.422 -05:00 [Debug] 20:51:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:34.873 -05:00 [Debug] 20:51:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:34.877 -05:00 [Debug] 20:51:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:35.206 -05:00 [Debug] 20:51:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:35.825 -05:00 [Debug] 20:51:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:36.616 -05:00 [Debug] 20:51:36 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:36.653 -05:00 [Debug] 20:51:36 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:37.163 -05:00 [Debug] 20:51:37 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:37.889 -05:00 [Debug] 20:51:37 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:38.045 -05:00 [Debug] 20:51:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:39.083 -05:00 [Debug] 20:51:39 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:40.768 -05:00 [Debug] 20:51:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:42.240 -05:00 [Debug] 20:51:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:42.366 -05:00 [Debug] 20:51:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:42.441 -05:00 [Debug] 20:51:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:42.629 -05:00 [Debug] 20:51:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:43.239 -05:00 [Debug] 20:51:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:43.948 -05:00 [Debug] 20:51:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:45.264 -05:00 [Debug] 20:51:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:46.699 -05:00 [Debug] 20:51:46 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:47.267 -05:00 [Debug] 20:51:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:47.588 -05:00 [Debug] 20:51:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:47.992 -05:00 [Debug] 20:51:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:48.136 -05:00 [Debug] 20:51:48 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:48.780 -05:00 [Debug] 20:51:48 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:49.650 -05:00 [Debug] 20:51:49 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:49.856 -05:00 [Debug] 20:51:49 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:50.129 -05:00 [Debug] 20:51:50 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:50.380 -05:00 [Debug] 20:51:50 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:52.293 -05:00 [Debug] 20:51:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:52.385 -05:00 [Debug] 20:51:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:52.961 -05:00 [Debug] 20:51:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:53.584 -05:00 [Debug] 20:51:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:53.844 -05:00 [Debug] 20:51:53 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:51:53.904 -05:00 [Debug] 20:51:53 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:56.153 -05:00 [Debug] 20:51:56 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:56.212 -05:00 [Debug] 20:51:56 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:56.214 -05:00 [Debug] 20:51:56 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:56.501 -05:00 [Debug] 20:51:56 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:56.784 -05:00 [Debug] 20:51:56 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:51:56.898 -05:00 [Debug] 20:51:56 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:57.007 -05:00 [Debug] 20:51:57 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:51:57.073 -05:00 [Debug] 20:51:57 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-07 20:51:57.250 -05:00 [Debug] 20:51:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:57.471 -05:00 [Debug] 20:51:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:57.948 -05:00 [Debug] 20:51:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:58.312 -05:00 [Debug] 20:51:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:51:58.370 -05:00 [Debug] 20:51:58 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:01.480 -05:00 [Debug] 20:52:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:01.550 -05:00 [Debug] 20:52:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:01.655 -05:00 [Debug] 20:52:01 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:01.882 -05:00 [Debug] 20:52:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:01.972 -05:00 [Debug] 20:52:01 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:02.204 -05:00 [Debug] 20:52:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:02.325 -05:00 [Debug] 20:52:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:04.380 -05:00 [Debug] 20:52:04 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:04.972 -05:00 [Debug] 20:52:04 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:04.973 -05:00 [Debug] 20:52:04 Gateway     Received Dispatch (MESSAGE_REACTION_ADD)
+2017-09-07 20:52:05.027 -05:00 [Debug] 20:52:05 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:05.484 -05:00 [Debug] 20:52:05 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:06.430 -05:00 [Debug] 20:52:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:06.567 -05:00 [Debug] 20:52:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:07.072 -05:00 [Debug] 20:52:07 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:07.183 -05:00 [Debug] 20:52:07 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:07.372 -05:00 [Debug] 20:52:07 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:07.558 -05:00 [Debug] 20:52:07 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:07.988 -05:00 [Debug] 20:52:07 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:08.093 -05:00 [Debug] 20:52:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:08.264 -05:00 [Debug] 20:52:08 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:08.745 -05:00 [Debug] 20:52:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:09.023 -05:00 [Debug] 20:52:09 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:09.374 -05:00 [Debug] 20:52:09 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:09.455 -05:00 [Debug] 20:52:09 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:09.630 -05:00 [Debug] 20:52:09 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:09.693 -05:00 [Debug] 20:52:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:09.880 -05:00 [Debug] 20:52:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:10.443 -05:00 [Debug] 20:52:10 Gateway     Sent Heartbeat
+2017-09-07 20:52:10.541 -05:00 [Debug] 20:52:10 Gateway     Received HeartbeatAck
+2017-09-07 20:52:10.542 -05:00 [Debug] 20:52:10 Gateway     Latency = 94 ms
+2017-09-07 20:52:11.892 -05:00 [Debug] 20:52:11 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:12.564 -05:00 [Debug] 20:52:12 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:13.524 -05:00 [Debug] 20:52:13 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:14.083 -05:00 [Debug] 20:52:14 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:14.527 -05:00 [Debug] 20:52:14 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:17.285 -05:00 [Debug] 20:52:17 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:17.499 -05:00 [Debug] 20:52:17 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:17.667 -05:00 [Debug] 20:52:17 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:17.890 -05:00 [Debug] 20:52:17 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:17.891 -05:00 [Debug] 20:52:17 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:18.663 -05:00 [Debug] 20:52:18 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:18.986 -05:00 [Debug] 20:52:18 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:20.235 -05:00 [Debug] 20:52:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:20.518 -05:00 [Debug] 20:52:20 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:20.613 -05:00 [Debug] 20:52:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:22.488 -05:00 [Debug] 20:52:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:23.207 -05:00 [Debug] 20:52:23 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:24.036 -05:00 [Debug] 20:52:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:24.316 -05:00 [Debug] 20:52:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:24.536 -05:00 [Debug] 20:52:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:24.575 -05:00 [Debug] 20:52:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:25.088 -05:00 [Debug] 20:52:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:25.430 -05:00 [Debug] 20:52:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:25.768 -05:00 [Debug] 20:52:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:26.079 -05:00 [Debug] 20:52:26 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:26.180 -05:00 [Debug] 20:52:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:26.351 -05:00 [Debug] 20:52:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:26.735 -05:00 [Debug] 20:52:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:26.789 -05:00 [Debug] 20:52:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:27.956 -05:00 [Debug] 20:52:27 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:28.825 -05:00 [Debug] 20:52:28 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:30.203 -05:00 [Debug] 20:52:30 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:32.506 -05:00 [Debug] 20:52:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:32.575 -05:00 [Debug] 20:52:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:32.779 -05:00 [Debug] 20:52:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:32.816 -05:00 [Debug] 20:52:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:32.886 -05:00 [Debug] 20:52:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:33.406 -05:00 [Debug] 20:52:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:33.676 -05:00 [Debug] 20:52:33 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:34.006 -05:00 [Debug] 20:52:34 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:36.357 -05:00 [Debug] 20:52:36 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:36.502 -05:00 [Debug] 20:52:36 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:36.527 -05:00 [Debug] 20:52:36 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:36.680 -05:00 [Debug] 20:52:36 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:36.848 -05:00 [Debug] 20:52:36 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:37.437 -05:00 [Debug] 20:52:37 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:38.061 -05:00 [Debug] 20:52:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:38.312 -05:00 [Debug] 20:52:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:38.738 -05:00 [Debug] 20:52:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:39.206 -05:00 [Debug] 20:52:39 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:39.255 -05:00 [Debug] 20:52:39 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:39.639 -05:00 [Debug] 20:52:39 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:39.896 -05:00 [Debug] 20:52:39 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:52:39.938 -05:00 [Debug] 20:52:39 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:40.291 -05:00 [Debug] 20:52:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:41.732 -05:00 [Debug] 20:52:41 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:42.048 -05:00 [Debug] 20:52:42 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:42.893 -05:00 [Debug] 20:52:42 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:52:42.894 -05:00 [Debug] 20:52:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:44.195 -05:00 [Debug] 20:52:44 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:45.361 -05:00 [Debug] 20:52:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:45.547 -05:00 [Debug] 20:52:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:45.714 -05:00 [Debug] 20:52:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:46.001 -05:00 [Debug] 20:52:46 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:47.377 -05:00 [Debug] 20:52:47 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:48.245 -05:00 [Debug] 20:52:48 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:51.160 -05:00 [Debug] 20:52:51 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:51.268 -05:00 [Debug] 20:52:51 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:51.437 -05:00 [Debug] 20:52:51 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:51.707 -05:00 [Debug] 20:52:51 Gateway     Sent Heartbeat
+2017-09-07 20:52:51.804 -05:00 [Debug] 20:52:51 Gateway     Received HeartbeatAck
+2017-09-07 20:52:51.804 -05:00 [Debug] 20:52:51 Gateway     Latency = 94 ms
+2017-09-07 20:52:52.078 -05:00 [Debug] 20:52:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:52.359 -05:00 [Debug] 20:52:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:53.558 -05:00 [Debug] 20:52:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:54.108 -05:00 [Debug] 20:52:54 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:54.207 -05:00 [Debug] 20:52:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:56.886 -05:00 [Debug] 20:52:56 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:57.145 -05:00 [Debug] 20:52:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:57.379 -05:00 [Debug] 20:52:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:52:57.776 -05:00 [Debug] 20:52:57 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:52:58.921 -05:00 [Debug] 20:52:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:00.182 -05:00 [Debug] 20:53:00 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:01.367 -05:00 [Debug] 20:53:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:02.127 -05:00 [Debug] 20:53:02 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:02.787 -05:00 [Debug] 20:53:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:03.609 -05:00 [Debug] 20:53:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:03.631 -05:00 [Debug] 20:53:03 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:04.371 -05:00 [Debug] 20:53:04 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:05.597 -05:00 [Debug] 20:53:05 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:06.091 -05:00 [Debug] 20:53:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:06.836 -05:00 [Debug] 20:53:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:06.840 -05:00 [Debug] 20:53:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:07.187 -05:00 [Debug] 20:53:07 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:07.699 -05:00 [Debug] 20:53:07 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:07.849 -05:00 [Debug] 20:53:07 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:09.548 -05:00 [Debug] 20:53:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:09.709 -05:00 [Debug] 20:53:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:10.141 -05:00 [Debug] 20:53:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:10.178 -05:00 [Debug] 20:53:10 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:10.724 -05:00 [Debug] 20:53:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:11.155 -05:00 [Debug] 20:53:11 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:11.434 -05:00 [Debug] 20:53:11 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:11.805 -05:00 [Debug] 20:53:11 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:12.217 -05:00 [Debug] 20:53:12 Gateway     Received Dispatch (GUILD_MEMBER_ADD)
+2017-09-07 20:53:12.311 -05:00 [Debug] 20:53:12 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:13.038 -05:00 [Debug] 20:53:13 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:14.675 -05:00 [Debug] 20:53:14 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:14.931 -05:00 [Debug] 20:53:14 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:15.713 -05:00 [Debug] 20:53:15 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:16.889 -05:00 [Debug] 20:53:16 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:17.456 -05:00 [Debug] 20:53:17 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:17.710 -05:00 [Debug] 20:53:17 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:18.216 -05:00 [Debug] 20:53:18 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:18.757 -05:00 [Debug] 20:53:18 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:18.907 -05:00 [Debug] 20:53:18 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:19.033 -05:00 [Debug] 20:53:19 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:19.895 -05:00 [Debug] 20:53:19 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:20.158 -05:00 [Debug] 20:53:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:20.922 -05:00 [Debug] 20:53:20 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:53:22.303 -05:00 [Debug] 20:53:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:22.534 -05:00 [Debug] 20:53:22 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:22.870 -05:00 [Debug] 20:53:22 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:24.082 -05:00 [Debug] 20:53:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:24.260 -05:00 [Debug] 20:53:24 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:25.757 -05:00 [Debug] 20:53:25 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:26.350 -05:00 [Debug] 20:53:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:26.639 -05:00 [Debug] 20:53:26 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:26.639 -05:00 [Debug] 20:53:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:27.114 -05:00 [Debug] 20:53:27 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:27.114 -05:00 [Debug] 20:53:27 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:27.604 -05:00 [Debug] 20:53:27 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:29.651 -05:00 [Debug] 20:53:29 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:30.195 -05:00 [Debug] 20:53:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:30.300 -05:00 [Debug] 20:53:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:30.455 -05:00 [Debug] 20:53:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:30.662 -05:00 [Debug] 20:53:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:30.712 -05:00 [Debug] 20:53:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:31.159 -05:00 [Debug] 20:53:31 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:31.357 -05:00 [Debug] 20:53:31 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:53:32.957 -05:00 [Debug] 20:53:32 Gateway     Sent Heartbeat
+2017-09-07 20:53:33.057 -05:00 [Debug] 20:53:33 Gateway     Received HeartbeatAck
+2017-09-07 20:53:33.057 -05:00 [Debug] 20:53:33 Gateway     Latency = 94 ms
+2017-09-07 20:53:33.439 -05:00 [Debug] 20:53:33 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 20:53:33.441 -05:00 [Warning] 20:53:33 Gateway     Unknown User (VOICE_STATE_UPDATE User=133585698795159552 Guild=265256381437706240).
+2017-09-07 20:53:33.910 -05:00 [Debug] 20:53:33 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:34.014 -05:00 [Debug] 20:53:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:34.998 -05:00 [Debug] 20:53:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:35.241 -05:00 [Debug] 20:53:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:35.792 -05:00 [Debug] 20:53:35 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:36.037 -05:00 [Debug] 20:53:36 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:37.369 -05:00 [Debug] 20:53:37 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:38.123 -05:00 [Debug] 20:53:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:38.202 -05:00 [Debug] 20:53:38 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:39.114 -05:00 [Debug] 20:53:39 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:39.443 -05:00 [Debug] 20:53:39 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:40.156 -05:00 [Debug] 20:53:40 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:42.053 -05:00 [Debug] 20:53:42 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:42.190 -05:00 [Debug] 20:53:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:42.415 -05:00 [Debug] 20:53:42 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:43.239 -05:00 [Debug] 20:53:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:43.448 -05:00 [Debug] 20:53:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:43.869 -05:00 [Debug] 20:53:43 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:43.987 -05:00 [Debug] 20:53:43 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:44.327 -05:00 [Debug] 20:53:44 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:44.720 -05:00 [Debug] 20:53:44 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:45.294 -05:00 [Debug] 20:53:45 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:45.786 -05:00 [Debug] 20:53:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:46.245 -05:00 [Debug] 20:53:46 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:47.547 -05:00 [Debug] 20:53:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:48.207 -05:00 [Debug] 20:53:48 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:48.310 -05:00 [Debug] 20:53:48 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:48.312 -05:00 [Debug] 20:53:48 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:48.700 -05:00 [Debug] 20:53:48 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:53:50.396 -05:00 [Debug] 20:53:50 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:51.603 -05:00 [Debug] 20:53:51 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:52.187 -05:00 [Debug] 20:53:52 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:52.260 -05:00 [Debug] 20:53:52 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:52.318 -05:00 [Debug] 20:53:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:52.783 -05:00 [Debug] 20:53:52 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:53.280 -05:00 [Debug] 20:53:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:53.946 -05:00 [Debug] 20:53:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:54.097 -05:00 [Debug] 20:53:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:56.267 -05:00 [Debug] 20:53:56 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:57.032 -05:00 [Debug] 20:53:57 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:58.397 -05:00 [Debug] 20:53:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:53:59.633 -05:00 [Debug] 20:53:59 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:53:59.965 -05:00 [Debug] 20:53:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:00.521 -05:00 [Debug] 20:54:00 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:00.740 -05:00 [Debug] 20:54:00 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:01.483 -05:00 [Debug] 20:54:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:01.935 -05:00 [Debug] 20:54:01 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:02.154 -05:00 [Debug] 20:54:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:02.340 -05:00 [Debug] 20:54:02 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:02.410 -05:00 [Debug] 20:54:02 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:54:02.695 -05:00 [Debug] 20:54:02 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:02.874 -05:00 [Debug] 20:54:02 Gateway     Received Dispatch (GUILD_MEMBER_REMOVE)
+2017-09-07 20:54:02.878 -05:00 [Debug] 20:54:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:03.123 -05:00 [Debug] 20:54:03 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:03.604 -05:00 [Debug] 20:54:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:04.175 -05:00 [Debug] 20:54:04 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:04.497 -05:00 [Debug] 20:54:04 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:54:05.160 -05:00 [Debug] 20:54:05 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:05.839 -05:00 [Debug] 20:54:05 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:06.228 -05:00 [Debug] 20:54:06 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:54:07.376 -05:00 [Debug] 20:54:07 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:54:07.460 -05:00 [Debug] 20:54:07 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:54:07.929 -05:00 [Debug] 20:54:07 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:08.299 -05:00 [Debug] 20:54:08 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:08.382 -05:00 [Debug] 20:54:08 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 20:54:09.271 -05:00 [Debug] 20:54:09 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:09.320 -05:00 [Debug] 20:54:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:09.934 -05:00 [Debug] 20:54:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:09.984 -05:00 [Debug] 20:54:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:10.179 -05:00 [Debug] 20:54:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:54:10.213 -05:00 [Debug] 20:54:10 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 20:54:10.404 -05:00 [Debug] 20:54:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 20:56:17.262 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 20:56:17.364 -05:00 [Information] 20:56:17 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 20:56:17.883 -05:00 [Information] 20:56:17 Gateway     Connecting
+2017-09-07 20:56:17.889 -05:00 [Debug] 20:56:17 Gateway     Connecting ApiClient
+2017-09-07 20:56:18.261 -05:00 [Debug] 20:56:18 Gateway     Identifying
+2017-09-07 20:56:18.321 -05:00 [Debug] 20:56:18 Gateway     Sent Identify
+2017-09-07 20:56:18.414 -05:00 [Debug] 20:56:18 Gateway     Received Hello
+2017-09-07 20:56:18.431 -05:00 [Debug] 20:56:18 Gateway     Heartbeat Started
+2017-09-07 20:56:18.434 -05:00 [Debug] 20:56:18 Gateway     Sent Heartbeat
+2017-09-07 20:56:18.443 -05:00 [Debug] 20:56:18 Gateway     Received Dispatch (READY)
+2017-09-07 20:56:18.488 -05:00 [Debug] 20:56:18 Gateway     GuildDownloader Started
+2017-09-07 20:56:18.491 -05:00 [Debug] 20:56:18 Gateway     Sending Status
+2017-09-07 20:56:18.502 -05:00 [Debug] 20:56:18 Gateway     Sent StatusUpdate
+2017-09-07 20:56:18.503 -05:00 [Information] 20:56:18 Gateway     Connected
+2017-09-07 20:56:18.503 -05:00 [Debug] 20:56:18 Gateway     Raising Event
+2017-09-07 20:56:18.899 -05:00 [Debug] 20:56:18 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 20:56:18.947 -05:00 [Debug] 20:56:18 Gateway     Received HeartbeatAck
+2017-09-07 20:56:18.953 -05:00 [Debug] 20:56:18 Gateway     Latency = 515 ms
+2017-09-07 21:09:22.245 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 21:09:22.384 -05:00 [Information] 21:09:22 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 21:09:22.918 -05:00 [Information] 21:09:22 Gateway     Connecting
+2017-09-07 21:09:22.924 -05:00 [Debug] 21:09:22 Gateway     Connecting ApiClient
+2017-09-07 21:09:43.839 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 21:09:46.391 -05:00 [Information] 21:09:46 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 21:09:48.849 -05:00 [Information] 21:09:48 Gateway     Connecting
+2017-09-07 21:09:48.854 -05:00 [Debug] 21:09:48 Gateway     Connecting ApiClient
+2017-09-07 21:11:46.110 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 21:11:46.236 -05:00 [Information] 21:11:46 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 21:11:46.705 -05:00 [Information] 21:11:46 Gateway     Connecting
+2017-09-07 21:11:46.713 -05:00 [Debug] 21:11:46 Gateway     Connecting ApiClient
+2017-09-07 21:14:35.596 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 21:14:35.745 -05:00 [Information] 21:14:35 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 21:14:36.291 -05:00 [Information] 21:14:36 Gateway     Connecting
+2017-09-07 21:14:36.299 -05:00 [Debug] 21:14:36 Gateway     Connecting ApiClient
+2017-09-07 21:42:42.828 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 21:42:42.971 -05:00 [Information] 21:42:42 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 21:42:46.970 -05:00 [Information] 21:42:46 Gateway     Connecting
+2017-09-07 21:42:46.976 -05:00 [Debug] 21:42:46 Gateway     Connecting ApiClient
+2017-09-07 21:42:47.373 -05:00 [Debug] 21:42:47 Gateway     Identifying
+2017-09-07 21:42:47.436 -05:00 [Debug] 21:42:47 Gateway     Sent Identify
+2017-09-07 21:42:47.535 -05:00 [Debug] 21:42:47 Gateway     Received Hello
+2017-09-07 21:42:47.548 -05:00 [Debug] 21:42:47 Gateway     Heartbeat Started
+2017-09-07 21:42:47.551 -05:00 [Debug] 21:42:47 Gateway     Sent Heartbeat
+2017-09-07 21:42:47.561 -05:00 [Debug] 21:42:47 Gateway     Received Dispatch (READY)
+2017-09-07 21:42:47.601 -05:00 [Debug] 21:42:47 Gateway     GuildDownloader Started
+2017-09-07 21:42:47.606 -05:00 [Debug] 21:42:47 Gateway     Sending Status
+2017-09-07 21:42:47.621 -05:00 [Debug] 21:42:47 Gateway     Sent StatusUpdate
+2017-09-07 21:42:47.621 -05:00 [Information] 21:42:47 Gateway     Connected
+2017-09-07 21:42:47.622 -05:00 [Debug] 21:42:47 Gateway     Raising Event
+2017-09-07 21:42:47.903 -05:00 [Debug] 21:42:47 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 21:42:47.949 -05:00 [Debug] 21:42:47 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:42:47.961 -05:00 [Debug] 21:42:47 Gateway     Received HeartbeatAck
+2017-09-07 21:42:47.966 -05:00 [Debug] 21:42:47 Gateway     Latency = 422 ms
+2017-09-07 21:42:47.967 -05:00 [Debug] 21:42:47 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:42:47.999 -05:00 [Debug] 21:42:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:48.105 -05:00 [Debug] 21:42:48 Gateway     GuildDownloader Stopped
+2017-09-07 21:42:48.107 -05:00 [Information] 21:42:48 Gateway     Ready
+2017-09-07 21:42:48.272 -05:00 [Debug] 21:42:48 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:42:49.181 -05:00 [Debug] 21:42:49 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:49.801 -05:00 [Debug] 21:42:49 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:42:49.827 -05:00 [Debug] 21:42:49 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:42:51.317 -05:00 [Debug] 21:42:51 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:42:52.768 -05:00 [Debug] 21:42:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:53.680 -05:00 [Debug] 21:42:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:53.826 -05:00 [Debug] 21:42:53 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:42:54.193 -05:00 [Debug] 21:42:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:54.600 -05:00 [Debug] 21:42:54 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:42:55.175 -05:00 [Debug] 21:42:55 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:42:55.606 -05:00 [Debug] 21:42:55 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:56.157 -05:00 [Debug] 21:42:56 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:57.105 -05:00 [Debug] 21:42:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:57.544 -05:00 [Debug] 21:42:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:57.561 -05:00 [Debug] 21:42:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:57.714 -05:00 [Debug] 21:42:57 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:42:57.746 -05:00 [Debug] 21:42:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:58.092 -05:00 [Debug] 21:42:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:42:58.165 -05:00 [Debug] 21:42:58 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:42:58.393 -05:00 [Debug] 21:42:58 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:43:00.446 -05:00 [Debug] 21:43:00 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:43:00.915 -05:00 [Debug] 21:43:00 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:43:01.414 -05:00 [Debug] 21:43:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:43:01.438 -05:00 [Debug] 21:43:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:43:01.717 -05:00 [Debug] 21:43:01 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:43:02.037 -05:00 [Debug] 21:43:02 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:43:02.742 -05:00 [Debug] 21:43:02 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:43:03.624 -05:00 [Debug] 21:43:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:43:03.692 -05:00 [Debug] 21:43:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:43:04.119 -05:00 [Debug] 21:43:04 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:56:00.441 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 21:56:00.628 -05:00 [Information] 21:56:00 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 21:56:05.160 -05:00 [Information] 21:56:05 Gateway     Connecting
+2017-09-07 21:56:05.165 -05:00 [Debug] 21:56:05 Gateway     Connecting ApiClient
+2017-09-07 21:56:05.567 -05:00 [Debug] 21:56:05 Gateway     Identifying
+2017-09-07 21:56:05.628 -05:00 [Debug] 21:56:05 Gateway     Sent Identify
+2017-09-07 21:56:05.723 -05:00 [Debug] 21:56:05 Gateway     Received Hello
+2017-09-07 21:56:05.734 -05:00 [Debug] 21:56:05 Gateway     Heartbeat Started
+2017-09-07 21:56:05.737 -05:00 [Debug] 21:56:05 Gateway     Sent Heartbeat
+2017-09-07 21:56:05.757 -05:00 [Debug] 21:56:05 Gateway     Received Dispatch (READY)
+2017-09-07 21:56:05.805 -05:00 [Debug] 21:56:05 Gateway     GuildDownloader Started
+2017-09-07 21:56:05.814 -05:00 [Debug] 21:56:05 Gateway     Sending Status
+2017-09-07 21:56:05.825 -05:00 [Debug] 21:56:05 Gateway     Sent StatusUpdate
+2017-09-07 21:56:05.826 -05:00 [Information] 21:56:05 Gateway     Connected
+2017-09-07 21:56:05.826 -05:00 [Debug] 21:56:05 Gateway     Raising Event
+2017-09-07 21:56:06.158 -05:00 [Debug] 21:56:06 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 21:56:06.203 -05:00 [Debug] 21:56:06 Gateway     Received HeartbeatAck
+2017-09-07 21:56:06.211 -05:00 [Debug] 21:56:06 Gateway     Latency = 468 ms
+2017-09-07 21:56:06.212 -05:00 [Debug] 21:56:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:06.313 -05:00 [Debug] 21:56:06 Gateway     GuildDownloader Stopped
+2017-09-07 21:56:06.315 -05:00 [Information] 21:56:06 Gateway     Ready
+2017-09-07 21:56:06.990 -05:00 [Debug] 21:56:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:07.324 -05:00 [Debug] 21:56:07 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:56:08.627 -05:00 [Debug] 21:56:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:08.659 -05:00 [Debug] 21:56:08 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 21:56:09.844 -05:00 [Debug] 21:56:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:10.092 -05:00 [Debug] 21:56:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:11.386 -05:00 [Debug] 21:56:11 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:12.881 -05:00 [Debug] 21:56:12 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:13.404 -05:00 [Debug] 21:56:13 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:13.908 -05:00 [Debug] 21:56:13 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:15.324 -05:00 [Debug] 21:56:15 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:15.441 -05:00 [Debug] 21:56:15 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:16.300 -05:00 [Debug] 21:56:16 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:17.375 -05:00 [Debug] 21:56:17 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:19.025 -05:00 [Debug] 21:56:19 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:19.758 -05:00 [Debug] 21:56:19 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:20.055 -05:00 [Debug] 21:56:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:20.421 -05:00 [Debug] 21:56:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:20.473 -05:00 [Debug] 21:56:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:20.538 -05:00 [Debug] 21:56:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:21.898 -05:00 [Debug] 21:56:21 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 21:56:22.131 -05:00 [Debug] 21:56:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:22.356 -05:00 [Debug] 21:56:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:22.848 -05:00 [Debug] 21:56:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:22.918 -05:00 [Debug] 21:56:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 21:56:22.956 -05:00 [Debug] 21:56:22 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:23.688 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 22:07:23.818 -05:00 [Information] 22:07:23 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 22:07:24.343 -05:00 [Information] 22:07:24 Gateway     Connecting
+2017-09-07 22:07:24.348 -05:00 [Debug] 22:07:24 Gateway     Connecting ApiClient
+2017-09-07 22:07:24.753 -05:00 [Debug] 22:07:24 Gateway     Identifying
+2017-09-07 22:07:24.812 -05:00 [Debug] 22:07:24 Gateway     Sent Identify
+2017-09-07 22:07:24.913 -05:00 [Debug] 22:07:24 Gateway     Received Hello
+2017-09-07 22:07:24.924 -05:00 [Debug] 22:07:24 Gateway     Heartbeat Started
+2017-09-07 22:07:24.927 -05:00 [Debug] 22:07:24 Gateway     Sent Heartbeat
+2017-09-07 22:07:24.934 -05:00 [Debug] 22:07:24 Gateway     Received Dispatch (READY)
+2017-09-07 22:07:24.974 -05:00 [Debug] 22:07:24 Gateway     GuildDownloader Started
+2017-09-07 22:07:24.978 -05:00 [Debug] 22:07:24 Gateway     Sending Status
+2017-09-07 22:07:24.998 -05:00 [Debug] 22:07:24 Gateway     Sent StatusUpdate
+2017-09-07 22:07:25.000 -05:00 [Information] 22:07:25 Gateway     Connected
+2017-09-07 22:07:25.000 -05:00 [Debug] 22:07:25 Gateway     Raising Event
+2017-09-07 22:07:25.337 -05:00 [Debug] 22:07:25 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 22:07:25.383 -05:00 [Debug] 22:07:25 Gateway     Received HeartbeatAck
+2017-09-07 22:07:25.391 -05:00 [Debug] 22:07:25 Gateway     Latency = 469 ms
+2017-09-07 22:07:25.391 -05:00 [Debug] 22:07:25 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:25.476 -05:00 [Debug] 22:07:25 Gateway     GuildDownloader Stopped
+2017-09-07 22:07:25.478 -05:00 [Information] 22:07:25 Gateway     Ready
+2017-09-07 22:07:25.780 -05:00 [Debug] 22:07:25 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:26.390 -05:00 [Debug] 22:07:26 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:26.485 -05:00 [Debug] 22:07:26 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:07:27.476 -05:00 [Debug] 22:07:27 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:28.460 -05:00 [Debug] 22:07:28 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:28.937 -05:00 [Debug] 22:07:28 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:29.449 -05:00 [Debug] 22:07:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:29.642 -05:00 [Debug] 22:07:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:30.051 -05:00 [Debug] 22:07:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:30.101 -05:00 [Debug] 22:07:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:30.113 -05:00 [Debug] 22:07:30 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:07:30.363 -05:00 [Debug] 22:07:30 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:30.720 -05:00 [Debug] 22:07:30 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:31.212 -05:00 [Debug] 22:07:31 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:32.187 -05:00 [Debug] 22:07:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:33.008 -05:00 [Debug] 22:07:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:33.051 -05:00 [Debug] 22:07:33 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:33.970 -05:00 [Debug] 22:07:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:34.741 -05:00 [Debug] 22:07:34 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:07:34.814 -05:00 [Debug] 22:07:34 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:35.027 -05:00 [Debug] 22:07:35 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:35.057 -05:00 [Debug] 22:07:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:35.166 -05:00 [Debug] 22:07:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:35.365 -05:00 [Debug] 22:07:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:38.554 -05:00 [Debug] 22:07:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:38.922 -05:00 [Debug] 22:07:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:39.305 -05:00 [Debug] 22:07:39 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:39.534 -05:00 [Debug] 22:07:39 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:07:40.251 -05:00 [Debug] 22:07:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:40.334 -05:00 [Debug] 22:07:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:41.324 -05:00 [Debug] 22:07:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:41.808 -05:00 [Debug] 22:07:41 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:42.347 -05:00 [Debug] 22:07:42 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:07:42.913 -05:00 [Debug] 22:07:42 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:43.068 -05:00 [Debug] 22:07:43 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:43.139 -05:00 [Debug] 22:07:43 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:07:43.415 -05:00 [Debug] 22:07:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:43.743 -05:00 [Debug] 22:07:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:43.785 -05:00 [Debug] 22:07:43 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:07:43.922 -05:00 [Debug] 22:07:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:44.222 -05:00 [Debug] 22:07:44 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:07:44.541 -05:00 [Debug] 22:07:44 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:08:22.434 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 22:08:22.583 -05:00 [Information] 22:08:22 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 22:08:23.139 -05:00 [Information] 22:08:23 Gateway     Connecting
+2017-09-07 22:08:23.148 -05:00 [Debug] 22:08:23 Gateway     Connecting ApiClient
+2017-09-07 22:08:23.522 -05:00 [Debug] 22:08:23 Gateway     Identifying
+2017-09-07 22:08:23.587 -05:00 [Debug] 22:08:23 Gateway     Sent Identify
+2017-09-07 22:08:23.690 -05:00 [Debug] 22:08:23 Gateway     Received Hello
+2017-09-07 22:08:23.704 -05:00 [Debug] 22:08:23 Gateway     Heartbeat Started
+2017-09-07 22:08:23.707 -05:00 [Debug] 22:08:23 Gateway     Sent Heartbeat
+2017-09-07 22:08:23.718 -05:00 [Debug] 22:08:23 Gateway     Received Dispatch (READY)
+2017-09-07 22:08:23.764 -05:00 [Debug] 22:08:23 Gateway     GuildDownloader Started
+2017-09-07 22:08:23.767 -05:00 [Debug] 22:08:23 Gateway     Sending Status
+2017-09-07 22:08:23.783 -05:00 [Debug] 22:08:23 Gateway     Sent StatusUpdate
+2017-09-07 22:08:23.783 -05:00 [Information] 22:08:23 Gateway     Connected
+2017-09-07 22:08:23.784 -05:00 [Debug] 22:08:23 Gateway     Raising Event
+2017-09-07 22:08:24.127 -05:00 [Debug] 22:08:24 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 22:08:24.178 -05:00 [Debug] 22:08:24 Gateway     Received HeartbeatAck
+2017-09-07 22:08:24.185 -05:00 [Debug] 22:08:24 Gateway     Latency = 485 ms
+2017-09-07 22:08:24.185 -05:00 [Debug] 22:08:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:24.193 -05:00 [Debug] 22:08:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:24.266 -05:00 [Debug] 22:08:24 Gateway     GuildDownloader Stopped
+2017-09-07 22:08:24.268 -05:00 [Information] 22:08:24 Gateway     Ready
+2017-09-07 22:08:24.964 -05:00 [Debug] 22:08:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:25.418 -05:00 [Debug] 22:08:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:25.651 -05:00 [Debug] 22:08:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:25.936 -05:00 [Debug] 22:08:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:26.988 -05:00 [Debug] 22:08:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:27.299 -05:00 [Debug] 22:08:27 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:08:28.449 -05:00 [Debug] 22:08:28 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:44.482 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 22:23:44.671 -05:00 [Information] 22:23:44 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 22:23:45.323 -05:00 [Information] 22:23:45 Gateway     Connecting
+2017-09-07 22:23:45.333 -05:00 [Debug] 22:23:45 Gateway     Connecting ApiClient
+2017-09-07 22:23:45.768 -05:00 [Debug] 22:23:45 Gateway     Identifying
+2017-09-07 22:23:45.829 -05:00 [Debug] 22:23:45 Gateway     Sent Identify
+2017-09-07 22:23:45.949 -05:00 [Debug] 22:23:45 Gateway     Received Hello
+2017-09-07 22:23:45.963 -05:00 [Debug] 22:23:45 Gateway     Heartbeat Started
+2017-09-07 22:23:45.968 -05:00 [Debug] 22:23:45 Gateway     Sent Heartbeat
+2017-09-07 22:23:45.990 -05:00 [Debug] 22:23:45 Gateway     Received Dispatch (READY)
+2017-09-07 22:23:46.047 -05:00 [Debug] 22:23:46 Gateway     GuildDownloader Started
+2017-09-07 22:23:46.053 -05:00 [Debug] 22:23:46 Gateway     Sending Status
+2017-09-07 22:23:46.075 -05:00 [Debug] 22:23:46 Gateway     Sent StatusUpdate
+2017-09-07 22:23:46.075 -05:00 [Information] 22:23:46 Gateway     Connected
+2017-09-07 22:23:46.076 -05:00 [Debug] 22:23:46 Gateway     Raising Event
+2017-09-07 22:23:46.340 -05:00 [Debug] 22:23:46 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 22:23:46.387 -05:00 [Debug] 22:23:46 Gateway     Received HeartbeatAck
+2017-09-07 22:23:46.394 -05:00 [Debug] 22:23:46 Gateway     Latency = 422 ms
+2017-09-07 22:23:46.448 -05:00 [Debug] 22:23:46 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:46.550 -05:00 [Debug] 22:23:46 Gateway     GuildDownloader Stopped
+2017-09-07 22:23:46.553 -05:00 [Information] 22:23:46 Gateway     Ready
+2017-09-07 22:23:46.554 -05:00 [Debug] 22:23:46 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:47.447 -05:00 [Debug] 22:23:47 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:48.876 -05:00 [Debug] 22:23:48 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:49.857 -05:00 [Debug] 22:23:49 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:50.603 -05:00 [Debug] 22:23:50 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:23:50.997 -05:00 [Debug] 22:23:50 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:23:53.386 -05:00 [Debug] 22:23:53 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:53.493 -05:00 [Debug] 22:23:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:54.069 -05:00 [Debug] 22:23:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:54.560 -05:00 [Debug] 22:23:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:55.171 -05:00 [Debug] 22:23:55 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:55.728 -05:00 [Debug] 22:23:55 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:56.959 -05:00 [Debug] 22:23:56 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:57.779 -05:00 [Debug] 22:23:57 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:23:58.464 -05:00 [Debug] 22:23:58 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:59.027 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:23:59.071 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:59.115 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:59.205 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:23:59.228 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:59.905 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:23:59.925 -05:00 [Debug] 22:23:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:24:00.105 -05:00 [Debug] 22:24:00 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:24:01.308 -05:00 [Debug] 22:24:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:24:01.616 -05:00 [Debug] 22:24:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:24:02.006 -05:00 [Debug] 22:24:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:24:02.528 -05:00 [Debug] 22:24:02 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:29:00.992 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 22:29:01.167 -05:00 [Information] 22:29:01 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 22:29:01.789 -05:00 [Information] 22:29:01 Gateway     Connecting
+2017-09-07 22:29:01.797 -05:00 [Debug] 22:29:01 Gateway     Connecting ApiClient
+2017-09-07 22:29:02.211 -05:00 [Debug] 22:29:02 Gateway     Identifying
+2017-09-07 22:29:02.289 -05:00 [Debug] 22:29:02 Gateway     Sent Identify
+2017-09-07 22:29:02.455 -05:00 [Debug] 22:29:02 Gateway     Received Hello
+2017-09-07 22:29:02.471 -05:00 [Debug] 22:29:02 Gateway     Heartbeat Started
+2017-09-07 22:29:02.475 -05:00 [Debug] 22:29:02 Gateway     Sent Heartbeat
+2017-09-07 22:29:02.487 -05:00 [Debug] 22:29:02 Gateway     Received Dispatch (READY)
+2017-09-07 22:29:02.570 -05:00 [Debug] 22:29:02 Gateway     GuildDownloader Started
+2017-09-07 22:29:02.578 -05:00 [Debug] 22:29:02 Gateway     Sending Status
+2017-09-07 22:29:02.595 -05:00 [Debug] 22:29:02 Gateway     Sent StatusUpdate
+2017-09-07 22:29:02.597 -05:00 [Information] 22:29:02 Gateway     Connected
+2017-09-07 22:29:02.597 -05:00 [Debug] 22:29:02 Gateway     Raising Event
+2017-09-07 22:29:02.923 -05:00 [Debug] 22:29:02 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 22:29:03.007 -05:00 [Debug] 22:29:03 Gateway     Received HeartbeatAck
+2017-09-07 22:29:03.027 -05:00 [Debug] 22:29:03 Gateway     Latency = 563 ms
+2017-09-07 22:29:03.028 -05:00 [Debug] 22:29:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:03.076 -05:00 [Debug] 22:29:03 Gateway     GuildDownloader Stopped
+2017-09-07 22:29:03.079 -05:00 [Information] 22:29:03 Gateway     Ready
+2017-09-07 22:29:03.197 -05:00 [Debug] 22:29:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:03.585 -05:00 [Debug] 22:29:03 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:04.657 -05:00 [Debug] 22:29:04 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:29:04.788 -05:00 [Debug] 22:29:04 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:06.590 -05:00 [Debug] 22:29:06 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:07.395 -05:00 [Debug] 22:29:07 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:08.161 -05:00 [Debug] 22:29:08 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:29:08.326 -05:00 [Debug] 22:29:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:09.075 -05:00 [Debug] 22:29:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:09.419 -05:00 [Debug] 22:29:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:09.769 -05:00 [Debug] 22:29:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:09.788 -05:00 [Debug] 22:29:09 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:10.377 -05:00 [Debug] 22:29:10 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:29:11.966 -05:00 [Debug] 22:29:11 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:29:13.441 -05:00 [Debug] 22:29:13 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:14.781 -05:00 [Debug] 22:29:14 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:15.635 -05:00 [Debug] 22:29:15 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:16.428 -05:00 [Debug] 22:29:16 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:29:16.928 -05:00 [Debug] 22:29:16 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:29:18.435 -05:00 [Debug] 22:29:18 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:19.068 -05:00 [Debug] 22:29:19 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:19.337 -05:00 [Debug] 22:29:19 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:29:20.417 -05:00 [Debug] 22:29:20 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:21.249 -05:00 [Debug] 22:29:21 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:22.676 -05:00 [Debug] 22:29:22 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:24.719 -05:00 [Debug] 22:29:24 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:24.765 -05:00 [Debug] 22:29:24 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:29:24.966 -05:00 [Debug] 22:29:24 Gateway     Received Dispatch (VOICE_STATE_UPDATE)
+2017-09-07 22:29:25.292 -05:00 [Debug] 22:29:25 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:26.603 -05:00 [Debug] 22:29:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:26.731 -05:00 [Debug] 22:29:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:26.972 -05:00 [Debug] 22:29:26 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:28.004 -05:00 [Debug] 22:29:28 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:28.247 -05:00 [Debug] 22:29:28 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:29.369 -05:00 [Debug] 22:29:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:29.380 -05:00 [Debug] 22:29:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:29.517 -05:00 [Debug] 22:29:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:29.739 -05:00 [Debug] 22:29:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:29.977 -05:00 [Debug] 22:29:29 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:32.236 -05:00 [Debug] 22:29:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:32.273 -05:00 [Debug] 22:29:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:34.860 -05:00 [Debug] 22:29:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:35.439 -05:00 [Debug] 22:29:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:37.678 -05:00 [Debug] 22:29:37 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:38.048 -05:00 [Debug] 22:29:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:39.247 -05:00 [Debug] 22:29:39 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:41.269 -05:00 [Debug] 22:29:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:42.054 -05:00 [Debug] 22:29:42 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:43.739 -05:00 [Debug] 22:29:43 Gateway     Sent Heartbeat
+2017-09-07 22:29:43.834 -05:00 [Debug] 22:29:43 Gateway     Received HeartbeatAck
+2017-09-07 22:29:43.834 -05:00 [Debug] 22:29:43 Gateway     Latency = 94 ms
+2017-09-07 22:29:44.222 -05:00 [Debug] 22:29:44 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:45.488 -05:00 [Debug] 22:29:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:46.703 -05:00 [Debug] 22:29:46 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:47.525 -05:00 [Debug] 22:29:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:47.888 -05:00 [Debug] 22:29:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:48.527 -05:00 [Debug] 22:29:48 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:49.581 -05:00 [Debug] 22:29:49 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:49.787 -05:00 [Debug] 22:29:49 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:50.185 -05:00 [Debug] 22:29:50 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:52.126 -05:00 [Debug] 22:29:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:52.398 -05:00 [Debug] 22:29:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:52.681 -05:00 [Debug] 22:29:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:52.736 -05:00 [Debug] 22:29:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:52.944 -05:00 [Debug] 22:29:52 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:53.423 -05:00 [Debug] 22:29:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:53.634 -05:00 [Debug] 22:29:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:54.026 -05:00 [Debug] 22:29:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:54.111 -05:00 [Debug] 22:29:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:54.813 -05:00 [Debug] 22:29:54 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:55.028 -05:00 [Debug] 22:29:55 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:57.617 -05:00 [Debug] 22:29:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:57.760 -05:00 [Debug] 22:29:57 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:29:58.356 -05:00 [Debug] 22:29:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:58.469 -05:00 [Debug] 22:29:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:59.487 -05:00 [Debug] 22:29:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:29:59.831 -05:00 [Debug] 22:29:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:00.693 -05:00 [Debug] 22:30:00 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:01.441 -05:00 [Debug] 22:30:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:01.447 -05:00 [Debug] 22:30:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:01.587 -05:00 [Debug] 22:30:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:01.842 -05:00 [Debug] 22:30:01 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:02.542 -05:00 [Debug] 22:30:02 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:30:02.548 -05:00 [Debug] 22:30:02 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:02.912 -05:00 [Debug] 22:30:02 Gateway     Received Dispatch (MESSAGE_UPDATE)
+2017-09-07 22:30:04.566 -05:00 [Debug] 22:30:04 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:05.491 -05:00 [Debug] 22:30:05 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:30:07.559 -05:00 [Debug] 22:30:07 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:30:07.779 -05:00 [Debug] 22:30:07 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:07.812 -05:00 [Debug] 22:30:07 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:30:08.205 -05:00 [Debug] 22:30:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:08.221 -05:00 [Debug] 22:30:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:08.392 -05:00 [Debug] 22:30:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:08.781 -05:00 [Debug] 22:30:08 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:10.353 -05:00 [Debug] 22:30:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:10.374 -05:00 [Debug] 22:30:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:10.785 -05:00 [Debug] 22:30:10 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:11.191 -05:00 [Debug] 22:30:11 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:30:11.531 -05:00 [Debug] 22:30:11 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:30:11.652 -05:00 [Debug] 22:30:11 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:44:54.978 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 22:44:55.153 -05:00 [Information] 22:44:55 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 22:44:55.817 -05:00 [Information] 22:44:55 Gateway     Connecting
+2017-09-07 22:44:55.827 -05:00 [Debug] 22:44:55 Gateway     Connecting ApiClient
+2017-09-07 22:44:56.507 -05:00 [Debug] 22:44:56 Gateway     Identifying
+2017-09-07 22:44:56.599 -05:00 [Debug] 22:44:56 Gateway     Sent Identify
+2017-09-07 22:44:56.759 -05:00 [Debug] 22:44:56 Gateway     Received Hello
+2017-09-07 22:44:56.780 -05:00 [Debug] 22:44:56 Gateway     Heartbeat Started
+2017-09-07 22:44:56.786 -05:00 [Debug] 22:44:56 Gateway     Sent Heartbeat
+2017-09-07 22:44:56.931 -05:00 [Debug] 22:44:56 Gateway     Received Dispatch (READY)
+2017-09-07 22:44:56.982 -05:00 [Debug] 22:44:56 Gateway     GuildDownloader Started
+2017-09-07 22:44:56.986 -05:00 [Debug] 22:44:56 Gateway     Sending Status
+2017-09-07 22:44:56.999 -05:00 [Debug] 22:44:56 Gateway     Sent StatusUpdate
+2017-09-07 22:44:56.999 -05:00 [Information] 22:44:56 Gateway     Connected
+2017-09-07 22:44:56.999 -05:00 [Debug] 22:44:56 Gateway     Raising Event
+2017-09-07 22:44:57.276 -05:00 [Debug] 22:44:57 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 22:44:57.322 -05:00 [Debug] 22:44:57 Gateway     Received HeartbeatAck
+2017-09-07 22:44:57.329 -05:00 [Debug] 22:44:57 Gateway     Latency = 546 ms
+2017-09-07 22:44:57.330 -05:00 [Debug] 22:44:57 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:44:57.483 -05:00 [Debug] 22:44:57 Gateway     GuildDownloader Stopped
+2017-09-07 22:44:57.485 -05:00 [Information] 22:44:57 Gateway     Ready
+2017-09-07 22:44:57.878 -05:00 [Debug] 22:44:57 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:44:58.507 -05:00 [Debug] 22:44:58 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:44:59.348 -05:00 [Debug] 22:44:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:44:59.532 -05:00 [Debug] 22:44:59 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:44:59.947 -05:00 [Debug] 22:44:59 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:00.125 -05:00 [Debug] 22:45:00 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:01.388 -05:00 [Debug] 22:45:01 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:03.957 -05:00 [Debug] 22:45:03 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:28.158 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 22:45:28.332 -05:00 [Information] 22:45:28 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 22:45:28.863 -05:00 [Information] 22:45:28 Gateway     Connecting
+2017-09-07 22:45:28.872 -05:00 [Debug] 22:45:28 Gateway     Connecting ApiClient
+2017-09-07 22:45:29.284 -05:00 [Debug] 22:45:29 Gateway     Identifying
+2017-09-07 22:45:29.348 -05:00 [Debug] 22:45:29 Gateway     Sent Identify
+2017-09-07 22:45:29.485 -05:00 [Debug] 22:45:29 Gateway     Received Hello
+2017-09-07 22:45:29.502 -05:00 [Debug] 22:45:29 Gateway     Heartbeat Started
+2017-09-07 22:45:29.508 -05:00 [Debug] 22:45:29 Gateway     Sent Heartbeat
+2017-09-07 22:45:29.520 -05:00 [Debug] 22:45:29 Gateway     Received Dispatch (READY)
+2017-09-07 22:45:29.571 -05:00 [Debug] 22:45:29 Gateway     GuildDownloader Started
+2017-09-07 22:45:29.575 -05:00 [Debug] 22:45:29 Gateway     Sending Status
+2017-09-07 22:45:29.589 -05:00 [Debug] 22:45:29 Gateway     Sent StatusUpdate
+2017-09-07 22:45:29.590 -05:00 [Information] 22:45:29 Gateway     Connected
+2017-09-07 22:45:29.590 -05:00 [Debug] 22:45:29 Gateway     Raising Event
+2017-09-07 22:45:29.938 -05:00 [Debug] 22:45:29 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 22:45:30.000 -05:00 [Debug] 22:45:30 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:30.013 -05:00 [Debug] 22:45:30 Gateway     Received HeartbeatAck
+2017-09-07 22:45:30.020 -05:00 [Debug] 22:45:30 Gateway     Latency = 516 ms
+2017-09-07 22:45:30.072 -05:00 [Debug] 22:45:30 Gateway     GuildDownloader Stopped
+2017-09-07 22:45:30.077 -05:00 [Information] 22:45:30 Gateway     Ready
+2017-09-07 22:45:30.135 -05:00 [Debug] 22:45:30 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:30.635 -05:00 [Debug] 22:45:30 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:32.359 -05:00 [Debug] 22:45:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:32.360 -05:00 [Debug] 22:45:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:32.458 -05:00 [Debug] 22:45:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:32.917 -05:00 [Debug] 22:45:32 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:32.948 -05:00 [Debug] 22:45:32 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:33.147 -05:00 [Debug] 22:45:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:33.647 -05:00 [Debug] 22:45:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:34.088 -05:00 [Debug] 22:45:34 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:35.668 -05:00 [Debug] 22:45:35 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:35.884 -05:00 [Debug] 22:45:35 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:36.626 -05:00 [Debug] 22:45:36 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:36.895 -05:00 [Debug] 22:45:36 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:39.790 -05:00 [Debug] 22:45:39 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:39.886 -05:00 [Debug] 22:45:39 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:40.567 -05:00 [Debug] 22:45:40 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:41.189 -05:00 [Debug] 22:45:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:41.812 -05:00 [Debug] 22:45:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:43.357 -05:00 [Debug] 22:45:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:43.453 -05:00 [Debug] 22:45:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:43.780 -05:00 [Debug] 22:45:43 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:44.233 -05:00 [Debug] 22:45:44 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:44.782 -05:00 [Debug] 22:45:44 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 22:45:45.711 -05:00 [Debug] 22:45:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:45.991 -05:00 [Debug] 22:45:45 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:47.249 -05:00 [Debug] 22:45:47 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:47.597 -05:00 [Debug] 22:45:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:47.637 -05:00 [Debug] 22:45:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:47.638 -05:00 [Debug] 22:45:47 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:47.694 -05:00 [Debug] 22:45:47 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:49.064 -05:00 [Debug] 22:45:49 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:49.205 -05:00 [Debug] 22:45:49 Gateway     Received Dispatch (MESSAGE_CREATE)
+2017-09-07 22:45:50.979 -05:00 [Debug] 22:45:50 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:51.122 -05:00 [Debug] 22:45:51 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:51.213 -05:00 [Debug] 22:45:51 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:53.273 -05:00 [Debug] 22:45:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:53.286 -05:00 [Debug] 22:45:53 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:55.541 -05:00 [Debug] 22:45:55 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 22:45:55.808 -05:00 [Debug] 22:45:55 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:31.845 -05:00 [Debug] ["FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule", "FluentScheduler.Schedule"]
+2017-09-07 23:48:32.010 -05:00 [Information] 23:48:32 Discord     Discord.Net v1.0.1 (API v6)
+2017-09-07 23:48:32.619 -05:00 [Information] 23:48:32 Gateway     Connecting
+2017-09-07 23:48:32.627 -05:00 [Debug] 23:48:32 Gateway     Connecting ApiClient
+2017-09-07 23:48:33.027 -05:00 [Debug] 23:48:33 Gateway     Identifying
+2017-09-07 23:48:33.099 -05:00 [Debug] 23:48:33 Gateway     Sent Identify
+2017-09-07 23:48:33.240 -05:00 [Debug] 23:48:33 Gateway     Received Hello
+2017-09-07 23:48:33.255 -05:00 [Debug] 23:48:33 Gateway     Heartbeat Started
+2017-09-07 23:48:33.262 -05:00 [Debug] 23:48:33 Gateway     Sent Heartbeat
+2017-09-07 23:48:33.310 -05:00 [Debug] 23:48:33 Gateway     Received Dispatch (READY)
+2017-09-07 23:48:33.370 -05:00 [Debug] 23:48:33 Gateway     GuildDownloader Started
+2017-09-07 23:48:33.375 -05:00 [Debug] 23:48:33 Gateway     Sending Status
+2017-09-07 23:48:33.386 -05:00 [Debug] 23:48:33 Gateway     Sent StatusUpdate
+2017-09-07 23:48:33.387 -05:00 [Information] 23:48:33 Gateway     Connected
+2017-09-07 23:48:33.387 -05:00 [Debug] 23:48:33 Gateway     Raising Event
+2017-09-07 23:48:33.704 -05:00 [Debug] 23:48:33 Gateway     Received Dispatch (GUILD_AVAILABLE)
+2017-09-07 23:48:33.761 -05:00 [Debug] 23:48:33 Gateway     Received HeartbeatAck
+2017-09-07 23:48:33.773 -05:00 [Debug] 23:48:33 Gateway     Latency = 500 ms
+2017-09-07 23:48:33.871 -05:00 [Debug] 23:48:33 Gateway     GuildDownloader Stopped
+2017-09-07 23:48:33.875 -05:00 [Information] 23:48:33 Gateway     Ready
+2017-09-07 23:48:33.971 -05:00 [Debug] 23:48:33 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:34.606 -05:00 [Debug] 23:48:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:34.618 -05:00 [Debug] 23:48:34 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:36.172 -05:00 [Debug] 23:48:36 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:38.137 -05:00 [Debug] 23:48:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:38.591 -05:00 [Debug] 23:48:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:38.735 -05:00 [Debug] 23:48:38 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:39.085 -05:00 [Debug] 23:48:39 Gateway     Received Dispatch (TYPING_START)
+2017-09-07 23:48:39.814 -05:00 [Debug] 23:48:39 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:40.049 -05:00 [Debug] 23:48:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:40.239 -05:00 [Debug] 23:48:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:40.464 -05:00 [Debug] 23:48:40 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:41.001 -05:00 [Debug] 23:48:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:41.134 -05:00 [Debug] 23:48:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:41.989 -05:00 [Debug] 23:48:41 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:43.678 -05:00 [Debug] 23:48:43 Gateway     Received Dispatch (PRESENCE_UPDATE)
+2017-09-07 23:48:43.984 -05:00 [Debug] 23:48:43 Gateway     Received Dispatch (MESSAGE_CREATE)
