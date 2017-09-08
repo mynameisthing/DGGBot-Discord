@@ -38,7 +38,7 @@ namespace DGGBot.Services.Youtube
 
         public void Execute()
         {
-            var videos = _youtubeService.GetYouTubeVideoListAsync(_youTubeToCheck.ChannelId, "").GetAwaiter()
+            var videos = _youtubeService.GetYouTubeVideoListAsync(_youTubeToCheck.ChannelId).GetAwaiter()
                 .GetResult();
             if (videos.Items is null)
                 return;

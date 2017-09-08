@@ -9,6 +9,7 @@ namespace DGGBot.Modules
     {
         [Command("justask")]
         [Alias("ask")]
+        [CompSciChannelOnly]
         [ChannelThrottle]
         public async Task JustAsk([Remainder] string unused = null)
         {
