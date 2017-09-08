@@ -28,7 +28,7 @@ namespace DGGBot.Services.Youtube
         public async Task<YouTubeVideoList> GetYouTubeVideoListAsync(string videoId)
         {
             var response = await _httpClient
-                .GetAsync($"videos?part=snippet&id={videoId}&maxResults=10&key={_config["youtubeKey"]}");
+                .GetAsync($"videos?part=snippet&id={videoId}&maxResults=10&key={_config["YoutubeKey"]}");
             var responseString = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<YouTubeVideoList>(responseString, GetJsonSettings());
         }
@@ -37,7 +37,7 @@ namespace DGGBot.Services.Youtube
         {
             var response = await _httpClient
                 .GetAsync(
-                    $"search?part=snippet&&channelId={channelId}&maxResults=10&order=date&type=video&key={_config["youtubeKey"]}");
+                    $"search?part=snippet&&channelId={channelId}&maxResults=10&order=date&type=video&key={_config["YoutubeKey"]}");
             var responseString = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<YouTubeVideoList>(responseString, GetJsonSettings());
         }

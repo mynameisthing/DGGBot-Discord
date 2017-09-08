@@ -45,7 +45,7 @@ namespace SenpaiBot
 
         public async Task Start()
         {
-            var token = _config["discordToken"];
+            var token = _config["DiscordToken"];
             await InstallCommands();
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
@@ -70,15 +70,20 @@ namespace SenpaiBot
             if (!(messageParam is SocketUserMessage message)) return;
 
             var argPos = 0;
-        
 
-            if (!(message.HasCharPrefix('!', ref argPos) ||
-                  message.HasMentionPrefix(_client.CurrentUser, ref argPos))) return;
+
+            //if (!(message.HasCharPrefix('!', ref argPos) ||
+            //      message.HasMentionPrefix(_client.CurrentUser, ref argPos))) return;
+            if (!(message.HasStringPrefix("! ", ref argPos)
+                  || message.HasCharPrefix('!', ref argPos)
+                  || message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
+                return;
 
             var context = new CommandContext(_client, message);
 
             var result = await _commands.ExecuteAsync(context, argPos, _services);
         }
+        //TRUMPED
         private static void CreateJobs(IServiceProvider serviceProvider)
         {
             var registry = new Registry();

@@ -28,7 +28,7 @@ namespace DGGBot.Services.Twitch
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/vnd.twitchtv.v5+json"));
-            _httpClient.DefaultRequestHeaders.Add("Client-ID", _config["twitchClientId"]);
+            _httpClient.DefaultRequestHeaders.Add("Client-ID", _config["TwitchClientId"]);
         }
 
         public async Task<TwitchStream> GetTwitchStreamAsync(long userId)
