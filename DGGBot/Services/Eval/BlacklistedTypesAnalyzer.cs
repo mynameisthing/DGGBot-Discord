@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -40,7 +41,7 @@ namespace DGGBot.Services.Eval
                 var symbol = node is IdentifierNameSyntax
                     ? model.GetSymbolInfo(node).Symbol
                     : model.GetTypeInfo(node).Type;
-
+                
                 if (symbol is INamedTypeSymbol namedSymbol &&
                     namedSymbol.Name == typeof(Environment).Name)
                     context.ReportDiagnostic(Diagnostic.Create(Rule, node.GetLocation()));

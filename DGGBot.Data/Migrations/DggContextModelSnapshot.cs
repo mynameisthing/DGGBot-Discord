@@ -25,7 +25,7 @@ namespace DGGBot.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<ulong>("DiscordChannelId")
-                        .HasColumnName("siscord_channel_id");
+                        .HasColumnName("discord_channel_id");
 
                     b.Property<string>("ModuleName")
                         .IsRequired()
@@ -34,6 +34,21 @@ namespace DGGBot.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("throttle");
+                });
+
+            modelBuilder.Entity("DGGBot.Data.Enitities.TrustedUser", b =>
+                {
+                    b.Property<ulong>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("user_id");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnName("username");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("trusted_user");
                 });
 
             modelBuilder.Entity("DGGBot.Data.Enitities.Twitch.StreamGame", b =>
@@ -49,7 +64,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 7, 23, 5, 6, 462, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 9, 8, 14, 17, 6, 293, DateTimeKind.Utc));
 
                     b.Property<DateTime?>("StopTime")
                         .HasColumnName("stop_time");
@@ -116,7 +131,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 7, 23, 5, 6, 460, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 9, 8, 14, 17, 6, 291, DateTimeKind.Utc));
 
                     b.Property<long>("UserId")
                         .HasColumnName("user_id");

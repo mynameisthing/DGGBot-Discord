@@ -20,6 +20,7 @@ namespace DGGBot.Data
         public DbSet<StreamGame> StreamGames { get; set; }
         public DbSet<StreamNullResponse> StreamNullResponses { get; set; }
         public DbSet<Throttle> Throttles { get; set; }
+        public DbSet<TrustedUser> TrustedUsers { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -150,8 +151,15 @@ namespace DGGBot.Data
                 e.ToTable("throttle");
                 e.HasKey(g => g.Id);
 
-                e.Property(s => s.DiscordChannelId).IsRequired().HasColumnName("siscord_channel_id");
+                e.Property(s => s.DiscordChannelId).IsRequired().HasColumnName("discord_channel_id");
                 e.Property(s => s.ModuleName).IsRequired().HasColumnName("module_name");
+            });    modelBuilder.Entity<TrustedUser>(e =>
+            {
+                e.ToTable("trusted_user");
+                e.HasKey(g => g.UserId);
+
+                e.Property(s => s.UserId).IsRequired().HasColumnName("user_id");
+                e.Property(s => s.Username).IsRequired().HasColumnName("username");
             });
         }
     }

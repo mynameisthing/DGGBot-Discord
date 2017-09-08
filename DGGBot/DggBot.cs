@@ -83,57 +83,67 @@ namespace SenpaiBot
         //TRUMPED
         private static void CreateJobs(IServiceProvider serviceProvider)
         {
-            var registry = new Registry();
-            using (var context = new DggContext())
+            try
             {
-                context.Database.Migrate();
-                var throttles = context.Throttles;
-
-                context.Throttles.RemoveRange(throttles);
-                context.SaveChanges();
-
-                var twitters = context.TwittersToCheck;
-                foreach (var twitter in twitters)
-                    registry.Schedule(() => new TwitterJob(
-                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                            twitter,
-                            serviceProvider.GetRequiredService<TwitterService>()))
-                        .ToRunEvery(twitter.Frequency)
-                        .Seconds();
-
-                var youtubes = context.YouTubesToCheck;
-                foreach (var youTube in youtubes)
-                    registry.Schedule(() => new YoutubeJob(
-                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                            serviceProvider.GetRequiredService<YoutubeService>(),
-                            youTube,
-                            new HttpClient(),
-                            serviceProvider.GetRequiredService<IConfiguration>())).WithName(youTube.ChannelId)
-                        .ToRunEvery(youTube.Frequency)
-                        .Seconds();
-
-                var streamsToCheck = context.StreamsToCheck.ToList();
-                foreach (var stream in streamsToCheck)
-                    registry.Schedule(() => new TwitchJob(
-                        serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                        serviceProvider.GetRequiredService<TwitchService>(),
-                        stream
-                    )).ToRunEvery(30).Seconds();
-
-                var streamRecords = context.StreamRecords;
-                foreach (var stream in streamRecords)
+                var registry = new Registry();
+                using (var context = new DggContext())
                 {
-                    var thisStreamToCheck = streamsToCheck.Find(s => s.UserId == stream.UserId);
-                    registry.Schedule(() => new TwitchUpdateJob(
-                        serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                        serviceProvider.GetRequiredService<TwitchService>(),
-                        thisStreamToCheck
-                    )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
+                    context.Database.Migrate();
+                    var throttles = context.Throttles;
+
+                    context.Throttles.RemoveRange(throttles);
+                    context.SaveChanges();
+
+                    var twitters = context.TwittersToCheck;
+                    foreach (var twitter in twitters)
+                        registry.Schedule(() => new TwitterJob(
+                                serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                                twitter,
+                                serviceProvider.GetRequiredService<TwitterService>()))
+                            .ToRunEvery(twitter.Frequency)
+                            .Seconds();
+
+                    var youtubes = context.YouTubesToCheck;
+                    foreach (var youTube in youtubes)
+                        registry.Schedule(() => new YoutubeJob(
+                                serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                                serviceProvider.GetRequiredService<YoutubeService>(),
+                                youTube,
+                                new HttpClient(),
+                                serviceProvider.GetRequiredService<IConfiguration>())).WithName(youTube.ChannelId)
+                            .ToRunEvery(youTube.Frequency)
+                            .Seconds();
+
+                    var streamsToCheck = context.StreamsToCheck.ToList();
+                    foreach (var stream in streamsToCheck)
+                        registry.Schedule(() => new TwitchJob(
+                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                            serviceProvider.GetRequiredService<TwitchService>(),
+                            stream
+                        )).ToRunEvery(30).Seconds();
+
+                    var streamRecords = context.StreamRecords;
+                    foreach (var stream in streamRecords)
+                    {
+                        var thisStreamToCheck = streamsToCheck.Find(s => s.UserId == stream.UserId);
+                        registry.Schedule(() => new TwitchUpdateJob(
+                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                            serviceProvider.GetRequiredService<TwitchService>(),
+                            thisStreamToCheck
+                        )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
+                    }
+                    JobManager.Initialize(registry);
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+          
 
 
-            JobManager.Initialize(registry);
+           
         }
 
         private static IServiceProvider BuildDependencies()
