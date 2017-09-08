@@ -4,6 +4,7 @@ using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord.Commands;
 using Microsoft.Extensions.Configuration;
@@ -14,7 +15,7 @@ namespace DGGBot.Modules
     [Group("cat")]
     [Alias("<:ASLAN:271856531505545236>", "<:DJAslan:271856531505545216>", "aslan")]
     [ChannelThrottle]
-    public class CatModule : ModuleBase
+    public class CatModule : ModuleBase<DggCommandContext>
     {
         private readonly HttpClient _client;
         private readonly IConfiguration _config;

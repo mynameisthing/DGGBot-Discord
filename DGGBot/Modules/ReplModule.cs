@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DGGBot.Services.Eval;
 using DGGBot.Services.Eval.ResultModels;
+using DGGBot.Utilities;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -22,7 +23,7 @@ namespace DGGBot.Modules
     }
 
     [RequireOwner]
-    public class ReplModule : ModuleBase
+    public class ReplModule : ModuleBase<DggCommandContext>
     {
         [Command("exec", RunMode = RunMode.Async)]
         [Alias("eval")]

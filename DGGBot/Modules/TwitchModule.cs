@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Data.Enitities.Twitch;
 using DGGBot.Extensions;
+using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord.Commands;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +13,7 @@ namespace DGGBot.Modules
     [Group("live")]
     [Alias("twitch")]
     [ChannelThrottle]
-    public class TwitchModule : ModuleBase
+    public class TwitchModule : ModuleBase<DggCommandContext>
     {
         [Command]
         public async Task GetLive([Remainder] string unused = null)

@@ -1,11 +1,12 @@
 ﻿using System.Threading.Tasks;
+using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord.Commands;
 
 namespace DGGBot.Modules
 {
     [CompSciChannelOnly]
-    public class AskModule : ModuleBase
+    public class AskModule : ModuleBase<DggCommandContext>
     {
         [Command("justask")]
         [Alias("ask")]

@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
+using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord.Commands;
 using Newtonsoft.Json;
@@ -10,7 +11,7 @@ namespace DGGBot.Modules
     [Group("ferret")]
     [Alias("ferretlol", "<:FerretLOL:271856531857735680>")]
     [ChannelThrottle]
-    public class FerretModule : ModuleBase
+    public class FerretModule : ModuleBase<DggCommandContext>
     {
         private readonly HttpClient _client;
 

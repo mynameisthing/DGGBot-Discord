@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Data.Enitities.Twitter;
+using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
@@ -9,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DGGBot.Modules
 {
-    public class TwitterModule : ModuleBase
+    public class TwitterModule : ModuleBase<DggCommandContext>
     {
         [Command("twitter")]
         [ChannelThrottle]
@@ -46,7 +47,7 @@ namespace DGGBot.Modules
                 IconUrl = tweet.ProfileImageUrl
             };
 
-            var createdAt = TimeZoneInfo.ConvertTime(tweet.CreatedAt, TimeZoneInfo.Local);
+            var createdAt = TimeZoneInfo.ConvertTime(tweet.CreatedAt, Helpers.CentralTimeZone());
 
             var footer = new EmbedFooterBuilder
             {

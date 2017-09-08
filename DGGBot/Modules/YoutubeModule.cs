@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Data.Enitities.Youtube;
+using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
@@ -12,7 +13,7 @@ namespace DGGBot.Modules
     [Group("youtube")]
     [Alias("yt")]
     [ChannelThrottle]
-    public class YoutubeModule : ModuleBase
+    public class YoutubeModule : ModuleBase<DggCommandContext>
     {
         [Command]
         public async Task GetYouTube([Remainder] string unused = null)
@@ -47,7 +48,7 @@ namespace DGGBot.Modules
                 IconUrl = record.AuthorIconUrl
             };
 
-            var publishedAt = TimeZoneInfo.ConvertTime(record.PublishedAt, TimeZoneInfo.Local);
+            var publishedAt = TimeZoneInfo.ConvertTime(record.PublishedAt,Helpers.CentralTimeZone());
 
             var footer = new EmbedFooterBuilder
             {
