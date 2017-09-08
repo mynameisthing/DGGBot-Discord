@@ -6,7 +6,10 @@ namespace DGGBot.Services.Eval.ResultModels
 {
     public class PropertiesObject
     {
-        public PropertiesObject() { }
+        public PropertiesObject()
+        {
+        }
+
         public PropertiesObject(MetadataReferenceProperties properties)
         {
             Aliases = properties.Aliases.ToList();

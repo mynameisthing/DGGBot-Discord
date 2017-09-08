@@ -1,41 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
-using DGGBot.Data;
-using DGGBot.Services;
 using DGGBot.Utilities.Attributes;
 using Discord.Commands;
-using FluentScheduler;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
 namespace DGGBot.Modules
 {
     [Group("cat")]
-    [Alias("<:ASLAN:271856531505545236>", "<:DJAslan:271856531505545216>","aslan")]
-    
+    [Alias("<:ASLAN:271856531505545236>", "<:DJAslan:271856531505545216>", "aslan")]
     [ChannelThrottle]
     public class CatModule : ModuleBase
     {
-        readonly HttpClient _client;
+        private readonly HttpClient _client;
         private readonly IConfiguration _config;
 
-        readonly Random _rng = new Random();
+        private readonly Random _rng = new Random();
 
-        public CatModule(HttpClient client,IConfiguration config)
+        public CatModule(HttpClient client, IConfiguration config)
         {
             _client = client;
             _config = config;
         }
 
         [Command(RunMode = RunMode.Async)]
-        public async Task Cat([Remainder]string unused = null)
+        public async Task Cat([Remainder] string unused = null)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.imgur.com/3/album/ohOjC/images");
             request.Headers.Authorization = new AuthenticationHeaderValue("Client-ID", _config["imgurClientId"]);
@@ -62,16 +55,14 @@ namespace DGGBot.Modules
                 stream.Seek(0, SeekOrigin.Begin);
                 await Context.Channel.SendFileAsync(stream, Path.GetFileName(imgUri.AbsolutePath));
             }
-
-        
         }
 
-        class ImgurAlbum
+        private class ImgurAlbum
         {
             public List<ImgurImage> Data { get; set; }
         }
 
-        class ImgurImage
+        private class ImgurImage
         {
             public string Id { get; set; }
 

@@ -4,7 +4,10 @@ namespace DGGBot.Services.Eval.ResultModels
 {
     public class MetadataReferencesObject
     {
-        public MetadataReferencesObject() { }
+        public MetadataReferencesObject()
+        {
+        }
+
         public MetadataReferencesObject(MetadataReference metadataReference)
         {
             Display = metadataReference.Display;

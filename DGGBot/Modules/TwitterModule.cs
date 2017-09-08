@@ -11,7 +11,6 @@ namespace DGGBot.Modules
 {
     public class TwitterModule : ModuleBase
     {
-        
         [Command("twitter")]
         [ChannelThrottle]
         public async Task GetTweet()

@@ -11,9 +11,9 @@ namespace DGGBot.Services.Eval
     public class BlacklistedTypesAnalyzer : DiagnosticAnalyzer
     {
         public const string DiagnosticId = "MOD0001";
+        private const string Category = "Discord";
         private static readonly LocalizableString Title = "Prohibited API";
         private static readonly LocalizableString MessageFormat = "Usage of this API is prohibited";
-        private const string Category = "Discord";
 
         internal static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Error, true);
@@ -43,9 +43,7 @@ namespace DGGBot.Services.Eval
 
                 if (symbol is INamedTypeSymbol namedSymbol &&
                     namedSymbol.Name == typeof(Environment).Name)
-                {
                     context.ReportDiagnostic(Diagnostic.Create(Rule, node.GetLocation()));
-                }
             }
         }
     }

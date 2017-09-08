@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Data.Enitities.Twitch;
@@ -18,9 +15,8 @@ namespace DGGBot.Modules
     public class TwitchModule : ModuleBase
     {
         [Command]
-        public async Task GetLive([Remainder]string unused = null)
+        public async Task GetLive([Remainder] string unused = null)
         {
-
             StreamLastOnline lastOnline;
             StreamRecord streamRecord;
 
@@ -33,17 +29,19 @@ namespace DGGBot.Modules
             string msg;
 
             if (lastOnline == null && streamRecord == null)
+            {
                 msg = $"Destiny is offline. " +
-                    "I'll have more info in the future, after the next time the stream goes live. " +
-                    "Sorry!";
+                      "I'll have more info in the future, after the next time the stream goes live. " +
+                      "Sorry!";
+            }
             else if (lastOnline == null && streamRecord != null)
             {
                 streamRecord.StartTime = DateTime.SpecifyKind(streamRecord.StartTime, DateTimeKind.Utc);
 
                 var duration = DateTime.UtcNow - streamRecord.StartTime;
                 msg = $"Destiny is live! <https://www.destiny.gg/bigscreen>\n" +
-                    $"Currently playing {streamRecord.CurrentGame}\n" +
-                    $"Live for {duration.ToFriendlyString()}";
+                      $"Currently playing {streamRecord.CurrentGame}\n" +
+                      $"Live for {duration.ToFriendlyString()}";
             }
             else
             {
@@ -51,13 +49,10 @@ namespace DGGBot.Modules
 
                 var duration = DateTime.UtcNow - lastOnline.LastOnlineAt;
                 msg = $"Destiny is offline.\n" +
-                    $"Last online {duration.ToFriendlyString()} ago, was playing {lastOnline.LastGame}.";
+                      $"Last online {duration.ToFriendlyString()} ago, was playing {lastOnline.LastGame}.";
             }
 
             await ReplyAsync(msg);
-
-           
         }
-
     }
 }

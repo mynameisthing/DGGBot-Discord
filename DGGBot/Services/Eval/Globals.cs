@@ -13,5 +13,4 @@ namespace DGGBot.Services.Eval
             Environment.Exit(0);
         }
     }
-
 }

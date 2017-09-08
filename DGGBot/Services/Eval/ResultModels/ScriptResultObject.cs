@@ -7,8 +7,19 @@ namespace DGGBot.Services.Eval.ResultModels
 {
     public class ScriptResultObject
     {
-        public ScriptResultObject() { }
-        public ScriptResultObject(ScriptState<object> state) => FromState(state);
+        public ScriptResultObject()
+        {
+        }
+
+        public ScriptResultObject(ScriptState<object> state)
+        {
+            FromState(state);
+        }
+
+        public Exception Exception { get; set; }
+        public object ReturnValue { get; set; }
+        public List<VariableObject> Variables { get; set; } = new List<VariableObject>();
+        public ScriptObject Script { get; set; }
 
         public static ScriptResultObject FromState(ScriptState<object> state)
         {
@@ -22,10 +33,5 @@ namespace DGGBot.Services.Eval.ResultModels
             };
             return result;
         }
-
-       public Exception Exception { get; set; }
-       public object ReturnValue { get; set; }
-       public List<VariableObject> Variables { get; set; } = new List<VariableObject>();
-       public ScriptObject Script { get; set; }
     }
 }

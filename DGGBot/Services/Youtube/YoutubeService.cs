@@ -21,7 +21,7 @@ namespace DGGBot.Services.Youtube
             _client = client;
             _config = config;
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri("https://www.googleapis.com/youtube/v3/");
+            _httpClient.BaseAddress = new Uri(_url);
             _httpClient.Timeout = new TimeSpan(0, 0, 8);
         }
 

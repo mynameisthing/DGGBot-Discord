@@ -5,7 +5,10 @@ namespace DGGBot.Services.Eval.ResultModels
 {
     public class ScriptObject
     {
-        public ScriptObject() { }
+        public ScriptObject()
+        {
+        }
+
         public ScriptObject(Script script)
         {
             Code = script.Code;

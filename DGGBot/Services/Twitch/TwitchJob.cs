@@ -78,10 +78,9 @@ namespace DGGBot.Services.Twitch
                 if (streamToCheck.EmbedColor != 0)
                 {
                     Console.WriteLine("add");
-                   
+
                     JobManager.AddJob(new TwitchUpdateJob(_client, _twitchService, streamToCheck),
                         s => s.WithName(stream.Id.ToString()).ToRunEvery(1).Minutes());
-              
                 }
 
                 return;
@@ -97,7 +96,7 @@ namespace DGGBot.Services.Twitch
                     if (responses.Any(r => r.UserId == existingRecord.UserId))
                     {
                         response = responses.First(r => r.UserId == existingRecord.UserId);
-                        Console.WriteLine($"{response.NullResponseDate} + { DateTimeOffset.UtcNow.AddMinutes(-2)}");
+                        Console.WriteLine($"{response.NullResponseDate} + {DateTimeOffset.UtcNow.AddMinutes(-2)}");
                         if (response.NullResponseDate > DateTimeOffset.UtcNow.AddMinutes(-2))
                             return;
                     }
@@ -127,7 +126,7 @@ namespace DGGBot.Services.Twitch
                         channel.GetMessageAsync((ulong) existingRecord.DiscordMessageId).GetAwaiter().GetResult() as
                             RestUserMessage;
 
-                   msg.DeleteAsync().GetAwaiter().GetResult();
+                    msg.DeleteAsync().GetAwaiter().GetResult();
                 }
                 else if (!streamToCheck.DeleteDiscordMessage && streamToCheck.EmbedColor != 0 &&
                          existingRecord.DiscordMessageId != 0)
@@ -142,10 +141,7 @@ namespace DGGBot.Services.Twitch
                         channel.GetMessageAsync((ulong) existingRecord.DiscordMessageId).GetAwaiter().GetResult() as
                             RestUserMessage;
                     if (!(msg is null))
-                    {
                         msg.UnpinAsync().GetAwaiter().GetResult();
-                    }
-                 
                 }
 
                 using (var db = new DggContext())
@@ -166,18 +162,13 @@ namespace DGGBot.Services.Twitch
                     var updateJob =
                         JobManager.AllSchedules.FirstOrDefault(u => u.Name == existingRecord.StreamId.ToString());
                     if (updateJob == null)
-                    {
                         return;
-
-                    }
                     Console.WriteLine("remove jhob");
                     JobManager.RemoveJob(updateJob.Name);
 
                     db.StreamRecords.Remove(existingRecord);
                     Console.WriteLine($"Records: {db.SaveChanges()}");
-                    
                 }
-             
             }
         }
 

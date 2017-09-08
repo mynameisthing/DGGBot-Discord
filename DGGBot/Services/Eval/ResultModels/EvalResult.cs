@@ -45,24 +45,6 @@ namespace DGGBot.Services.Eval.ResultModels
             ExceptionType = state.Exception?.GetType().Name;
         }
 
-        public static EvalResult CreateErrorResult(string code, string consoleOut, TimeSpan compileTime, ImmutableArray<Diagnostic> compileErrors)
-        {
-            var ex = new CompilationErrorException(string.Join("\n", compileErrors.Select(a => a.GetMessage())), compileErrors);
-            var errorResult = new EvalResult
-            {
-                ScriptResult = null,
-                Code = code,
-                CompileTime = compileTime,
-                ConsoleOut = consoleOut,
-                Exception = ex.Message,
-                ExceptionType = ex.GetType().Name,
-                ExecutionTime = TimeSpan.FromMilliseconds(0),
-                ReturnValue = null,
-                ReturnTypeName = null
-            };
-            return errorResult;
-        }
-
         public object ReturnValue { get; set; }
 
         public string ReturnTypeName { get; set; }
@@ -81,5 +63,24 @@ namespace DGGBot.Services.Eval.ResultModels
 
         public ScriptResultObject ScriptResult { get; set; }
 
+        public static EvalResult CreateErrorResult(string code, string consoleOut, TimeSpan compileTime,
+            ImmutableArray<Diagnostic> compileErrors)
+        {
+            var ex = new CompilationErrorException(string.Join("\n", compileErrors.Select(a => a.GetMessage())),
+                compileErrors);
+            var errorResult = new EvalResult
+            {
+                ScriptResult = null,
+                Code = code,
+                CompileTime = compileTime,
+                ConsoleOut = consoleOut,
+                Exception = ex.Message,
+                ExceptionType = ex.GetType().Name,
+                ExecutionTime = TimeSpan.FromMilliseconds(0),
+                ReturnValue = null,
+                ReturnTypeName = null
+            };
+            return errorResult;
+        }
     }
 }

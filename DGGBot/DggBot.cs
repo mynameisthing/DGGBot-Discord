@@ -23,8 +23,8 @@ namespace SenpaiBot
     {
         private readonly DiscordSocketClient _client;
         private readonly CommandService _commands;
-        private readonly IServiceProvider _services;
         private readonly IConfiguration _config;
+        private readonly IServiceProvider _services;
 
         public DggBot()
         {
@@ -39,8 +39,6 @@ namespace SenpaiBot
             _commands = _services.GetRequiredService<CommandService>();
             _config = _services.GetRequiredService<IConfiguration>();
             CreateJobs(_services);
-            
-            
         }
 
         public async Task Start()
@@ -50,15 +48,14 @@ namespace SenpaiBot
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
 
-            
 
             await Task.Delay(-1);
         }
 
         private async Task InstallCommands()
         {
-
-            JobManager.JobException += (info) => Log.Debug("An error just happened with a scheduled job: " + info.Exception);
+            JobManager.JobException +=
+                info => Log.Debug("An error just happened with a scheduled job: " + info.Exception);
             _client.Log += HandleLog;
             _commands.Log += HandleLog;
             _client.MessageReceived += HandleCommand;
@@ -79,74 +76,66 @@ namespace SenpaiBot
                   || message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
                 return;
 
+
             var context = new CommandContext(_client, message);
 
             var result = await _commands.ExecuteAsync(context, argPos, _services);
         }
+
         //TRUMPED
         private static void CreateJobs(IServiceProvider serviceProvider)
         {
             var registry = new Registry();
-            try
+            using (var context = new DggContext())
             {
-                using (var context = new DggContext())
+                context.Database.Migrate();
+                var throttles = context.Throttles;
+
+                context.Throttles.RemoveRange(throttles);
+                context.SaveChanges();
+
+                var twitters = context.TwittersToCheck;
+                foreach (var twitter in twitters)
+                    registry.Schedule(() => new TwitterJob(
+                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                            twitter,
+                            serviceProvider.GetRequiredService<TwitterService>()))
+                        .ToRunEvery(twitter.Frequency)
+                        .Seconds();
+
+                var youtubes = context.YouTubesToCheck;
+                foreach (var youTube in youtubes)
+                    registry.Schedule(() => new YoutubeJob(
+                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                            serviceProvider.GetRequiredService<YoutubeService>(),
+                            youTube,
+                            new HttpClient(),
+                            serviceProvider.GetRequiredService<IConfiguration>())).WithName(youTube.ChannelId)
+                        .ToRunEvery(youTube.Frequency)
+                        .Seconds();
+
+                var streamsToCheck = context.StreamsToCheck.ToList();
+                foreach (var stream in streamsToCheck)
+                    registry.Schedule(() => new TwitchJob(
+                        serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                        serviceProvider.GetRequiredService<TwitchService>(),
+                        stream
+                    )).ToRunEvery(30).Seconds();
+
+                var streamRecords = context.StreamRecords;
+                foreach (var stream in streamRecords)
                 {
-                    context.Database.Migrate();
-                    var throttles = context.Throttles;
-                    
-                    context.Throttles.RemoveRange(throttles);
-                    context.SaveChanges();
-                    
-                    var twitters = context.TwittersToCheck;
-                    foreach (var twitter in twitters)
-                        registry.Schedule(() => new TwitterJob(
-                                serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                                twitter,
-                                serviceProvider.GetRequiredService<TwitterService>()))
-                            .ToRunEvery(twitter.Frequency)
-                            .Seconds();
-
-                    var youtubes = context.YouTubesToCheck;
-                    foreach (var youTube in youtubes)
-                        registry.Schedule(() => new YoutubeJob(
-                                serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                                serviceProvider.GetRequiredService<YoutubeService>(),
-                                youTube,
-                                new HttpClient(),
-                                serviceProvider.GetRequiredService<IConfiguration>())).WithName(youTube.ChannelId)
-                            .ToRunEvery(youTube.Frequency)
-                            .Seconds();
-
-                    var streamsToCheck = context.StreamsToCheck.ToList();
-                    foreach (var stream in streamsToCheck)
-                        registry.Schedule(() => new TwitchJob(
-                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                            serviceProvider.GetRequiredService<TwitchService>(),
-                            stream
-                        )).ToRunEvery(30).Seconds();
-
-                    var streamRecords = context.StreamRecords;
-                    foreach (var stream in streamRecords)
-                    {
-                        var thisStreamToCheck = streamsToCheck.Find(s => s.UserId == stream.UserId);
-                        registry.Schedule(() => new TwitchUpdateJob(
-                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                            serviceProvider.GetRequiredService<TwitchService>(),
-                            thisStreamToCheck
-                        )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
-                    }
+                    var thisStreamToCheck = streamsToCheck.Find(s => s.UserId == stream.UserId);
+                    registry.Schedule(() => new TwitchUpdateJob(
+                        serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                        serviceProvider.GetRequiredService<TwitchService>(),
+                        thisStreamToCheck
+                    )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
                 }
+            }
 
 
-                JobManager.Initialize(registry);
-                var sche = JobManager.AllSchedules.ToList();
-                Log.Debug("{schedule}",sche);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            JobManager.Initialize(registry);
         }
 
         private static IServiceProvider BuildDependencies()
@@ -155,8 +144,8 @@ namespace SenpaiBot
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("config.json")
                 .Build();
-            
-            var discordConfig = new DiscordSocketConfig()
+
+            var discordConfig = new DiscordSocketConfig
             {
                 LogLevel = LogSeverity.Debug
             };
@@ -168,11 +157,12 @@ namespace SenpaiBot
             services.AddSingleton(httpclient);
             services.AddSingleton(new CommandService());
             services.AddSingleton(new TwitterService(config));
-            services.AddSingleton(new YoutubeService(client, config,new HttpClient()));
+            services.AddSingleton(new YoutubeService(client, config, new HttpClient()));
             services.AddSingleton(new TwitchService(client, config, new HttpClient()));
 
             return services.BuildServiceProvider();
         }
+
         private Task HandleLog(LogMessage message)
         {
             switch (message.Severity)

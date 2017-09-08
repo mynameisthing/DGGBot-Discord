@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Discord.Commands;
 
@@ -13,7 +10,6 @@ namespace DGGBot.Utilities.Attributes
             CommandInfo command,
             IServiceProvider services)
         {
-            
             //353286877866098700
             //273920762312916992
 

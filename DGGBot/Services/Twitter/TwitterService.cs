@@ -25,7 +25,8 @@ namespace DGGBot.Services.Twitter
         {
             try
             {
-                var header = new OAuthHeader(_config["Twitter:ConsumerKey"], _config["Twitter:ConsumerSecret"], _config["Twitter:Token"],
+                var header = new OAuthHeader(_config["Twitter:ConsumerKey"], _config["Twitter:ConsumerSecret"],
+                    _config["Twitter:Token"],
                     _config["Twitter:TokenSecret"]);
                 var url = $"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id={userId}&count=50";
                 if (sinceId.HasValue)
@@ -45,17 +46,17 @@ namespace DGGBot.Services.Twitter
             }
             catch (Exception e)
             {
-                Log.Debug(e,"Get Tweet");
+                Log.Debug(e, "Get Tweet");
                 return new List<Tweet>();
-               
             }
-          
         }
+
         public async Task<TwitterToCheck> GetUser(string handle)
         {
             try
             {
-                var header = new OAuthHeader(_config["Twitter:ConsumerKey"], _config["Twitter:ConsumerSecret"], _config["Twitter:Token"],
+                var header = new OAuthHeader(_config["Twitter:ConsumerKey"], _config["Twitter:ConsumerSecret"],
+                    _config["Twitter:Token"],
                     _config["Twitter:TokenSecret"]);
                 var url = $"https://api.twitter.com/1.1/users/show.json?screen_name={handle}";
 
@@ -65,18 +66,13 @@ namespace DGGBot.Services.Twitter
                     var response = await client.GetAsync(url);
                     var responseString = await response.Content.ReadAsStringAsync();
                     return JsonConvert.DeserializeObject<TwitterToCheck>(responseString);
-
-                   
                 }
-
             }
             catch (Exception e)
             {
                 Log.Debug(e, "Get Tweet");
                 return new TwitterToCheck();
-
             }
-
         }
     }
 }

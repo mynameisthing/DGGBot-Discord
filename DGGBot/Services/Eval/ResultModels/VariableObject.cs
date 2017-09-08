@@ -5,7 +5,10 @@ namespace DGGBot.Services.Eval.ResultModels
 {
     public class VariableObject
     {
-        public VariableObject() { }
+        public VariableObject()
+        {
+        }
+
         public VariableObject(ScriptVariable scriptVariable)
         {
             scriptVariable = scriptVariable ?? throw new ArgumentNullException(nameof(scriptVariable));

@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Linq;
-using System.Reflection;
-using Microsoft.CodeAnalysis.Scripting;
-using Microsoft.CodeAnalysis.CSharp.Scripting;
 using System.Diagnostics;
-using Newtonsoft.Json;
-using Microsoft.CodeAnalysis.Diagnostics;
-using System.Text;
-using Microsoft.CodeAnalysis;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Net.Http;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 using DGGBot.Services.Eval.ResultModels;
-using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
+using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Scripting;
+using Newtonsoft.Json;
 
 namespace DGGBot.Services.Eval
 {
@@ -33,7 +32,6 @@ namespace DGGBot.Services.Eval
                 "System.Net.Http",
                 "Newtonsoft.Json",
                 "Newtonsoft.Json.Linq"
-                
             );
 
         private static readonly ImmutableArray<Assembly> DefaultReferences =
@@ -63,18 +61,16 @@ namespace DGGBot.Services.Eval
 
             var sw = Stopwatch.StartNew();
             var eval = CSharpScript.Create(code, Options, typeof(Globals));
-            
+
             var compilation = eval.GetCompilation().WithAnalyzers(Analyzers);
 
             var compileResult = await compilation.GetAllDiagnosticsAsync();
             var compileErrors = compileResult.Where(a => a.Severity == DiagnosticSeverity.Error).ToImmutableArray();
             sw.Stop();
-            
+
             var compileTime = sw.Elapsed;
             if (compileErrors.Length > 0)
-            {
                 return EvalResult.CreateErrorResult(code, sb.ToString(), sw.Elapsed, compileErrors);
-            }
 
             var globals = new Globals
             {

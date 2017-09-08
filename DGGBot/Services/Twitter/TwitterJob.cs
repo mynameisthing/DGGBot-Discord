@@ -25,7 +25,6 @@ namespace DGGBot.Services.Twitter
 
         public void Execute()
         {
-            
             using (var context = new DggContext())
             {
                 var existing = context.TweetRecords.FirstOrDefault(t => t.UserId == _twitter.UserId);

@@ -41,9 +41,7 @@ namespace DGGBot.Services.Youtube
             var videos = _youtubeService.GetYouTubeVideoListAsync(_youTubeToCheck.ChannelId, "").GetAwaiter()
                 .GetResult();
             if (videos.Items is null)
-            {
                 return;
-            }
             var latestVideo = videos.Items.FirstOrDefault();
             var latestVideoId = latestVideo.Id.VideoId;
 
