@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -26,5 +27,11 @@ namespace DGGBot.Utilities
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             };
         }
-    }
+
+        public static TimeZoneInfo CentralTimeZone()
+        {
+            
+            return TimeZoneInfo.FindSystemTimeZoneById(RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "Central Standard Time" : "America/Chicago");
+        };
+}
 }

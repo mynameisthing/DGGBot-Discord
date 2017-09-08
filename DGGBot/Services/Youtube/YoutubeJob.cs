@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Data.Enitities.Youtube;
 using DGGBot.Models;
+using DGGBot.Utilities;
 using Discord;
 using Discord.WebSocket;
 using FluentScheduler;
@@ -155,7 +156,7 @@ namespace DGGBot.Services.Youtube
                 IconUrl = channel.Snippet.Thumbnails.Default.Url
             };
 
-            var publishedAt = TimeZoneInfo.ConvertTime(video.Snippet.PublishedAt, TimeZoneInfo.Local);
+            var publishedAt = TimeZoneInfo.ConvertTime(video.Snippet.PublishedAt, Helpers.CentralTimeZone());
 
             var footer = new EmbedFooterBuilder
             {

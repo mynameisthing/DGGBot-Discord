@@ -7,6 +7,7 @@ using DGGBot.Data;
 using DGGBot.Data.Enitities.Twitch;
 using DGGBot.Extensions;
 using DGGBot.Models;
+using DGGBot.Utilities;
 using Discord;
 using Discord.Rest;
 using Discord.WebSocket;
@@ -255,8 +256,8 @@ namespace DGGBot.Services.Twitch
             record.StartTime = DateTime.SpecifyKind(record.StartTime, DateTimeKind.Utc);
 
             var streamDuration = DateTime.UtcNow - record.StartTime;
-            var startTime = TimeZoneInfo.ConvertTime(record.StartTime, TimeZoneInfo.Local);
-            var stopTime = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.Local);
+            var startTime = TimeZoneInfo.ConvertTime(record.StartTime, Helpers.CentralTimeZone());
+            var stopTime = TimeZoneInfo.ConvertTime(DateTime.UtcNow, Helpers.CentralTimeZone());
 
             var msg = new StringBuilder(streamToCheck.FriendlyUsername + " was live.\n\n");
             msg.Append("**Started at:** ");

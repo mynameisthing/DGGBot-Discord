@@ -4,6 +4,7 @@ using System.Net;
 using DGGBot.Data;
 using DGGBot.Data.Enitities.Twitter;
 using DGGBot.Models;
+using DGGBot.Utilities;
 using Discord;
 using Discord.WebSocket;
 using FluentScheduler;
@@ -114,7 +115,7 @@ namespace DGGBot.Services.Twitter
                 IconUrl = tweet.User.ProfileImageUrl
             };
 
-            var createdAt = TimeZoneInfo.ConvertTime(tweet.CreatedAt, TimeZoneInfo.Local);
+            var createdAt = TimeZoneInfo.ConvertTime(tweet.CreatedAt, Helpers.CentralTimeZone());
 
             var footer = new EmbedFooterBuilder
             {
