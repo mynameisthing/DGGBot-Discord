@@ -24,7 +24,7 @@ namespace DGGBot.Modules
 
             if (record == null)
             {
-                await ReplyAsync("BOT IS ALL CUCKED UP! Pester Thing about it.");
+                await ReplyAsync("Bot is on FIRE. Go Tell Thing");
                 return;
             }
 
@@ -50,16 +50,12 @@ namespace DGGBot.Modules
 
             var footer = new EmbedFooterBuilder
             {
-                Text = "Posted on " +
-                       createdAt.ToString("MMM d, yyyy") +
-                       " at " +
-                       createdAt.ToString("H:mm") +
-                       " Central"
+                Text = $"Posted on {createdAt:MMM d, yyyy} at {createdAt:H:mm} Central"
             };
 
             embed.Title = "Go to tweet";
             embed.Description = tweet.Text;
-            embed.Url = "https://twitter.com/" + tweet.AuthorUsername + "/status/" + tweet.TweetId;
+            embed.Url = $"https://twitter.com/{tweet.AuthorUsername}/status/{tweet.TweetId}";
             embed.Color = new Color(29, 161, 242);
             embed.Author = author;
             embed.Footer = footer;

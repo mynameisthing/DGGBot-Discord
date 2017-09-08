@@ -31,7 +31,7 @@ namespace DGGBot.Services
                         DiscordChannelId = _discordChannelId,
                         ModuleName = _moduleName
                     });
-                    var stuff = context.SaveChanges();
+                    context.SaveChanges();
                     JobManager.AddJob(new ThrottleJob(_moduleName, _discordChannelId),
                         s => s.ToRunOnceIn(15).Seconds());
                 }

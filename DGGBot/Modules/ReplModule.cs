@@ -31,7 +31,7 @@ namespace DGGBot.Modules
         {
             if (code.Length > 1024)
             {
-                await ReplyAsync("Exec failed: Code is greater than 1024 characters in length");
+                await ReplyAsync("Eval failed: Code is greater than 1024 characters in length");
                 return;
             }
             EvalResult result;

@@ -56,8 +56,6 @@ namespace DGGBot.Services.Youtube
             if (existingRecord != null &&
                 latestVideo.Snippet.PublishedAt.CompareTo(new DateTimeOffset(existingRecord.PublishedAt)) <= 0)
                 return;
-            //Console.WriteLine(latestVideo.Snippet.PublishedAt.CompareTo(new DateTimeOffset(existingRecord.PublishedAt)) <= 0);
-            var channel = _client.GetChannel((ulong) _youTubeToCheck.DiscordChannelId) as SocketTextChannel;
 
             var embed = SendMessageAsync(_youTubeToCheck, latestVideo).GetAwaiter().GetResult();
             if (embed == null)

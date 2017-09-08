@@ -51,11 +51,7 @@ namespace DGGBot.Modules
 
             var footer = new EmbedFooterBuilder
             {
-                Text = "Posted on " +
-                       publishedAt.ToString("MMM d, yyyy") +
-                       " at " +
-                       publishedAt.ToString("H:mm") +
-                       " Central"
+                Text = $"Posted on {publishedAt:MMM d, yyyy} at {publishedAt:H:mm} Central"
             };
 
             var descriptionField = new EmbedFieldBuilder

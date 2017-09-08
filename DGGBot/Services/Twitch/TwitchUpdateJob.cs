@@ -25,9 +25,8 @@ namespace DGGBot.Services.Twitch
 
         public void Execute()
         {
-            //  var _stream = (StreamToCheck)streamToCheckIn;
+            
             StreamRecord record;
-            Console.WriteLine("update");
             using (var db = new DggContext())
             {
                 record = db.StreamRecords.FirstOrDefault(sr => sr.UserId == _stream.UserId);

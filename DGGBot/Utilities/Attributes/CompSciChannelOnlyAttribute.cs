@@ -10,9 +10,6 @@ namespace DGGBot.Utilities.Attributes
             CommandInfo command,
             IServiceProvider services)
         {
-            //353286877866098700
-            //273920762312916992
-
             if (context.Channel.Id == 273920762312916992)
                 return Task.FromResult(PreconditionResult.FromSuccess());
 
