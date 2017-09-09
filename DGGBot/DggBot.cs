@@ -54,7 +54,7 @@ namespace SenpaiBot
         private async Task InstallCommands()
         {
             JobManager.JobException +=
-                info => Log.Debug("An error just happened with a scheduled job: " + info.Exception);
+                info => Log.Warning("An error just happened with a scheduled job: " + info.Exception);
             _client.Log += HandleLog;
             _commands.Log += HandleLog;
             _client.MessageReceived += HandleCommand;
@@ -66,10 +66,7 @@ namespace SenpaiBot
             if (!(messageParam is SocketUserMessage message)) return;
 
             var argPos = 0;
-
-
-            //if (!(message.HasCharPrefix('!', ref argPos) ||
-            //      message.HasMentionPrefix(_client.CurrentUser, ref argPos))) return;
+          
             if (!(message.HasStringPrefix("! ", ref argPos)
                   || message.HasCharPrefix('!', ref argPos)
                   || message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
@@ -101,6 +98,7 @@ namespace SenpaiBot
                                 serviceProvider.GetRequiredService<DiscordSocketClient>(),
                                 twitter,
                                 serviceProvider.GetRequiredService<TwitterService>()))
+                            .WithName(twitter.UserId.ToString())
                             .ToRunEvery(twitter.Frequency)
                             .Seconds();
 
@@ -112,6 +110,7 @@ namespace SenpaiBot
                                 youTube,
                                 new HttpClient(),
                                 serviceProvider.GetRequiredService<IConfiguration>())).WithName(youTube.ChannelId)
+                            .WithName(youTube.ChannelId)
                             .ToRunEvery(youTube.Frequency)
                             .Seconds();
 
@@ -120,8 +119,9 @@ namespace SenpaiBot
                         registry.Schedule(() => new TwitchJob(
                             serviceProvider.GetRequiredService<DiscordSocketClient>(),
                             serviceProvider.GetRequiredService<TwitchService>(),
-                            stream
-                        )).ToRunEvery(30).Seconds();
+                            stream))
+                            .WithName(stream.UserId.ToString())
+                            .ToRunEvery(30).Seconds();
 
                     var streamRecords = context.StreamRecords;
                     foreach (var stream in streamRecords)

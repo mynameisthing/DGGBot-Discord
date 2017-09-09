@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using DGGBot.Services.Eval;
 using DGGBot.Services.Eval.ResultModels;
 using DGGBot.Utilities;
+using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -28,6 +30,7 @@ namespace DGGBot.Modules
         [Command("exec", RunMode = RunMode.Async)]
         [Alias("eval")]
         [Summary("Executes code!")]
+        [RequireOwner]
         public async Task ReplInvoke([Remainder] string code)
         {
             if (code.Length > 1024)
@@ -44,8 +47,9 @@ namespace DGGBot.Modules
 
             try
             {
+                var tokenSource = new CancellationTokenSource(15000);
                 var eval = new CSharpEval();
-                result = await eval.RunEvalAsync(content);
+                result = await eval.RunEvalAsync(content,tokenSource.Token);
             }
             catch (TaskCanceledException)
             {
@@ -68,7 +72,7 @@ namespace DGGBot.Modules
                 a.Embed = embed.Build();
             });
 
-            await Context.Message.DeleteAsync();
+            //await Context.Message.DeleteAsync();
         }
 
         private string BuildContent(string code)

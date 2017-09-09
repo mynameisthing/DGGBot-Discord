@@ -12,6 +12,7 @@ namespace DGGBot.Models
     {
         [JsonProperty(PropertyName = "_id")]
         public long Id { get; set; }
+        [JsonProperty(PropertyName = "display_name")]
         public string Name { get; set; }
     }
 

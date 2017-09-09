@@ -7,6 +7,7 @@ using Discord;
 using Discord.Rest;
 using Discord.WebSocket;
 using FluentScheduler;
+using Serilog;
 
 namespace DGGBot.Services.Twitch
 {
@@ -25,7 +26,7 @@ namespace DGGBot.Services.Twitch
 
         public void Execute()
         {
-            
+            Log.Information("Stream update check started for {stream}", _stream.FriendlyUsername);
             StreamRecord record;
             using (var db = new DggContext())
             {

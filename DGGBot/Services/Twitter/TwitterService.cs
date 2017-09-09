@@ -46,7 +46,7 @@ namespace DGGBot.Services.Twitter
             }
             catch (Exception e)
             {
-                Log.Debug(e, "Get Tweet");
+                Log.Warning(e, "Get Tweet");
                 return new List<Tweet>();
             }
         }

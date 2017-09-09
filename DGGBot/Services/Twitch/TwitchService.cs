@@ -34,18 +34,16 @@ namespace DGGBot.Services.Twitch
 
         public async Task<TwitchStream> GetTwitchStreamAsync(long userId)
         {
-            _httpClient.BaseAddress = new Uri(_streamUrl);
-            _httpClient.Timeout = new TimeSpan(0, 0, 8);
-            var response = await _httpClient.GetAsync(userId.ToString());
+            
+            
+            var response = await _httpClient.GetAsync($"{_streamUrl}{userId}");
             var responseString = await response.Content.ReadAsStringAsync();
             var streamResponse = JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse?.Stream;
         }
         public async Task<TwitchUserResponse> GetTwitchUserAsync(string userName)
         {
-            _httpClient.BaseAddress = new Uri(_userUrl);
-            _httpClient.Timeout = new TimeSpan(0, 0, 8);
-            var response = await _httpClient.GetAsync($"?login={userName}");
+            var response = await _httpClient.GetAsync($"{_userUrl}?login={userName}");
             var responseString = await response.Content.ReadAsStringAsync();
             var streamResponse = JsonConvert.DeserializeObject<TwitchUserResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse;

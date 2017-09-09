@@ -8,6 +8,7 @@ using DGGBot.Utilities;
 using Discord;
 using Discord.WebSocket;
 using FluentScheduler;
+using Serilog;
 
 namespace DGGBot.Services.Twitter
 {
@@ -26,12 +27,13 @@ namespace DGGBot.Services.Twitter
 
         public void Execute()
         {
+            Log.Information("Twitter check started for {twitter}", _twitter.FriendlyUsername);
             using (var context = new DggContext())
             {
                 var existing = context.TweetRecords.FirstOrDefault(t => t.UserId == _twitter.UserId);
                 var tweets = _twitterService.GetTweet(_twitter.UserId, existing?.TweetId).GetAwaiter().GetResult();
                 var channel = _client.GetChannel((ulong) _twitter.DiscordChannelId) as SocketTextChannel;
-                Console.WriteLine(tweets.Count);
+                
                 for (var i = 0; i < tweets.Count; i++)
                 {
                     var tweet = tweets[i];
