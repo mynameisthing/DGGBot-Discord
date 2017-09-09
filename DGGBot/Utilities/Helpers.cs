@@ -32,6 +32,6 @@ namespace DGGBot.Utilities
         {
             
             return TimeZoneInfo.FindSystemTimeZoneById(RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "Central Standard Time" : "America/Chicago");
-        };
+        }
 }
 }

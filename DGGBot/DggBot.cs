@@ -8,6 +8,7 @@ using DGGBot.Data;
 using DGGBot.Services.Twitch;
 using DGGBot.Services.Twitter;
 using DGGBot.Services.Youtube;
+using DGGBot.Utilities;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -75,7 +76,7 @@ namespace SenpaiBot
                 return;
 
 
-            var context = new CommandContext(_client, message);
+            var context = new DggCommandContext(_client, message);
 
             var result = await _commands.ExecuteAsync(context, argPos, _services);
         }
