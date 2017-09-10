@@ -6,6 +6,7 @@ using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
+using Serilog;
 
 namespace DGGBot.Modules
 {
@@ -38,6 +39,14 @@ namespace DGGBot.Modules
                 "!twitter: Get the most recent tweet posted\n" +
                 "! <:FerretLOL:271856531857735680> : Post a random ferret picture\n" +
                 "! <:ASLAN:271856531505545236> : Post a random Aslan picture");
+        }
+        [RequireOwnerOrAdmin]
+        [Command("kill")]
+        public async Task Kill()
+        {
+            Log.Information("{user} killed the bot",Context.User.Username);
+            await ReplyAsync($"{Context.User.Username} Killed ME. Get the Cops <:WEEWOO:271856532117913600>");
+            Environment.Exit(0);
         }
 
        

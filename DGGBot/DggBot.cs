@@ -49,6 +49,7 @@ namespace SenpaiBot
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
             CreateJobs(_services);
+           
             await Task.Delay(-1);
         }
 
