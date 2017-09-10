@@ -1,14 +1,11 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using DGGBot.Models;
 using DGGBot.Utilities;
-using Discord;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 namespace DGGBot.Services.Twitch
 {
@@ -25,7 +22,7 @@ namespace DGGBot.Services.Twitch
             _client = client;
             _config = config;
             _httpClient = httpClient;
-         
+
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/vnd.twitchtv.v5+json"));
@@ -34,20 +31,20 @@ namespace DGGBot.Services.Twitch
 
         public async Task<TwitchStream> GetTwitchStreamAsync(long userId)
         {
-            
-            
             var response = await _httpClient.GetAsync($"{_streamUrl}{userId}");
             var responseString = await response.Content.ReadAsStringAsync();
-            var streamResponse = JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, Helpers.GetJsonSettings());
+            var streamResponse =
+                JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse?.Stream;
         }
+
         public async Task<TwitchUserResponse> GetTwitchUserAsync(string userName)
         {
             var response = await _httpClient.GetAsync($"{_userUrl}?login={userName}");
             var responseString = await response.Content.ReadAsStringAsync();
-            var streamResponse = JsonConvert.DeserializeObject<TwitchUserResponse>(responseString, Helpers.GetJsonSettings());
+            var streamResponse =
+                JsonConvert.DeserializeObject<TwitchUserResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse;
         }
-       
     }
 }

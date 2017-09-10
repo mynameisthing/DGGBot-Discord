@@ -13,7 +13,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Scripting;
-using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 
 namespace DGGBot.Services.Eval
@@ -56,7 +55,7 @@ namespace DGGBot.Services.Eval
 
         private static readonly Random random = new Random();
 
-        public async Task<EvalResult> RunEvalAsync(string code,CancellationToken token)
+        public async Task<EvalResult> RunEvalAsync(string code, CancellationToken token)
         {
             var sb = new StringBuilder();
             var textWr = new ConsoleLikeStringWriter(sb);

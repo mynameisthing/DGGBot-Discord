@@ -16,7 +16,6 @@ namespace DGGBot.Models
 
     public class YouTubeChannelSnippet
     {
-
         public string Title { get; set; }
 
         public string Description { get; set; }

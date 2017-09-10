@@ -6,7 +6,6 @@ using DGGBot.Utilities;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 namespace DGGBot.Services.Youtube
 {
@@ -34,6 +33,7 @@ namespace DGGBot.Services.Youtube
             var responseString = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<YouTubeVideoList>(responseString, Helpers.GetJsonSettings());
         }
+
         public async Task<YouTubeChannelList> GetYouTubeVideoChannelInfoAsync(string channelName)
         {
             var response = await _httpClient
@@ -42,8 +42,5 @@ namespace DGGBot.Services.Youtube
             var responseString = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<YouTubeChannelList>(responseString, Helpers.GetJsonSettings());
         }
-
-
-     
     }
 }

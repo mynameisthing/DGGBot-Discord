@@ -33,7 +33,7 @@ namespace DGGBot.Services.Twitter
                 var existing = context.TweetRecords.FirstOrDefault(t => t.UserId == _twitter.UserId);
                 var tweets = _twitterService.GetTweet(_twitter.UserId, existing?.TweetId).GetAwaiter().GetResult();
                 var channel = _client.GetChannel((ulong) _twitter.DiscordChannelId) as SocketTextChannel;
-                
+
                 for (var i = 0; i < tweets.Count; i++)
                 {
                     var tweet = tweets[i];

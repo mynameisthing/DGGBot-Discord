@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using DGGBot.Services.Eval;
 using DGGBot.Services.Eval.ResultModels;
 using DGGBot.Utilities;
-using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -25,7 +24,7 @@ namespace DGGBot.Modules
         public string ReturnTypeName { get; set; }
     }
 
-    
+
     public class ReplModule : ModuleBase<DggCommandContext>
     {
         [Command("exec", RunMode = RunMode.Async)]
@@ -34,7 +33,6 @@ namespace DGGBot.Modules
         [RequireOwner]
         public async Task ReplInvoke([Remainder] string code)
         {
-            
             if (code.Length > 1024)
             {
                 await ReplyAsync("Eval failed: Code is greater than 1024 characters in length");
@@ -45,13 +43,14 @@ namespace DGGBot.Modules
             var message = await Context.Channel.SendMessageAsync("Working...");
 
             var content = BuildContent(code);
-            Log.Information("{user:l}#{number:l} \n\t{code:l}",Context.Message.Author.Username, Context.Message.Author.Discriminator, content);
+            Log.Information("{user:l}#{number:l} \n\t{code:l}", Context.Message.Author.Username,
+                Context.Message.Author.Discriminator, content);
 
             try
             {
                 var tokenSource = new CancellationTokenSource(15000);
                 var eval = new CSharpEval();
-                result = await eval.RunEvalAsync(content,tokenSource.Token);
+                result = await eval.RunEvalAsync(content, tokenSource.Token);
             }
             catch (TaskCanceledException)
             {

@@ -10,9 +10,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DGGBot.Modules
 {
-    
-    
-    
     public class YoutubeModule : ModuleBase<DggCommandContext>
     {
         [Command("youtube")]
@@ -50,7 +47,7 @@ namespace DGGBot.Modules
                 IconUrl = record.AuthorIconUrl
             };
 
-            var publishedAt = TimeZoneInfo.ConvertTime(record.PublishedAt,Helpers.CentralTimeZone());
+            var publishedAt = TimeZoneInfo.ConvertTime(record.PublishedAt, Helpers.CentralTimeZone());
 
             var footer = new EmbedFooterBuilder
             {

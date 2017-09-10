@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Diagnostics;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -16,7 +14,10 @@ namespace DGGBot.Services.Eval
         private const string Category = "Discord";
         private static readonly LocalizableString Title = "Prohibited API";
         private static readonly LocalizableString MessageFormat = "Usage of this API is prohibited";
-        private static List<string> _symbols = new List<string>() { "Environment", "Process","File","Directory","FileInfo","DirectoryInfo" };
+
+        private static readonly List<string> _symbols =
+            new List<string> {"Environment", "Process", "File", "Directory", "FileInfo", "DirectoryInfo"};
+
         internal static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Error, true);
 
@@ -42,13 +43,11 @@ namespace DGGBot.Services.Eval
                 var symbol = node is IdentifierNameSyntax
                     ? model.GetSymbolInfo(node).Symbol
                     : model.GetTypeInfo(node).Type;
-                
+
                 if (symbol is INamedTypeSymbol namedSymbol &&
                     _symbols.Contains(namedSymbol.Name))
                     context.ReportDiagnostic(Diagnostic.Create(Rule, node.GetLocation()));
             }
         }
-
-       
     }
 }

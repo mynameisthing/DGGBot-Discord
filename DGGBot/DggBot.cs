@@ -39,7 +39,6 @@ namespace SenpaiBot
             _client = _services.GetRequiredService<DiscordSocketClient>();
             _commands = _services.GetRequiredService<CommandService>();
             _config = _services.GetRequiredService<IConfiguration>();
-           
         }
 
         public async Task Start()
@@ -65,9 +64,9 @@ namespace SenpaiBot
         private async Task HandleCommand(SocketMessage messageParam)
         {
             if (!(messageParam is SocketUserMessage message)) return;
-            
+
             var argPos = 0;
-          
+
             if (!(message.HasStringPrefix("! ", ref argPos)
                   || message.HasCharPrefix('!', ref argPos)
                   || message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
@@ -77,7 +76,6 @@ namespace SenpaiBot
             var context = new DggCommandContext(_client, message);
 
             await _commands.ExecuteAsync(context, argPos, _services);
-            
         }
 
         //TRUMPED
@@ -104,9 +102,10 @@ namespace SenpaiBot
                             .WithName(twitter.UserId.ToString())
                             .ToRunEvery(twitter.Frequency)
                             .Seconds();
-                        Log.Information("{jobtype} started for {name} with ID: {id}",nameof(TwitterJob),twitter.FriendlyUsername,twitter.UserId);
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitterJob),
+                            twitter.FriendlyUsername, twitter.UserId);
                     }
-                        
+
 
                     var youtubes = context.YouTubesToCheck;
                     foreach (var youTube in youtubes)
@@ -120,8 +119,8 @@ namespace SenpaiBot
                             .WithName(youTube.ChannelId)
                             .ToRunEvery(youTube.Frequency)
                             .Seconds();
-                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(YoutubeJob), youTube.FriendlyUsername, youTube.ChannelId);
-
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(YoutubeJob),
+                            youTube.FriendlyUsername, youTube.ChannelId);
                     }
 
                     var streamsToCheck = context.StreamsToCheck.ToList();
@@ -133,10 +132,10 @@ namespace SenpaiBot
                                 stream))
                             .WithName(stream.UserId.ToString())
                             .ToRunEvery(30).Seconds();
-                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchJob), stream.FriendlyUsername, stream.UserId);
-
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchJob),
+                            stream.FriendlyUsername, stream.UserId);
                     }
-                  
+
 
                     var streamRecords = context.StreamRecords;
                     foreach (var stream in streamRecords)
@@ -147,7 +146,8 @@ namespace SenpaiBot
                             serviceProvider.GetRequiredService<TwitchService>(),
                             thisStreamToCheck
                         )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
-                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchUpdateJob), thisStreamToCheck.FriendlyUsername, stream.StreamId);
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchUpdateJob),
+                            thisStreamToCheck.FriendlyUsername, stream.StreamId);
                     }
                     JobManager.Initialize(registry);
                 }
@@ -157,10 +157,6 @@ namespace SenpaiBot
                 Console.WriteLine(e);
                 throw;
             }
-          
-
-
-           
         }
 
         private static IServiceProvider BuildDependencies()

@@ -60,7 +60,7 @@ namespace DGGBot.Modules
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
                         {
-                            Log.Information("{author} added Twitter User:{user}",Context.Message.Author,twitterName);
+                            Log.Information("{author} added Twitter User:{user}", Context.Message.Author, twitterName);
                             await ReplyAsync($"{user.FriendlyUsername} added to the database");
                             JobManager.AddJob(new TwitterJob(Context.SocketClient, user, _twitterService),
                                 s => s.WithName(user.UserId.ToString()).ToRunEvery(user.Frequency).Seconds());
@@ -101,11 +101,14 @@ namespace DGGBot.Modules
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
                         {
-                            Log.Information("{author} added Youtube Channel:{channel}", Context.Message.Author, youtubeName);
+                            Log.Information("{author} added Youtube Channel:{channel}", Context.Message.Author,
+                                youtubeName);
                             await ReplyAsync($"{channel.Snippet.Title} added to the database");
                             JobManager.AddJob(
                                 new YoutubeJob(Context.SocketClient, _youtubeService, youtubeToCheck, new HttpClient(),
-                                    _config), s => s.WithName(youtubeToCheck.ChannelId).ToRunEvery(youtubeToCheck.Frequency).Seconds());
+                                    _config),
+                                s => s.WithName(youtubeToCheck.ChannelId).ToRunEvery(youtubeToCheck.Frequency)
+                                    .Seconds());
                             return;
                         }
 
@@ -147,10 +150,12 @@ namespace DGGBot.Modules
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
                         {
-                            Log.Information("{author} added Twitch Channel:{channel}", Context.Message.Author, twitchName);
+                            Log.Information("{author} added Twitch Channel:{channel}", Context.Message.Author,
+                                twitchName);
                             await ReplyAsync($"{user.Name} added to the database");
                             JobManager.AddJob(new TwitchJob(Context.SocketClient, _twitchService, streamToCheck),
-                                s => s.WithName(streamToCheck.UserId.ToString()).ToRunEvery(streamToCheck.Frequency).Seconds());
+                                s => s.WithName(streamToCheck.UserId.ToString()).ToRunEvery(streamToCheck.Frequency)
+                                    .Seconds());
                             return;
                         }
 
@@ -171,7 +176,8 @@ namespace DGGBot.Modules
                 using (var context = new DggContext())
                 {
                     var twitter =
-                        await context.TwittersToCheck.FirstOrDefaultAsync(x => string.Compare(x.FriendlyUsername, twitterName,StringComparison.OrdinalIgnoreCase) == 0);
+                        await context.TwittersToCheck.FirstOrDefaultAsync(x =>
+                            string.Compare(x.FriendlyUsername, twitterName, StringComparison.OrdinalIgnoreCase) == 0);
                     if (twitter is null)
                     {
                         await ReplyAsync("Twitter account not found in Database");
@@ -185,7 +191,7 @@ namespace DGGBot.Modules
                     if (changes > 0)
                     {
                         Log.Information("{author} removed Twitter User:{user}", Context.Message.Author, twitterName);
-                        Log.Information("Job Count is {count}",JobManager.AllSchedules.Count());
+                        Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
                         JobManager.RemoveJob(twitter.UserId.ToString());
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
 
@@ -202,7 +208,8 @@ namespace DGGBot.Modules
                 using (var context = new DggContext())
                 {
                     var youtube =
-                        await context.YouTubesToCheck.FirstOrDefaultAsync(x => string.Compare(x.FriendlyUsername, youtubeName, StringComparison.OrdinalIgnoreCase) == 0);
+                        await context.YouTubesToCheck.FirstOrDefaultAsync(x =>
+                            string.Compare(x.FriendlyUsername, youtubeName, StringComparison.OrdinalIgnoreCase) == 0);
                     if (youtube is null)
                     {
                         await ReplyAsync("Youtube account not found in Database");
@@ -215,7 +222,8 @@ namespace DGGBot.Modules
                     var changes = await context.SaveChangesAsync();
                     if (changes > 0)
                     {
-                        Log.Information("{author} removed Youtube channel:{channel}", Context.Message.Author, youtubeName);
+                        Log.Information("{author} removed Youtube channel:{channel}", Context.Message.Author,
+                            youtubeName);
 
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
                         JobManager.RemoveJob(youtube.ChannelId);
@@ -233,8 +241,8 @@ namespace DGGBot.Modules
             {
                 using (var context = new DggContext())
                 {
-
-                    var stream = await context.StreamsToCheck.FirstOrDefaultAsync(x => string.Compare(x.FriendlyUsername, twitchName, StringComparison.OrdinalIgnoreCase) == 0);
+                    var stream = await context.StreamsToCheck.FirstOrDefaultAsync(x =>
+                        string.Compare(x.FriendlyUsername, twitchName, StringComparison.OrdinalIgnoreCase) == 0);
                     if (stream is null)
                     {
                         await ReplyAsync("Twitch account not found in Database");
@@ -254,7 +262,8 @@ namespace DGGBot.Modules
                     var changes = await context.SaveChangesAsync();
                     if (changes > 0)
                     {
-                        Log.Information("{author} removed Twitch channel:{channel}", Context.Message.Author, twitchName);
+                        Log.Information("{author} removed Twitch channel:{channel}", Context.Message.Author,
+                            twitchName);
 
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
                         JobManager.RemoveJob(stream.UserId.ToString());
@@ -267,6 +276,6 @@ namespace DGGBot.Modules
                     await ReplyAsync("Unable to remove Twitch from the database");
                 }
             }
-            }
         }
     }
+}
