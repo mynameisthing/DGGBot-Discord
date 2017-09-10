@@ -23,6 +23,11 @@ namespace DGGBot.Modules
     [RequireOwnerOrAdmin]
     public class SocialModule : ModuleBase<DggCommandContext>
     {
+        public async Task Info()
+        {
+          
+            
+        }
         [Group("add")]
         public class AddModule : ModuleBase<DggCommandContext>
         {
@@ -41,21 +46,28 @@ namespace DGGBot.Modules
             }
 
             [Command("twitter")]
-            public async Task Twitter(string twitterName, IGuildChannel guildChannel)
+            public async Task Twitter(string twitterName, IGuildChannel guildChannel,string hexColor,int checkFrequency)
             {
+                if (checkFrequency < 5)
+                {
+                    await ReplyAsync("Frequency cant be less than 5");
+                }
                 var user = await _twitterService.GetUser(twitterName);
                 if (user is null)
                 {
                     await ReplyAsync("Unable to get info from Twitter API");
                     return;
                 }
+             
+              
                 using (var context = new DggContext())
                 {
                     if (await context.TwittersToCheck.FirstOrDefaultAsync(x => x.UserId == user.UserId) is null)
                     {
                         user.DiscordChannelId = (long) guildChannel.Id;
                         user.DiscordServerId = (long) Context.Guild.Id;
-                        user.Frequency = 10;
+                        user.Frequency = checkFrequency;
+                        user.EmbedColor = (int) Helpers.GetColorFromHex(hexColor).RawValue;
                         await context.TwittersToCheck.AddAsync(user);
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
@@ -75,14 +87,20 @@ namespace DGGBot.Modules
             }
 
             [Command("youtube")]
-            public async Task Youtube(string youtubeName, IGuildChannel guildChannel)
+            public async Task Youtube(string youtubeName, IGuildChannel guildChannel, string hexColor, int checkFrequency)
             {
+                
+                if (checkFrequency < 5)
+                {
+                    await ReplyAsync("Frequency cant be less than 5");
+                }
                 var channels = await _youtubeService.GetYouTubeVideoChannelInfoAsync(youtubeName);
                 if (channels.Items is null)
                 {
                     await ReplyAsync("Unable to get info from Youtube API");
                     return;
                 }
+               
                 using (var context = new DggContext())
                 {
                     var channel = channels.Items.FirstOrDefault();
@@ -94,7 +112,8 @@ namespace DGGBot.Modules
                             DiscordServerId = (long) Context.Guild.Id,
                             ChannelId = channel.Id,
                             Frequency = 60,
-                            FriendlyUsername = channel.Snippet.Title
+                            FriendlyUsername = channel.Snippet.Title,
+                            EmbedColor = (int)Helpers.GetColorFromHex(hexColor).RawValue
                         };
 
                         await context.YouTubesToCheck.AddAsync(youtubeToCheck);
@@ -120,8 +139,12 @@ namespace DGGBot.Modules
             }
 
             [Command("twitch")]
-            public async Task Twitch(string twitchName, IGuildChannel guildChannel, bool deleteMessage, bool pinMessage)
+            public async Task Twitch(string twitchName, IGuildChannel guildChannel, string hexColor, int checkFrequency, bool deleteMessage, bool pinMessage ,[Remainder]string discordMessage)
             {
+                if (checkFrequency < 5)
+                {
+                    await ReplyAsync("Frequency cant be less than 5");
+                }
                 var response = await _twitchService.GetTwitchUserAsync(twitchName);
                 if (response.Users is null)
                 {
@@ -138,12 +161,12 @@ namespace DGGBot.Modules
                             DiscordChannelId = (long) guildChannel.Id,
                             DiscordServerId = (long) Context.Guild.Id,
                             UserId = user.Id,
-                            Frequency = 150,
+                            Frequency = checkFrequency,
                             FriendlyUsername = user.Name,
                             DeleteDiscordMessage = deleteMessage,
                             PinMessage = pinMessage,
-                            DiscordMessage = "Memes",
-                            EmbedColor = 29913
+                            DiscordMessage = discordMessage,
+                            EmbedColor = (int)Helpers.GetColorFromHex(hexColor).RawValue
                         };
 
                         await context.StreamsToCheck.AddAsync(streamToCheck);
@@ -173,6 +196,8 @@ namespace DGGBot.Modules
             [Command("twitter")]
             public async Task Twitter(string twitterName)
             {
+                
+                
                 using (var context = new DggContext())
                 {
                     var twitter =

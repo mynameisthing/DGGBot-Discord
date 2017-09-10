@@ -64,7 +64,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 8, 14, 17, 6, 293, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 9, 10, 5, 18, 52, 25, DateTimeKind.Utc));
 
                     b.Property<DateTime?>("StopTime")
                         .HasColumnName("stop_time");
@@ -131,7 +131,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 8, 14, 17, 6, 291, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 9, 10, 5, 18, 52, 22, DateTimeKind.Utc));
 
                     b.Property<long>("UserId")
                         .HasColumnName("user_id");
@@ -228,6 +228,9 @@ namespace DGGBot.Data.Migrations
                     b.Property<long>("DiscordServerId")
                         .HasColumnName("discord_server_id");
 
+                    b.Property<int>("EmbedColor")
+                        .HasColumnName("embed_color");
+
                     b.Property<int>("Frequency")
                         .HasColumnName("frequency");
 
@@ -303,6 +306,9 @@ namespace DGGBot.Data.Migrations
 
                     b.Property<long>("DiscordServerId")
                         .HasColumnName("discord_server_id");
+
+                    b.Property<int>("EmbedColor")
+                        .HasColumnName("embed_color");
 
                     b.Property<int>("Frequency")
                         .HasColumnName("frequency");

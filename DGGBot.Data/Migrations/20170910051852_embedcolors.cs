@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DGGBot.Data.Migrations
 {
-    public partial class trusted : Migration
+    public partial class embedcolors : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace DGGBot.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     game = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 8, 14, 17, 6, 293, DateTimeKind.Utc)),
+                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 5, 18, 52, 25, DateTimeKind.Utc)),
                     stop_time = table.Column<DateTime>(type: "TEXT", nullable: true),
                     stream_id = table.Column<long>(type: "INTEGER", nullable: false)
                 },
@@ -60,7 +60,7 @@ namespace DGGBot.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     current_game = table.Column<string>(type: "TEXT", nullable: false),
                     discord_message_id = table.Column<long>(type: "INTEGER", nullable: false),
-                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 8, 14, 17, 6, 291, DateTimeKind.Utc)),
+                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 5, 18, 52, 22, DateTimeKind.Utc)),
                     user_id = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -141,6 +141,7 @@ namespace DGGBot.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     discord_channel_id = table.Column<long>(type: "INTEGER", nullable: false),
                     discord_server_id = table.Column<long>(type: "INTEGER", nullable: false),
+                    embed_color = table.Column<int>(type: "INTEGER", nullable: false),
                     frequency = table.Column<int>(type: "INTEGER", nullable: false),
                     friendly_username = table.Column<string>(type: "TEXT", maxLength: 45, nullable: false)
                 },
@@ -175,6 +176,7 @@ namespace DGGBot.Data.Migrations
                     channel_id = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
                     discord_channel_id = table.Column<long>(type: "INTEGER", nullable: false),
                     discord_server_id = table.Column<long>(type: "INTEGER", nullable: false),
+                    embed_color = table.Column<int>(type: "INTEGER", nullable: false),
                     frequency = table.Column<int>(type: "INTEGER", nullable: false),
                     friendly_username = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
                 },

@@ -8,6 +8,7 @@ namespace DGGBot.Utilities.Attributes
 {
     public class RequireOwnerOrAdminAttribute : PreconditionAttribute
     {
+        //todo make this search id instead of name
         public override async Task<PreconditionResult> CheckPermissions(ICommandContext context,
             CommandInfo command,
             IServiceProvider services)

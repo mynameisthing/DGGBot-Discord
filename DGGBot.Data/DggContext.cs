@@ -44,6 +44,7 @@ namespace DGGBot.Data
                 e.Property(t => t.Frequency).HasColumnName("frequency").IsRequired();
                 e.Property(t => t.DiscordServerId).HasColumnName("discord_server_id").IsRequired();
                 e.Property(t => t.DiscordChannelId).HasColumnName("discord_channel_id").IsRequired();
+                e.Property(s => s.EmbedColor).IsRequired().HasColumnName("embed_color");
             });
 
             modelBuilder.Entity<TweetRecord>(e =>
@@ -71,6 +72,7 @@ namespace DGGBot.Data
                 e.Property(y => y.Frequency).IsRequired().HasColumnName("frequency");
                 e.Property(y => y.DiscordServerId).IsRequired().HasColumnName("discord_server_id");
                 e.Property(y => y.DiscordChannelId).IsRequired().HasColumnName("discord_channel_id");
+                e.Property(s => s.EmbedColor).IsRequired().HasColumnName("embed_color");
             });
 
             modelBuilder.Entity<YouTubeRecord>(e =>

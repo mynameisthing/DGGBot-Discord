@@ -8,6 +8,7 @@ using Discord.Commands;
 namespace DGGBot.Modules
 {
     [Group("bot")]
+    [ChannelThrottle]
     public class BotModule : ModuleBase<DggCommandContext>
     {
         private readonly CommandService _commandService;
@@ -19,8 +20,7 @@ namespace DGGBot.Modules
             _serviceProvider = serviceProvider;
         }
 
-        [Command("info")]
-        [ChannelThrottle]
+        [Command]
         public async Task Bot()
         {
             var builder = new StringBuilder();
@@ -36,7 +36,7 @@ namespace DGGBot.Modules
 
         [Command("commands")]
         [Alias("command")]
-        [ChannelThrottle]
+        
         public async Task CommandList([Remainder] string unused = null)
         {
             await ReplyAsync(
@@ -50,8 +50,9 @@ namespace DGGBot.Modules
 
         [Command("status")]
         [RequireOwnerOrAdmin]
-        public async Task Status([Remainder] string unused = null)
+        public async Task Status(string unused,[Remainder] string test)
         {
+            Console.WriteLine("stuff");
             //var process = Process.GetCurrentProcess();
 
             //await ReplyAsync(

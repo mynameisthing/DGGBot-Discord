@@ -14,5 +14,6 @@ namespace DGGBot.Data.Enitities.Twitter
         public long DiscordServerId { get; set; }
 
         public long DiscordChannelId { get; set; }
+        public int EmbedColor { get; set; }
     }
 }

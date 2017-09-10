@@ -174,7 +174,7 @@ namespace DGGBot.Services.Youtube
 
             embed.Author = author;
             embed.Footer = footer;
-            embed.Color = new Color(205, 32, 31);
+            embed.Color = new Color((uint) _youTubeToCheck.EmbedColor);
             embed.ImageUrl = video.Snippet.Thumbnails.Maxres.Url;
             embed.Title = video.Snippet.Title;
             embed.Description = shortDescription;

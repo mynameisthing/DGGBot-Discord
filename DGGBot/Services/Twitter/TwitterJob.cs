@@ -127,7 +127,7 @@ namespace DGGBot.Services.Twitter
             embed.Title = "Go to tweet";
             embed.Description = WebUtility.HtmlDecode(tweet.Text);
             embed.Url = $"https://twitter.com/{tweet.User.Username}/status/{tweet.Id}";
-            embed.Color = new Color(29, 161, 242);
+            embed.Color = new Color((uint) _twitter.EmbedColor);
             embed.Author = author;
             embed.Footer = footer;
 

@@ -18,10 +18,11 @@ namespace DGGBot.Modules
         public async Task GetYouTube([Remainder] string unused = null)
         {
             YouTubeRecord record;
-
+            YouTubeToCheck youtube;
             using (var db = new DggContext())
             {
                 record = await db.YouTubeRecords.FirstOrDefaultAsync(y => y.ChannelId == "UC554eY5jNUfDq3yDOJYirOQ");
+                youtube = await db.YouTubesToCheck.FirstOrDefaultAsync(y => y.ChannelId == "UC554eY5jNUfDq3yDOJYirOQ");
             }
 
             if (record == null)
@@ -32,12 +33,12 @@ namespace DGGBot.Modules
 
             record.PublishedAt = DateTime.SpecifyKind(record.PublishedAt, DateTimeKind.Utc);
 
-            var embed = CreateEmbed(record);
+            var embed = CreateEmbed(record,youtube);
 
             await ReplyAsync("", embed: embed);
         }
 
-        private Embed CreateEmbed(YouTubeRecord record)
+        private Embed CreateEmbed(YouTubeRecord record,YouTubeToCheck youtube)
         {
             var embed = new EmbedBuilder();
             var author = new EmbedAuthorBuilder
@@ -60,10 +61,10 @@ namespace DGGBot.Modules
                 Value = record.VideoDescription,
                 IsInline = false
             };
-
+            
             embed.Author = author;
             embed.Footer = footer;
-            embed.Color = new Color(205, 32, 31);
+            embed.Color = new Color((uint)youtube.EmbedColor);
             embed.ImageUrl = record.ImageUrl;
             embed.Title = record.VideoTitle;
             embed.Url = "https://www.youtube.com/watch?v=" + record.VideoId;

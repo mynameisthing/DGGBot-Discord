@@ -17,10 +17,12 @@ namespace DGGBot.Modules
         public async Task GetTweet()
         {
             TweetRecord record;
-
+            TwitterToCheck twitter;
             using (var db = new DggContext())
             {
-                record = await db.TweetRecords.FirstOrDefaultAsync();
+                twitter = await db.TwittersToCheck.FirstOrDefaultAsync();
+                record = await db.TweetRecords.FirstOrDefaultAsync(x => x.UserId == twitter.UserId);
+                
             }
 
             if (record == null)
@@ -31,12 +33,12 @@ namespace DGGBot.Modules
 
             record.CreatedAt = DateTime.SpecifyKind(record.CreatedAt, DateTimeKind.Utc);
 
-            var embed = CreateEmbed(record);
+            var embed = CreateEmbed(record,twitter);
 
             await ReplyAsync("", embed: embed);
         }
 
-        private Embed CreateEmbed(TweetRecord tweet)
+        private Embed CreateEmbed(TweetRecord tweet,TwitterToCheck twitter)
         {
             var embed = new EmbedBuilder();
 
@@ -57,7 +59,7 @@ namespace DGGBot.Modules
             embed.Title = "Go to tweet";
             embed.Description = tweet.Text;
             embed.Url = $"https://twitter.com/{tweet.AuthorUsername}/status/{tweet.TweetId}";
-            embed.Color = new Color(29, 161, 242);
+            embed.Color = new Color((uint) twitter.EmbedColor);
             embed.Author = author;
             embed.Footer = footer;
 

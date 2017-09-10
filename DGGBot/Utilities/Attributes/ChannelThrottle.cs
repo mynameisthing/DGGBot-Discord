@@ -12,14 +12,16 @@ namespace DGGBot.Utilities.Attributes
 {
     public class ChannelThrottle : PreconditionAttribute
     {
+        //todo make this search id instead of name
         public override async Task<PreconditionResult> CheckPermissions(ICommandContext context,
             CommandInfo command,
             IServiceProvider services)
         {
-            //if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == context.User.Username)
-            //{
-            //    return PreconditionResult.FromSuccess();
-            //}
+            if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == context.User.Username)
+            {
+                return PreconditionResult.FromSuccess();
+            }
+
             var user = context.User as SocketGuildUser;
             if (user.Roles.FirstOrDefault(x => x.Name == "Administrator") != null)
                 return PreconditionResult.FromSuccess();
