@@ -24,12 +24,12 @@ namespace DGGBot.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("CommandName")
+                        .IsRequired()
+                        .HasColumnName("command_name");
+
                     b.Property<ulong>("DiscordChannelId")
                         .HasColumnName("discord_channel_id");
-
-                    b.Property<string>("ModuleName")
-                        .IsRequired()
-                        .HasColumnName("module_name");
 
                     b.HasKey("Id");
 
@@ -64,7 +64,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 10, 5, 18, 52, 25, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 9, 10, 18, 32, 54, 878, DateTimeKind.Utc));
 
                     b.Property<DateTime?>("StopTime")
                         .HasColumnName("stop_time");
@@ -131,7 +131,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 10, 5, 18, 52, 22, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 9, 10, 18, 32, 54, 876, DateTimeKind.Utc));
 
                     b.Property<long>("UserId")
                         .HasColumnName("user_id");

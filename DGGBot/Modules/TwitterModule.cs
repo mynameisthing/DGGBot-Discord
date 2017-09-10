@@ -38,6 +38,7 @@ namespace DGGBot.Modules
             await ReplyAsync("", embed: embed);
         }
 
+
         private Embed CreateEmbed(TweetRecord tweet,TwitterToCheck twitter)
         {
             var embed = new EmbedBuilder();

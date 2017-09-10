@@ -36,7 +36,6 @@ namespace DGGBot.Modules
 
         [Command("commands")]
         [Alias("command")]
-        
         public async Task CommandList([Remainder] string unused = null)
         {
             await ReplyAsync(

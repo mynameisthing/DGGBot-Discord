@@ -10,6 +10,6 @@ namespace DGGBot.Data.Enitities
     {
         public int Id { get; set; }
         public ulong DiscordChannelId { get; set; }
-        public string ModuleName { get; set; }
+        public string CommandName { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DGGBot.Data.Migrations
 {
-    public partial class embedcolors : Migration
+    public partial class throttlefix : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace DGGBot.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     game = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 5, 18, 52, 25, DateTimeKind.Utc)),
+                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 18, 32, 54, 878, DateTimeKind.Utc)),
                     stop_time = table.Column<DateTime>(type: "TEXT", nullable: true),
                     stream_id = table.Column<long>(type: "INTEGER", nullable: false)
                 },
@@ -60,7 +60,7 @@ namespace DGGBot.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     current_game = table.Column<string>(type: "TEXT", nullable: false),
                     discord_message_id = table.Column<long>(type: "INTEGER", nullable: false),
-                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 5, 18, 52, 22, DateTimeKind.Utc)),
+                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 18, 32, 54, 876, DateTimeKind.Utc)),
                     user_id = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -94,8 +94,8 @@ namespace DGGBot.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    discord_channel_id = table.Column<ulong>(type: "INTEGER", nullable: false),
-                    module_name = table.Column<string>(type: "TEXT", nullable: false)
+                    command_name = table.Column<string>(type: "TEXT", nullable: false),
+                    discord_channel_id = table.Column<ulong>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

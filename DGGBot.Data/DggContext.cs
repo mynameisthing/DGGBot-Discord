@@ -154,8 +154,9 @@ namespace DGGBot.Data
                 e.HasKey(g => g.Id);
 
                 e.Property(s => s.DiscordChannelId).IsRequired().HasColumnName("discord_channel_id");
-                e.Property(s => s.ModuleName).IsRequired().HasColumnName("module_name");
-            });    modelBuilder.Entity<TrustedUser>(e =>
+                e.Property(s => s.CommandName).IsRequired().HasColumnName("command_name");
+            });
+            modelBuilder.Entity<TrustedUser>(e =>
             {
                 e.ToTable("trusted_user");
                 e.HasKey(g => g.UserId);

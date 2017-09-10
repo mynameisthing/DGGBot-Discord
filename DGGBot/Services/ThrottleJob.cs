@@ -9,11 +9,11 @@ namespace DGGBot.Services
     public class ThrottleJob : IJob
     {
         private readonly ulong _discordChannelId;
-        private readonly string _moduleName;
+        private readonly string _commandName;
 
-        public ThrottleJob(string moduleName, ulong discordChannelId)
+        public ThrottleJob(string commandName, ulong discordChannelId)
         {
-            _moduleName = moduleName;
+            _commandName = commandName;
             _discordChannelId = discordChannelId;
         }
 
@@ -22,17 +22,17 @@ namespace DGGBot.Services
             using (var context = new DggContext())
             {
                 var throttle = context.Throttles.FirstOrDefault(x =>
-                    x.DiscordChannelId == _discordChannelId && x.ModuleName == _moduleName);
+                    x.DiscordChannelId == _discordChannelId && x.CommandName == _commandName);
                 if (throttle is null)
                 {
                     Console.WriteLine("add throttle");
                     context.Throttles.Add(new Throttle
                     {
                         DiscordChannelId = _discordChannelId,
-                        ModuleName = _moduleName
+                        CommandName = _commandName
                     });
                     context.SaveChanges();
-                    JobManager.AddJob(new ThrottleJob(_moduleName, _discordChannelId),
+                    JobManager.AddJob(new ThrottleJob(_commandName, _discordChannelId),
                         s => s.ToRunOnceIn(20).Seconds());
                 }
                 else

@@ -17,10 +17,11 @@ namespace DGGBot.Utilities.Attributes
             CommandInfo command,
             IServiceProvider services)
         {
-            if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == context.User.Username)
-            {
-                return PreconditionResult.FromSuccess();
-            }
+            Console.WriteLine(command.Name);
+            //if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == context.User.Username)
+            //{
+            //    return PreconditionResult.FromSuccess();
+            //}
 
             var user = context.User as SocketGuildUser;
             if (user.Roles.FirstOrDefault(x => x.Name == "Administrator") != null)
@@ -29,11 +30,11 @@ namespace DGGBot.Utilities.Attributes
             using (var dggContext = new DggContext())
             {
                 var throttle = await dggContext.Throttles.FirstOrDefaultAsync(x =>
-                    x.DiscordChannelId == context.Channel.Id && x.ModuleName == command.Module.Name);
+                    x.DiscordChannelId == context.Channel.Id && x.CommandName == command.Name);
                 if (throttle != null)
                     return PreconditionResult.FromError("");
 
-                JobManager.AddJob(new ThrottleJob(command.Module.Name, context.Channel.Id), s => s.ToRunNow());
+                JobManager.AddJob(new ThrottleJob(command.Name, context.Channel.Id), s => s.ToRunNow());
                 return PreconditionResult.FromSuccess();
             }
         }
