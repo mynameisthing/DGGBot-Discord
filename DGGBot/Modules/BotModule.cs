@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
+using DGGBot.Services;
 using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
@@ -8,21 +9,13 @@ using Discord.Commands;
 
 namespace DGGBot.Modules
 {
-   
+   [Group("bot")]
     public class BotModule : ModuleBase<DggCommandContext>
     {
-        private readonly CommandService _commandService;
-        private readonly IServiceProvider _serviceProvider;
-
-        public BotModule(CommandService commandService, IServiceProvider serviceProvider)
-        {
-            _commandService = commandService;
-            _serviceProvider = serviceProvider;
-        }
-
-        [Command("bot"),ChannelThrottle]
+        [Command]
         public async Task Bot()
         {
+           
             var builder = new StringBuilder();
             builder.AppendLine("Hello <:MLADY:271856532033896448>")
                 .AppendLine(
@@ -34,7 +27,8 @@ namespace DGGBot.Modules
             await ReplyAsync(builder.ToString());
         }
 
-        [Command("commands"), ChannelThrottle]
+        [Command("commands")]
+        [Alias("command")]
         public async Task CommandList([Remainder] string unused = null)
         {
             await ReplyAsync(
@@ -46,19 +40,6 @@ namespace DGGBot.Modules
                 "! <:ASLAN:271856531505545236> : Post a random Aslan picture");
         }
 
-        [Command("admincheck")]
-        [RequireOwnerOrAdmin]
-        public async Task Status(IGuildUser user)
-        {
-            
-            await ReplyAsync(user.GuildPermissions.Administrator.ToString());
-            
-            //var process = Process.GetCurrentProcess();
-
-            //await ReplyAsync(
-            //    $"Job Count:{JobManager.AllSchedules.Count()}\n" +
-            //    $"Memory Usage: {process.WorkingSet64}\n");
-        }
        
     }
 }

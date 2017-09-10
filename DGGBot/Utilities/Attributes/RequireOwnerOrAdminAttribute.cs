@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 
@@ -13,11 +14,10 @@ namespace DGGBot.Utilities.Attributes
             CommandInfo command,
             IServiceProvider services)
         {
-            var user = context.User as SocketGuildUser;
-            if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == user.Username)
+            var user = context.User as IGuildUser;
+            if (user.GuildPermissions.Administrator || (await context.Client.GetApplicationInfoAsync()).Owner.Username == user.Username)
                 return PreconditionResult.FromSuccess();
-            if (user.Roles.FirstOrDefault(x => x.Name == "Administrator") != null)
-                return PreconditionResult.FromSuccess();
+           
             return PreconditionResult.FromError("");
         }
     }

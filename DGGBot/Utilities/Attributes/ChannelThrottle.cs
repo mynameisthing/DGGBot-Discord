@@ -18,14 +18,15 @@ namespace DGGBot.Utilities.Attributes
             CommandInfo command,
             IServiceProvider services)
         {
-            Console.WriteLine(command.Name);
-            //if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == context.User.Username)
-            //{
-            //    return PreconditionResult.FromSuccess();
-            //}
+
+            if ((await context.Client.GetApplicationInfoAsync()).Owner.Username == context.User.Username)
+            {
+                return PreconditionResult.FromSuccess();
+            }
+
+            var user = context.User as IGuildUser;
             
-            var user = context.User as SocketGuildUser;
-            if (user.Roles.FirstOrDefault(x => x.Name == "Administrator") != null)
+            if (user.GuildPermissions.Administrator)
                 return PreconditionResult.FromSuccess();
 
             using (var dggContext = new DggContext())

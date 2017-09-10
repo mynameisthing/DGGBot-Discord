@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using DGGBot.Data;
+using DGGBot.Services;
 using DGGBot.Services.Twitch;
 using DGGBot.Services.Twitter;
 using DGGBot.Services.Youtube;
@@ -176,6 +177,7 @@ namespace SenpaiBot
             services.AddSingleton<IConfiguration>(config);
             services.AddSingleton(client);
             services.AddSingleton(httpclient);
+          
             services.AddSingleton(new CommandService());
             services.AddSingleton(new TwitterService(config));
             services.AddSingleton(new YoutubeService(client, config, new HttpClient()));
