@@ -39,7 +39,7 @@ namespace SenpaiBot
             _client = _services.GetRequiredService<DiscordSocketClient>();
             _commands = _services.GetRequiredService<CommandService>();
             _config = _services.GetRequiredService<IConfiguration>();
-            CreateJobs(_services);
+           
         }
 
         public async Task Start()
@@ -48,6 +48,7 @@ namespace SenpaiBot
             await InstallCommands();
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
+            CreateJobs(_services);
             await Task.Delay(-1);
         }
 
@@ -64,7 +65,7 @@ namespace SenpaiBot
         private async Task HandleCommand(SocketMessage messageParam)
         {
             if (!(messageParam is SocketUserMessage message)) return;
-
+            
             var argPos = 0;
           
             if (!(message.HasStringPrefix("! ", ref argPos)
@@ -75,7 +76,8 @@ namespace SenpaiBot
 
             var context = new DggCommandContext(_client, message);
 
-            var result = await _commands.ExecuteAsync(context, argPos, _services);
+            await _commands.ExecuteAsync(context, argPos, _services);
+            
         }
 
         //TRUMPED
@@ -94,17 +96,22 @@ namespace SenpaiBot
 
                     var twitters = context.TwittersToCheck;
                     foreach (var twitter in twitters)
-                        registry.Schedule(() => new TwitterJob(
+                    {
+                        registry.Schedule(new TwitterJob(
                                 serviceProvider.GetRequiredService<DiscordSocketClient>(),
                                 twitter,
                                 serviceProvider.GetRequiredService<TwitterService>()))
                             .WithName(twitter.UserId.ToString())
                             .ToRunEvery(twitter.Frequency)
                             .Seconds();
+                        Log.Information("{jobtype} started for {name} with ID: {id}",nameof(TwitterJob),twitter.FriendlyUsername,twitter.UserId);
+                    }
+                        
 
                     var youtubes = context.YouTubesToCheck;
                     foreach (var youTube in youtubes)
-                        registry.Schedule(() => new YoutubeJob(
+                    {
+                        registry.Schedule(new YoutubeJob(
                                 serviceProvider.GetRequiredService<DiscordSocketClient>(),
                                 serviceProvider.GetRequiredService<YoutubeService>(),
                                 youTube,
@@ -113,25 +120,34 @@ namespace SenpaiBot
                             .WithName(youTube.ChannelId)
                             .ToRunEvery(youTube.Frequency)
                             .Seconds();
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(YoutubeJob), youTube.FriendlyUsername, youTube.ChannelId);
+
+                    }
 
                     var streamsToCheck = context.StreamsToCheck.ToList();
                     foreach (var stream in streamsToCheck)
-                        registry.Schedule(() => new TwitchJob(
-                            serviceProvider.GetRequiredService<DiscordSocketClient>(),
-                            serviceProvider.GetRequiredService<TwitchService>(),
-                            stream))
+                    {
+                        registry.Schedule(new TwitchJob(
+                                serviceProvider.GetRequiredService<DiscordSocketClient>(),
+                                serviceProvider.GetRequiredService<TwitchService>(),
+                                stream))
                             .WithName(stream.UserId.ToString())
                             .ToRunEvery(30).Seconds();
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchJob), stream.FriendlyUsername, stream.UserId);
+
+                    }
+                  
 
                     var streamRecords = context.StreamRecords;
                     foreach (var stream in streamRecords)
                     {
                         var thisStreamToCheck = streamsToCheck.Find(s => s.UserId == stream.UserId);
-                        registry.Schedule(() => new TwitchUpdateJob(
+                        registry.Schedule(new TwitchUpdateJob(
                             serviceProvider.GetRequiredService<DiscordSocketClient>(),
                             serviceProvider.GetRequiredService<TwitchService>(),
                             thisStreamToCheck
                         )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
+                        Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchUpdateJob), thisStreamToCheck.FriendlyUsername, stream.StreamId);
                     }
                     JobManager.Initialize(registry);
                 }

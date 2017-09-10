@@ -26,7 +26,7 @@ namespace DGGBot.Services.Twitch
 
         public void Execute()
         {
-            Log.Information("Stream update check started for {stream}", _stream.FriendlyUsername);
+            Log.Debug("Stream update check started for {stream}", _stream.FriendlyUsername);
             StreamRecord record;
             using (var db = new DggContext())
             {

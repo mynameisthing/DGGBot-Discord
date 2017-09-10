@@ -33,7 +33,7 @@ namespace DGGBot.Services.Twitch
 
         public void Execute()
         {
-            Log.Information("Stream check started for {stream}",_stream.FriendlyUsername);
+            Log.Debug("Stream check started for {stream}",_stream.FriendlyUsername);
             var streamToCheck = _stream;
 
             var stream = _twitchService.GetTwitchStreamAsync(streamToCheck.UserId).GetAwaiter().GetResult();

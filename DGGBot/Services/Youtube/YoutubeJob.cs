@@ -40,7 +40,7 @@ namespace DGGBot.Services.Youtube
 
         public void Execute()
         {
-            Log.Information("Checking youtube updates for {channel}",_youTubeToCheck.FriendlyUsername);
+            Log.Debug("Checking youtube updates for {channel}",_youTubeToCheck.FriendlyUsername);
             var videos = _youtubeService.GetYouTubeVideoListAsync(_youTubeToCheck.ChannelId).GetAwaiter()
                 .GetResult();
             if (videos.Items is null)
