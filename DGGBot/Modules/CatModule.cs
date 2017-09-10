@@ -29,6 +29,7 @@ namespace DGGBot.Modules
         }
 
         [Command(RunMode = RunMode.Async)]
+        [Summary("Gets a picture of Aslan")]
         public async Task Cat([Remainder] string unused = null)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.imgur.com/3/album/ohOjC/images");

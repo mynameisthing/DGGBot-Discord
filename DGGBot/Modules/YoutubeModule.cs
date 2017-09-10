@@ -10,12 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DGGBot.Modules
 {
-    [Group("youtube")]
-    [Alias("yt")]
-    [ChannelThrottle]
+    
+    
+    
     public class YoutubeModule : ModuleBase<DggCommandContext>
     {
-        [Command]
+        [Command("youtube")]
+        [Alias("yt")]
+        [ChannelThrottle]
         public async Task GetYouTube([Remainder] string unused = null)
         {
             YouTubeRecord record;

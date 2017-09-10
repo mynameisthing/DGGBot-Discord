@@ -9,6 +9,7 @@ using DGGBot.Services.Twitch;
 using DGGBot.Services.Twitter;
 using DGGBot.Services.Youtube;
 using DGGBot.Utilities;
+using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
 using FluentScheduler;
@@ -19,7 +20,7 @@ using Serilog;
 namespace DGGBot.Modules
 {
     [Group("social")]
-    [RequireOwner]
+    [RequireOwnerOrAdmin]
     public class SocialModule : ModuleBase<DggCommandContext>
     {
         [Group("add")]
@@ -160,22 +161,10 @@ namespace DGGBot.Modules
                 }
             }
         }
+
         [Group("remove")]
         public class RemoveModule : ModuleBase<DggCommandContext>
         {
-            private readonly IConfiguration _config;
-            private readonly TwitchService _twitchService;
-            
-            private readonly YoutubeService _youtubeService;
-
-            public RemoveModule(IConfiguration config,YoutubeService youtubeService)
-            {
-                _config = config;
-               
-                _youtubeService = youtubeService;
-                
-            }
-
             [Command("twitter")]
             public async Task Twitter(string twitterName)
             {

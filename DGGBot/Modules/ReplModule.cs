@@ -25,7 +25,7 @@ namespace DGGBot.Modules
         public string ReturnTypeName { get; set; }
     }
 
-    [RequireOwner]
+    
     public class ReplModule : ModuleBase<DggCommandContext>
     {
         [Command("exec", RunMode = RunMode.Async)]

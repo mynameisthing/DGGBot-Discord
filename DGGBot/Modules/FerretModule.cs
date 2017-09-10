@@ -22,6 +22,7 @@ namespace DGGBot.Modules
         }
 
         [Command]
+        [Summary("Gets a picture of a ferret")]
         public async Task Ferret([Remainder] string unused = null)
         {
             var response = await _client.GetAsync("https://polecat.me/api/ferret");

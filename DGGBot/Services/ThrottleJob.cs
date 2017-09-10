@@ -33,7 +33,7 @@ namespace DGGBot.Services
                     });
                     context.SaveChanges();
                     JobManager.AddJob(new ThrottleJob(_moduleName, _discordChannelId),
-                        s => s.ToRunOnceIn(30).Seconds());
+                        s => s.ToRunOnceIn(20).Seconds());
                 }
                 else
                 {
