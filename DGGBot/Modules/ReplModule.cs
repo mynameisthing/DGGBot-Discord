@@ -9,6 +9,7 @@ using DGGBot.Utilities.Attributes;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
+using Serilog;
 
 namespace DGGBot.Modules
 {
@@ -33,6 +34,7 @@ namespace DGGBot.Modules
         [RequireOwner]
         public async Task ReplInvoke([Remainder] string code)
         {
+            
             if (code.Length > 1024)
             {
                 await ReplyAsync("Eval failed: Code is greater than 1024 characters in length");
@@ -43,7 +45,7 @@ namespace DGGBot.Modules
             var message = await Context.Channel.SendMessageAsync("Working...");
 
             var content = BuildContent(code);
-
+            Log.Information("{user:l}#{number:l} \n\t{code:l}",Context.Message.Author.Username, Context.Message.Author.Discriminator, content);
 
             try
             {

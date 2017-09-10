@@ -59,6 +59,7 @@ namespace DGGBot.Modules
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
                         {
+                            Log.Information("{author} added Twitter User:{user}",Context.Message.Author,twitterName);
                             await ReplyAsync($"{user.FriendlyUsername} added to the database");
                             JobManager.AddJob(new TwitterJob(Context.SocketClient, user, _twitterService),
                                 s => s.WithName(user.UserId.ToString()).ToRunEvery(user.Frequency).Seconds());
@@ -99,6 +100,7 @@ namespace DGGBot.Modules
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
                         {
+                            Log.Information("{author} added Youtube Channel:{channel}", Context.Message.Author, youtubeName);
                             await ReplyAsync($"{channel.Snippet.Title} added to the database");
                             JobManager.AddJob(
                                 new YoutubeJob(Context.SocketClient, _youtubeService, youtubeToCheck, new HttpClient(),
@@ -144,6 +146,7 @@ namespace DGGBot.Modules
                         var changes = await context.SaveChangesAsync();
                         if (changes > 0)
                         {
+                            Log.Information("{author} added Twitch Channel:{channel}", Context.Message.Author, twitchName);
                             await ReplyAsync($"{user.Name} added to the database");
                             JobManager.AddJob(new TwitchJob(Context.SocketClient, _twitchService, streamToCheck),
                                 s => s.WithName(streamToCheck.UserId.ToString()).ToRunEvery(streamToCheck.Frequency).Seconds());
@@ -192,6 +195,7 @@ namespace DGGBot.Modules
                     var changes = await context.SaveChangesAsync();
                     if (changes > 0)
                     {
+                        Log.Information("{author} removed Twitter User:{user}", Context.Message.Author, twitterName);
                         Log.Information("Job Count is {count}",JobManager.AllSchedules.Count());
                         JobManager.RemoveJob(twitter.UserId.ToString());
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
@@ -222,6 +226,8 @@ namespace DGGBot.Modules
                     var changes = await context.SaveChangesAsync();
                     if (changes > 0)
                     {
+                        Log.Information("{author} removed Youtube channel:{channel}", Context.Message.Author, youtubeName);
+
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
                         JobManager.RemoveJob(youtube.ChannelId);
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
@@ -259,6 +265,8 @@ namespace DGGBot.Modules
                     var changes = await context.SaveChangesAsync();
                     if (changes > 0)
                     {
+                        Log.Information("{author} removed Twitch channel:{channel}", Context.Message.Author, twitchName);
+
                         Log.Information("Job Count is {count}", JobManager.AllSchedules.Count());
                         JobManager.RemoveJob(stream.UserId.ToString());
                         JobManager.RemoveJob(record?.StreamId.ToString());
