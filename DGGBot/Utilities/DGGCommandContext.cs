@@ -9,8 +9,9 @@ namespace DGGBot.Utilities
         public DggCommandContext(DiscordSocketClient client, IUserMessage msg) : base(client, msg)
         {
             SocketClient = client;
+            
         }
-
+      
         public DiscordSocketClient SocketClient { get; }
     }
 }

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DGGBot.Data;
 using DGGBot.Services;
+using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using FluentScheduler;
@@ -22,7 +23,7 @@ namespace DGGBot.Utilities.Attributes
             //{
             //    return PreconditionResult.FromSuccess();
             //}
-
+            
             var user = context.User as SocketGuildUser;
             if (user.Roles.FirstOrDefault(x => x.Name == "Administrator") != null)
                 return PreconditionResult.FromSuccess();
@@ -38,5 +39,7 @@ namespace DGGBot.Utilities.Attributes
                 return PreconditionResult.FromSuccess();
             }
         }
+
+        
     }
 }
