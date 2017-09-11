@@ -48,6 +48,9 @@ namespace SenpaiBot
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
             CreateJobs(_services);
+            //gateway doesn't actually open when the start happens so we need to wait to be able to use the client
+            await Task.Delay(2000);
+            await _client.SetGameAsync("!wander help");
             await Task.Delay(-1);
         }
 
