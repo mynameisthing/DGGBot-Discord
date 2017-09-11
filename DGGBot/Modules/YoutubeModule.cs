@@ -31,7 +31,7 @@ namespace DGGBot.Modules
 
         [Command]
         [ChannelThrottle]
-        public async Task GetYouTube([Remainder] string unused = null)
+        public async Task GetYouTube(string unused = null)
         {
             YouTubeRecord record;
             YouTubeToCheck youtube;
@@ -55,7 +55,8 @@ namespace DGGBot.Modules
         }
 
         [Command("add")]
-        public async Task Youtube(string youtubeName, IGuildChannel guildChannel, string hexColor, int checkFrequency)
+        [RequireOwnerOrAdmin]
+        public async Task AddYoutube(string youtubeName, IGuildChannel guildChannel, string hexColor, int checkFrequency)
         {
             if (checkFrequency < 5)
             {
@@ -106,7 +107,8 @@ namespace DGGBot.Modules
         }
 
         [Command("remove")]
-        public async Task Youtube(string youtubeName)
+        [RequireOwnerOrAdmin]
+        public async Task RemoveYoutube(string youtubeName)
         {
             using (var context = new DggContext())
             {

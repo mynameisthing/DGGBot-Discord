@@ -48,7 +48,6 @@ namespace SenpaiBot
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
             CreateJobs(_services);
-
             await Task.Delay(-1);
         }
 
@@ -151,7 +150,7 @@ namespace SenpaiBot
                             serviceProvider.GetRequiredService<DiscordSocketClient>(),
                             serviceProvider.GetRequiredService<TwitchService>(),
                             thisStreamToCheck
-                        )).WithName(stream.StreamId.ToString()).ToRunEvery(1).Minutes();
+                        )).WithName(stream.StreamId.ToString()).ToRunEvery(5).Minutes();
                         Log.Information("{jobtype} started for {name} with ID: {id}", nameof(TwitchUpdateJob),
                             thisStreamToCheck.FriendlyUsername, stream.StreamId);
                     }

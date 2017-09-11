@@ -36,6 +36,8 @@ namespace DGGBot.Services.Youtube
             _youTubeToCheck = youTubeToCheck;
             _httpClient = httpClient;
             _config = config;
+            _httpClient.BaseAddress = new Uri("https://www.googleapis.com/youtube/v3/");
+            _httpClient.Timeout = new TimeSpan(0, 0, 8);
         }
 
         public void Execute()
@@ -142,8 +144,7 @@ namespace DGGBot.Services.Youtube
         {
             video.Snippet.Thumbnails.Maxres =
                 new YouTubeVideoThumbnail {Url = $"https://i.ytimg.com/vi/{video.Id.VideoId}/maxresdefault.jpg"};
-            _httpClient.BaseAddress = new Uri("https://www.googleapis.com/youtube/v3/");
-            _httpClient.Timeout = new TimeSpan(0, 0, 8);
+          
             // GET CHANNEL OBJECT FROM API
             var response = await _httpClient
                 .GetAsync($"channels?part=snippet&id={video.Snippet.ChannelId}&key={_config["youtubeKey"]}");

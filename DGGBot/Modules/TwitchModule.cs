@@ -15,8 +15,8 @@ using Serilog;
 
 namespace DGGBot.Modules
 {
-    [Group("live")]
-    [Alias("twitch")]
+    [Group("twitch")]
+    [Alias("live")]
     public class TwitchModule : ModuleBase<DggCommandContext>
     {
         private readonly TwitchService _twitchService;
@@ -28,7 +28,7 @@ namespace DGGBot.Modules
 
         [Command]
         [ChannelThrottle]
-        public async Task GetLive([Remainder] string unused = null)
+        public async Task GetLive(string unused = null)
         {
             StreamLastOnline lastOnline;
             StreamRecord streamRecord;
@@ -69,7 +69,8 @@ namespace DGGBot.Modules
         }
 
         [Command("add")]
-        public async Task Twitch(string twitchName, IGuildChannel guildChannel, string hexColor, int checkFrequency,
+        [RequireOwnerOrAdmin]
+        public async Task AddTwitch(string twitchName, IGuildChannel guildChannel, string hexColor, int checkFrequency,
             bool deleteMessage, bool pinMessage, [Remainder] string discordMessage)
         {
             if (checkFrequency < 5)
@@ -121,7 +122,8 @@ namespace DGGBot.Modules
         }
 
         [Command("remove")]
-        public async Task Twitch(string twitchName)
+        [RequireOwnerOrAdmin]
+        public async Task RemoveTwitch(string twitchName)
         {
             using (var context = new DggContext())
             {

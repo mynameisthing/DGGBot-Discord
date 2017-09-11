@@ -3,6 +3,7 @@ using System.Linq;
 using DGGBot.Data;
 using DGGBot.Data.Enitities;
 using FluentScheduler;
+using Serilog;
 
 namespace DGGBot.Services
 {
@@ -25,7 +26,7 @@ namespace DGGBot.Services
                     x.DiscordChannelId == _discordChannelId && x.CommandName == _commandName);
                 if (throttle is null)
                 {
-                    Console.WriteLine("add throttle");
+                    
                     context.Throttles.Add(new Throttle
                     {
                         DiscordChannelId = _discordChannelId,
@@ -33,14 +34,13 @@ namespace DGGBot.Services
                     });
                     context.SaveChanges();
                     JobManager.AddJob(new ThrottleJob(_commandName, _discordChannelId),
-                        s => s.ToRunOnceIn(20).Seconds());
+                        s => s.ToRunOnceIn(30).Seconds());
                 }
                 else
                 {
-                    Console.WriteLine("remove throttle");
-
                     context.Throttles.Remove(throttle);
                     context.SaveChanges();
+                    Log.Information("Throttle ended in {channel} for {commandName}",_discordChannelId,_commandName);
                 }
             }
         }

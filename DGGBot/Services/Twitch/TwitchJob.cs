@@ -81,7 +81,7 @@ namespace DGGBot.Services.Twitch
                     Console.WriteLine("add");
 
                     JobManager.AddJob(new TwitchUpdateJob(_client, _twitchService, streamToCheck),
-                        s => s.WithName(stream.Id.ToString()).ToRunEvery(1).Minutes());
+                        s => s.WithName(stream.Id.ToString()).ToRunEvery(5).Minutes());
                 }
 
                 return;
