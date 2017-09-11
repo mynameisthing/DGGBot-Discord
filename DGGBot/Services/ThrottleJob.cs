@@ -8,8 +8,8 @@ namespace DGGBot.Services
 {
     public class ThrottleJob : IJob
     {
-        private readonly ulong _discordChannelId;
         private readonly string _commandName;
+        private readonly ulong _discordChannelId;
 
         public ThrottleJob(string commandName, ulong discordChannelId)
         {

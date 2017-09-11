@@ -44,7 +44,9 @@ namespace DGGBot.Services.Youtube
             var videos = _youtubeService.GetYouTubeVideoListAsync(_youTubeToCheck.ChannelId).GetAwaiter()
                 .GetResult();
             if (videos.Items is null)
+            {
                 return;
+            }
             var latestVideo = videos.Items.FirstOrDefault();
             var latestVideoId = latestVideo.Id.VideoId;
 
@@ -58,11 +60,15 @@ namespace DGGBot.Services.Youtube
 
             if (existingRecord != null &&
                 latestVideo.Snippet.PublishedAt.CompareTo(new DateTimeOffset(existingRecord.PublishedAt)) <= 0)
+            {
                 return;
+            }
 
             var embed = SendMessageAsync(_youTubeToCheck, latestVideo).GetAwaiter().GetResult();
             if (embed == null)
+            {
                 return;
+            }
 
             using (var db = new DggContext())
             {
@@ -144,7 +150,9 @@ namespace DGGBot.Services.Youtube
             var responseString = await response.Content.ReadAsStringAsync();
             var channelList = JsonConvert.DeserializeObject<YouTubeChannelList>(responseString);
             if (channelList.Items.Count != 1)
+            {
                 return null;
+            }
 
             var channel = channelList.Items[0];
 
@@ -167,10 +175,14 @@ namespace DGGBot.Services.Youtube
 
             var lineBreakIndex = video.Snippet.Description.IndexOf("\n");
             if (lineBreakIndex != -1)
+            {
                 shortDescription = shortDescription.Substring(0, lineBreakIndex);
+            }
 
             if (shortDescription.Length > 500)
+            {
                 shortDescription = shortDescription.Substring(0, 500) + "...";
+            }
 
             embed.Author = author;
             embed.Footer = footer;

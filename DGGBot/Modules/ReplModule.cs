@@ -104,12 +104,16 @@ namespace DGGBot.Modules
             embed.AddField(a => a.WithName("Code").WithValue(Format.Code(parsedResult.Code, "cs")));
 
             if (parsedResult.ReturnValue != null)
+            {
                 embed.AddField(a => a.WithName($"Result: {parsedResult.ReturnTypeName ?? "null"}")
                     .WithValue(Format.Code($"{returnValue}", "txt")));
+            }
 
             if (!string.IsNullOrWhiteSpace(consoleOut))
+            {
                 embed.AddField(a => a.WithName("Console Output")
                     .WithValue(Format.Code(consoleOut, "txt")));
+            }
 
             if (!string.IsNullOrWhiteSpace(parsedResult.Exception))
             {
@@ -124,7 +128,9 @@ namespace DGGBot.Modules
         private static string TrimIfNeeded(string value, int len)
         {
             if (value.Length > len)
+            {
                 return value.Substring(0, len);
+            }
 
             return value;
         }

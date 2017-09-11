@@ -99,7 +99,9 @@ namespace DGGBot.Services.Twitch
                         response = responses.First(r => r.UserId == existingRecord.UserId);
                         Console.WriteLine($"{response.NullResponseDate} + {DateTimeOffset.UtcNow.AddMinutes(-2)}");
                         if (response.NullResponseDate > DateTimeOffset.UtcNow.AddMinutes(-2))
+                        {
                             return;
+                        }
                     }
                     else
                     {
@@ -142,7 +144,9 @@ namespace DGGBot.Services.Twitch
                         channel.GetMessageAsync((ulong) existingRecord.DiscordMessageId).GetAwaiter().GetResult() as
                             RestUserMessage;
                     if (!(msg is null))
+                    {
                         msg.UnpinAsync().GetAwaiter().GetResult();
+                    }
                 }
 
                 using (var db = new DggContext())
@@ -163,7 +167,9 @@ namespace DGGBot.Services.Twitch
                     var updateJob =
                         JobManager.AllSchedules.FirstOrDefault(u => u.Name == existingRecord.StreamId.ToString());
                     if (updateJob == null)
+                    {
                         return;
+                    }
                     Console.WriteLine("remove jhob");
                     JobManager.RemoveJob(updateJob.Name);
 
@@ -178,13 +184,17 @@ namespace DGGBot.Services.Twitch
             Embed embed = null;
 
             if (streamToCheck.EmbedColor != 0)
+            {
                 embed = CreateEmbed(stream, (uint) streamToCheck.EmbedColor);
+            }
 
             var channel = _client.GetChannel((ulong) streamToCheck.DiscordChannelId) as SocketTextChannel;
             var resp = await channel.SendMessageAsync(streamToCheck.DiscordMessage, embed: embed);
 
             if (streamToCheck.PinMessage)
+            {
                 await resp.PinAsync();
+            }
 
             return (long) resp.Id;
         }
@@ -277,7 +287,9 @@ namespace DGGBot.Services.Twitch
                 // i dunno why it's putting an empty game for 0 minutes first each time,
                 // but here's a quick fix lel
                 if (string.IsNullOrEmpty(g.Game))
+                {
                     continue;
+                }
 
                 g.StopTime = DateTime.SpecifyKind(g.StopTime.Value, DateTimeKind.Utc);
                 g.StartTime = DateTime.SpecifyKind(g.StartTime, DateTimeKind.Utc);

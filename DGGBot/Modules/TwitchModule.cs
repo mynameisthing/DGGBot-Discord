@@ -17,7 +17,6 @@ namespace DGGBot.Modules
 {
     [Group("live")]
     [Alias("twitch")]
-    
     public class TwitchModule : ModuleBase<DggCommandContext>
     {
         private readonly TwitchService _twitchService;
@@ -26,6 +25,7 @@ namespace DGGBot.Modules
         {
             _twitchService = twitchService;
         }
+
         [Command]
         [ChannelThrottle]
         public async Task GetLive([Remainder] string unused = null)
@@ -69,7 +69,8 @@ namespace DGGBot.Modules
         }
 
         [Command("add")]
-        public async Task Twitch(string twitchName, IGuildChannel guildChannel, string hexColor, int checkFrequency, bool deleteMessage, bool pinMessage, [Remainder]string discordMessage)
+        public async Task Twitch(string twitchName, IGuildChannel guildChannel, string hexColor, int checkFrequency,
+            bool deleteMessage, bool pinMessage, [Remainder] string discordMessage)
         {
             if (checkFrequency < 5)
             {
@@ -88,15 +89,15 @@ namespace DGGBot.Modules
                 {
                     var streamToCheck = new StreamToCheck
                     {
-                        DiscordChannelId = (long)guildChannel.Id,
-                        DiscordServerId = (long)Context.Guild.Id,
+                        DiscordChannelId = (long) guildChannel.Id,
+                        DiscordServerId = (long) Context.Guild.Id,
                         UserId = user.Id,
                         Frequency = checkFrequency,
                         FriendlyUsername = user.Name,
                         DeleteDiscordMessage = deleteMessage,
                         PinMessage = pinMessage,
                         DiscordMessage = discordMessage,
-                        EmbedColor = (int)Helpers.GetColorFromHex(hexColor).RawValue
+                        EmbedColor = (int) Helpers.GetColorFromHex(hexColor).RawValue
                     };
 
                     await context.StreamsToCheck.AddAsync(streamToCheck);

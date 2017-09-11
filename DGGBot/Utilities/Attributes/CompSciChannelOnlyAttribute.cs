@@ -11,7 +11,9 @@ namespace DGGBot.Utilities.Attributes
             IServiceProvider services)
         {
             if (context.Channel.Id == 273920762312916992)
+            {
                 return Task.FromResult(PreconditionResult.FromSuccess());
+            }
 
             return Task.FromResult(PreconditionResult.FromError(""));
         }

@@ -73,7 +73,9 @@ namespace DGGBot.Services.Eval.ResultModels
         public ConsoleKeyInfo ReadKey(bool a)
         {
             if (a)
+            {
                 Write("a");
+            }
             return ReadKey();
         }
 

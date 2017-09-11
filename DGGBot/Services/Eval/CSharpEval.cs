@@ -71,7 +71,9 @@ namespace DGGBot.Services.Eval
 
             var compileTime = sw.Elapsed;
             if (compileErrors.Length > 0)
+            {
                 return EvalResult.CreateErrorResult(code, sb.ToString(), sw.Elapsed, compileErrors);
+            }
 
             var globals = new Globals
             {

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
-using Discord.WebSocket;
 
 namespace DGGBot.Utilities.Attributes
 {
@@ -15,9 +13,12 @@ namespace DGGBot.Utilities.Attributes
             IServiceProvider services)
         {
             var user = context.User as IGuildUser;
-            if (user.GuildPermissions.Administrator || (await context.Client.GetApplicationInfoAsync()).Owner.Username == user.Username)
+            if (user.GuildPermissions.Administrator ||
+                (await context.Client.GetApplicationInfoAsync()).Owner.Username == user.Username)
+            {
                 return PreconditionResult.FromSuccess();
-           
+            }
+
             return PreconditionResult.FromError("");
         }
     }

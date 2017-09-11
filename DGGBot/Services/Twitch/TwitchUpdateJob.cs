@@ -32,17 +32,24 @@ namespace DGGBot.Services.Twitch
             {
                 record = db.StreamRecords.FirstOrDefault(sr => sr.UserId == _stream.UserId);
                 if (record == null)
+                {
                     return;
+                }
             }
 
             var stream = _twitchService.GetTwitchStreamAsync(_stream.UserId).GetAwaiter().GetResult();
             if (stream == null)
+            {
                 return;
+            }
 
             if (string.IsNullOrEmpty(stream.Game))
+            {
                 stream.Game = "(no game)";
+            }
 
             if (record.CurrentGame != stream.Game)
+            {
                 using (var db = new DggContext())
                 {
                     var streamGame = db.StreamGames
@@ -62,6 +69,7 @@ namespace DGGBot.Services.Twitch
 
                     db.SaveChanges();
                 }
+            }
 
             var embed = CreateEmbed(stream, (uint) _stream.EmbedColor);
 
@@ -77,7 +85,9 @@ namespace DGGBot.Services.Twitch
                 {
                     var responses = context.StreamNullResponses;
                     if (responses.Any(f => f.UserId == _stream.UserId))
+                    {
                         responses.Remove(responses.First(f => f.UserId == _stream.UserId));
+                    }
                     context.SaveChanges();
                 }
             }

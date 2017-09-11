@@ -41,11 +41,15 @@ namespace DGGBot.Utilities
         {
             var stringBuilder = new StringBuilder();
             foreach (var item in p.OrderBy(x => x.Key))
+            {
                 if (!string.IsNullOrEmpty(item.Value) &&
                     !item.Key.EndsWith("secret"))
+                {
                     stringBuilder.AppendFormat("oauth_{0}=\"{1}\", ",
                         item.Key,
                         Uri.EscapeDataString(item.Value));
+                }
+            }
 
             return stringBuilder.ToString().TrimEnd(' ').TrimEnd(',');
         }
@@ -91,15 +95,21 @@ namespace DGGBot.Utilities
                 // signatures; any secrets must not be shared,
                 // and any existing signature will be invalid.
 
+            {
                 if (!string.IsNullOrEmpty(_params[pair.Key]) &&
                     !pair.Key.EndsWith("_secret") &&
                     !pair.Key.EndsWith("signature"))
+                {
                     queryParameters.Add("oauth_" + pair.Key, Uri.EscapeDataString(pair.Value));
+                }
+            }
 
 
             var stringBuilder = new StringBuilder();
             foreach (var item in queryParameters.OrderBy(x => x.Key))
+            {
                 stringBuilder.AppendFormat("{0}={1}&", item.Key, item.Value);
+            }
 
             // append the Uri.EscapeDataStringd version of that string to the sigbase
             sb.Append(Uri.EscapeDataString(stringBuilder.ToString().TrimEnd('&')));
@@ -112,15 +122,21 @@ namespace DGGBot.Utilities
         private Dictionary<string, string> ExtractQueryParameters(string queryString)
         {
             if (queryString.StartsWith("?"))
+            {
                 queryString = queryString.Remove(0, 1);
+            }
 
             var result = new Dictionary<string, string>();
 
             if (string.IsNullOrEmpty(queryString))
+            {
                 return result;
+            }
 
             foreach (var query in queryString.Split('&'))
+            {
                 if (!string.IsNullOrEmpty(query) && !query.StartsWith("oauth_"))
+                {
                     if (query.IndexOf('=') > -1)
                     {
                         var temp = query.Split('=');
@@ -130,6 +146,8 @@ namespace DGGBot.Utilities
                     {
                         result.Add(query, string.Empty);
                     }
+                }
+            }
 
             return result;
         }
@@ -137,7 +155,10 @@ namespace DGGBot.Utilities
         private string GenerateNonce(int length)
         {
             var result = new StringBuilder();
-            for (var i = 0; i < length; i++) result.Append(_chars[new Random().Next(0, 25)]);
+            for (var i = 0; i < length; i++)
+            {
+                result.Append(_chars[new Random().Next(0, 25)]);
+            }
             return result.ToString();
         }
 

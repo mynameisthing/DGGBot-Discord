@@ -15,7 +15,6 @@ using Serilog;
 namespace DGGBot.Modules
 {
     [Group("twitter")]
-    
     public class TwitterModule : ModuleBase<DggCommandContext>
     {
         private readonly TwitterService _twitterService;
@@ -35,7 +34,6 @@ namespace DGGBot.Modules
             {
                 twitter = await db.TwittersToCheck.FirstOrDefaultAsync();
                 record = await db.TweetRecords.FirstOrDefaultAsync(x => x.UserId == twitter.UserId);
-                
             }
 
             if (record == null)
@@ -46,14 +44,15 @@ namespace DGGBot.Modules
 
             record.CreatedAt = DateTime.SpecifyKind(record.CreatedAt, DateTimeKind.Utc);
 
-            var embed = CreateEmbed(record,twitter);
+            var embed = CreateEmbed(record, twitter);
 
             await ReplyAsync("", embed: embed);
         }
 
         [Command("add")]
         [RequireOwnerOrAdmin]
-        public async Task AddTwitter(string twitterName, IGuildChannel guildChannel, string hexColor, int checkFrequency)
+        public async Task AddTwitter(string twitterName, IGuildChannel guildChannel, string hexColor,
+            int checkFrequency)
         {
             if (checkFrequency < 5)
             {
@@ -71,10 +70,10 @@ namespace DGGBot.Modules
             {
                 if (await context.TwittersToCheck.FirstOrDefaultAsync(x => x.UserId == user.UserId) is null)
                 {
-                    user.DiscordChannelId = (long)guildChannel.Id;
-                    user.DiscordServerId = (long)Context.Guild.Id;
+                    user.DiscordChannelId = (long) guildChannel.Id;
+                    user.DiscordServerId = (long) Context.Guild.Id;
                     user.Frequency = checkFrequency;
-                    user.EmbedColor = (int)Helpers.GetColorFromHex(hexColor).RawValue;
+                    user.EmbedColor = (int) Helpers.GetColorFromHex(hexColor).RawValue;
                     await context.TwittersToCheck.AddAsync(user);
                     var changes = await context.SaveChangesAsync();
                     if (changes > 0)
@@ -97,8 +96,6 @@ namespace DGGBot.Modules
         [RequireOwnerOrAdmin]
         public async Task RemoveTwitter(string twitterName)
         {
-
-
             using (var context = new DggContext())
             {
                 var twitter =
@@ -129,7 +126,7 @@ namespace DGGBot.Modules
         }
 
 
-        private Embed CreateEmbed(TweetRecord tweet,TwitterToCheck twitter)
+        private Embed CreateEmbed(TweetRecord tweet, TwitterToCheck twitter)
         {
             var embed = new EmbedBuilder();
 

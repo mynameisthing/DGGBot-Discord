@@ -20,14 +20,15 @@ namespace DGGBot.Modules
     [Alias("yt")]
     public class YoutubeModule : ModuleBase<DggCommandContext>
     {
-        private readonly YoutubeService _youtubeService;
         private readonly IConfiguration _config;
+        private readonly YoutubeService _youtubeService;
 
         public YoutubeModule(YoutubeService youtubeService, IConfiguration config)
         {
             _youtubeService = youtubeService;
             _config = config;
         }
+
         [Command]
         [ChannelThrottle]
         public async Task GetYouTube([Remainder] string unused = null)
@@ -48,7 +49,7 @@ namespace DGGBot.Modules
 
             record.PublishedAt = DateTime.SpecifyKind(record.PublishedAt, DateTimeKind.Utc);
 
-            var embed = CreateEmbed(record,youtube);
+            var embed = CreateEmbed(record, youtube);
 
             await ReplyAsync("", embed: embed);
         }
@@ -56,7 +57,6 @@ namespace DGGBot.Modules
         [Command("add")]
         public async Task Youtube(string youtubeName, IGuildChannel guildChannel, string hexColor, int checkFrequency)
         {
-
             if (checkFrequency < 5)
             {
                 await ReplyAsync("Frequency cant be less than 5");
@@ -75,12 +75,12 @@ namespace DGGBot.Modules
                 {
                     var youtubeToCheck = new YouTubeToCheck
                     {
-                        DiscordChannelId = (long)guildChannel.Id,
-                        DiscordServerId = (long)Context.Guild.Id,
+                        DiscordChannelId = (long) guildChannel.Id,
+                        DiscordServerId = (long) Context.Guild.Id,
                         ChannelId = channel.Id,
                         Frequency = 60,
                         FriendlyUsername = channel.Snippet.Title,
-                        EmbedColor = (int)Helpers.GetColorFromHex(hexColor).RawValue
+                        EmbedColor = (int) Helpers.GetColorFromHex(hexColor).RawValue
                     };
 
                     await context.YouTubesToCheck.AddAsync(youtubeToCheck);
@@ -139,7 +139,7 @@ namespace DGGBot.Modules
             }
         }
 
-        private Embed CreateEmbed(YouTubeRecord record,YouTubeToCheck youtube)
+        private Embed CreateEmbed(YouTubeRecord record, YouTubeToCheck youtube)
         {
             var embed = new EmbedBuilder();
             var author = new EmbedAuthorBuilder
@@ -162,10 +162,10 @@ namespace DGGBot.Modules
                 Value = record.VideoDescription,
                 IsInline = false
             };
-            
+
             embed.Author = author;
             embed.Footer = footer;
-            embed.Color = new Color((uint)youtube.EmbedColor);
+            embed.Color = new Color((uint) youtube.EmbedColor);
             embed.ImageUrl = record.ImageUrl;
             embed.Title = record.VideoTitle;
             embed.Url = "https://www.youtube.com/watch?v=" + record.VideoId;

@@ -30,7 +30,9 @@ namespace DGGBot.Services.Twitter
                     _config["Twitter:TokenSecret"]);
                 var url = $"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id={userId}&count=50";
                 if (sinceId.HasValue)
+                {
                     url += $"&since_id={sinceId.Value}";
+                }
                 using (var client = new HttpClient())
                 {
                     client.DefaultRequestHeaders.Authorization = header.Generate(url, "GET");
@@ -39,7 +41,9 @@ namespace DGGBot.Services.Twitter
                     var tweets = JsonConvert.DeserializeObject<List<Tweet>>(responseString);
 
                     if (sinceId.HasValue)
+                    {
                         tweets.Reverse();
+                    }
 
                     return tweets;
                 }

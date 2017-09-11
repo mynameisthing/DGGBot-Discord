@@ -5,7 +5,6 @@ using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using DGGBot.Data;
-using DGGBot.Services;
 using DGGBot.Services.Twitch;
 using DGGBot.Services.Twitter;
 using DGGBot.Services.Youtube;
@@ -49,7 +48,7 @@ namespace SenpaiBot
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
             CreateJobs(_services);
-           
+
             await Task.Delay(-1);
         }
 
@@ -65,14 +64,19 @@ namespace SenpaiBot
 
         private async Task HandleCommand(SocketMessage messageParam)
         {
-            if (!(messageParam is SocketUserMessage message)) return;
+            if (!(messageParam is SocketUserMessage message))
+            {
+                return;
+            }
 
             var argPos = 0;
 
             if (!(message.HasStringPrefix("! ", ref argPos)
                   || message.HasCharPrefix('!', ref argPos)
                   || message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
+            {
                 return;
+            }
 
 
             var context = new DggCommandContext(_client, message);
@@ -178,7 +182,7 @@ namespace SenpaiBot
             services.AddSingleton<IConfiguration>(config);
             services.AddSingleton(client);
             services.AddSingleton(httpclient);
-          
+
             services.AddSingleton(new CommandService());
             services.AddSingleton(new TwitterService(config));
             services.AddSingleton(new YoutubeService(client, config, new HttpClient()));

@@ -68,7 +68,9 @@ namespace DGGBot.Services.Twitter
                     }
                 }
                 if (tweets.Count == 0)
+                {
                     return;
+                }
 
                 var latestTweet = tweets[tweets.Count - 1];
 

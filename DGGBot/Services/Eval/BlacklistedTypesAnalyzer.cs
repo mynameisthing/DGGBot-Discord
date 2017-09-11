@@ -46,7 +46,9 @@ namespace DGGBot.Services.Eval
 
                 if (symbol is INamedTypeSymbol namedSymbol &&
                     _symbols.Contains(namedSymbol.Name))
+                {
                     context.ReportDiagnostic(Diagnostic.Create(Rule, node.GetLocation()));
+                }
             }
         }
     }

@@ -12,7 +12,9 @@ namespace DGGBot.Extensions
             var args = type.GetGenericArguments();
 
             if (args.Length == 0)
+            {
                 return GetPrimitiveTypeName(type);
+            }
 
             var returnTypeName = type.Name;
             var returnArgs = args.Select(a => a.ParseGenericArgs());
@@ -23,7 +25,9 @@ namespace DGGBot.Extensions
         {
             var typeName = type.Name;
             if (type.IsArray)
+            {
                 typeName = typeName.Replace(ArrayBrackets, string.Empty);
+            }
 
             var returnValue = typeName;
             switch (typeName)
@@ -78,7 +82,9 @@ namespace DGGBot.Extensions
             }
 
             if (type.IsArray)
+            {
                 return string.Join(string.Empty, returnValue, ArrayBrackets);
+            }
             return returnValue;
         }
     }
