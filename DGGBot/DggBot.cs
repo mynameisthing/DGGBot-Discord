@@ -18,7 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace SenpaiBot
+namespace DGGBot
 {
     public class DggBot
     {
@@ -30,7 +30,7 @@ namespace SenpaiBot
         public DggBot()
         {
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
+                .MinimumLevel.Information()
                 .WriteTo.Console()
                 .WriteTo.RollingFile(@"logs\{Date}.txt")
                 .CreateLogger();

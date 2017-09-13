@@ -26,11 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Discord.Net" Version="1.0.1" />
+    <PackageReference Include="Discord.Net" Version="1.0.2" />
     <PackageReference Include="FluentScheduler" Version="5.3.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="2.3.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Net.Compilers" Version="2.3.2" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.0.1" />
     <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
   </ItemGroup>
