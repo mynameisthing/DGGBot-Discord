@@ -4,9 +4,9 @@ using Discord.WebSocket;
 
 namespace DGGBot.Utilities
 {
-    public class DggCommandContext : CommandContext
+    public class DggCommandContext : SocketCommandContext
     {
-        public DggCommandContext(DiscordSocketClient client, IUserMessage msg) : base(client, msg)
+        public DggCommandContext(DiscordSocketClient client, SocketUserMessage msg) : base(client, msg)
         {
             SocketClient = client;
         }

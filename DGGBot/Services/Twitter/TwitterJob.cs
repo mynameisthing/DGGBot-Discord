@@ -38,7 +38,7 @@ namespace DGGBot.Services.Twitter
                 {
                     var tweet = tweets[i];
 
-                    if (tweet.Text.StartsWith("@"))
+                    if (tweet.FullText.StartsWith("@"))
                     {
                         tweets.RemoveAt(i);
                         i--;
@@ -82,7 +82,7 @@ namespace DGGBot.Services.Twitter
                         {
                             UserId = latestTweet.User.Id,
                             TweetId = latestTweet.Id,
-                            Text = WebUtility.HtmlDecode(latestTweet.Text),
+                            Text = WebUtility.HtmlDecode(latestTweet.FullText),
                             AuthorName = latestTweet.User.Name,
                             AuthorUsername = latestTweet.User.Username,
                             ProfileImageUrl = latestTweet.User.ProfileImageUrl,
@@ -94,7 +94,7 @@ namespace DGGBot.Services.Twitter
                     else
                     {
                         existing.TweetId = latestTweet.Id;
-                        existing.Text = WebUtility.HtmlDecode(latestTweet.Text);
+                        existing.Text = WebUtility.HtmlDecode(latestTweet.FullText);
                         existing.AuthorName = latestTweet.User.Name;
                         existing.AuthorUsername = latestTweet.User.Username;
                         existing.ProfileImageUrl = latestTweet.User.ProfileImageUrl;
@@ -127,7 +127,7 @@ namespace DGGBot.Services.Twitter
             };
 
             embed.Title = "Go to tweet";
-            embed.Description = WebUtility.HtmlDecode(tweet.Text);
+            embed.Description = WebUtility.HtmlDecode(tweet.FullText);
             embed.Url = $"https://twitter.com/{tweet.User.Username}/status/{tweet.Id}";
             embed.Color = new Color((uint) _twitter.EmbedColor);
             embed.Author = author;

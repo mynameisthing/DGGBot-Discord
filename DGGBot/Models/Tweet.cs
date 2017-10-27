@@ -8,6 +8,8 @@ namespace DGGBot.Models
     {
         public long Id { get; set; }
         public string Text { get; set; }
+        [JsonProperty(PropertyName = "full_text")]
+        public string FullText { get; set; }
 
         [JsonConverter(typeof(TwitterDateTimeOffsetConverter))]
         [JsonProperty(PropertyName = "created_at")]

@@ -156,7 +156,7 @@ namespace DGGBot.Services.Youtube
             }
 
             var channel = channelList.Items[0];
-
+            
             var embed = new EmbedBuilder();
             var author = new EmbedAuthorBuilder
             {

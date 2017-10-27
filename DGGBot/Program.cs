@@ -6,6 +6,7 @@ namespace DGGBot
     {
         private static async Task Main(string[] args)
         {
+           
             await new DggBot().Start();
         }
     }

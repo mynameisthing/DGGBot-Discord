@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DGGBot.Data.Migrations
 {
-    public partial class throttlefix : Migration
+    public partial class PrioritySupport : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace DGGBot.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     game = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 18, 32, 54, 878, DateTimeKind.Utc)),
+                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 10, 27, 15, 38, 45, 966, DateTimeKind.Utc)),
                     stop_time = table.Column<DateTime>(type: "TEXT", nullable: true),
                     stream_id = table.Column<long>(type: "INTEGER", nullable: false)
                 },
@@ -60,7 +60,7 @@ namespace DGGBot.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     current_game = table.Column<string>(type: "TEXT", nullable: false),
                     discord_message_id = table.Column<long>(type: "INTEGER", nullable: false),
-                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 9, 10, 18, 32, 54, 876, DateTimeKind.Utc)),
+                    start_time = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValue: new DateTime(2017, 10, 27, 15, 38, 45, 965, DateTimeKind.Utc)),
                     user_id = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -81,7 +81,9 @@ namespace DGGBot.Data.Migrations
                     embed_color = table.Column<int>(type: "INTEGER", nullable: false),
                     frequency = table.Column<int>(type: "INTEGER", nullable: false),
                     friendly_username = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    pin_message = table.Column<bool>(type: "INTEGER", nullable: false)
+                    pin_message = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Priority = table.Column<int>(type: "INTEGER", nullable: false),
+                    StreamUrl = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -143,7 +145,8 @@ namespace DGGBot.Data.Migrations
                     discord_server_id = table.Column<long>(type: "INTEGER", nullable: false),
                     embed_color = table.Column<int>(type: "INTEGER", nullable: false),
                     frequency = table.Column<int>(type: "INTEGER", nullable: false),
-                    friendly_username = table.Column<string>(type: "TEXT", maxLength: 45, nullable: false)
+                    friendly_username = table.Column<string>(type: "TEXT", maxLength: 45, nullable: false),
+                    Priority = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -178,7 +181,8 @@ namespace DGGBot.Data.Migrations
                     discord_server_id = table.Column<long>(type: "INTEGER", nullable: false),
                     embed_color = table.Column<int>(type: "INTEGER", nullable: false),
                     frequency = table.Column<int>(type: "INTEGER", nullable: false),
-                    friendly_username = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
+                    friendly_username = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    Priority = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

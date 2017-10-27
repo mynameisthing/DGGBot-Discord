@@ -3,6 +3,7 @@ using System.Linq;
 using DGGBot.Data;
 using DGGBot.Data.Enitities;
 using FluentScheduler;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 
 namespace DGGBot.Services
@@ -34,7 +35,7 @@ namespace DGGBot.Services
                     });
                     context.SaveChanges();
                     JobManager.AddJob(new ThrottleJob(_commandName, _discordChannelId),
-                        s => s.ToRunOnceIn(45).Seconds());
+                        s => s.ToRunOnceIn(120).Seconds());
                 }
                 else
                 {

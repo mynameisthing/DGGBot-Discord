@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using Serilog;
 
@@ -10,7 +11,7 @@ namespace DGGBot.Modules
 {
     [Group("wander")]
     [Alias("bot")]
-    public class BotModule : ModuleBase<DggCommandContext>
+    public class BotModule : InteractiveBase<DggCommandContext>
     {
         [Command]
         public async Task Bot()

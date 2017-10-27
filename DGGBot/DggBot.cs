@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -10,12 +11,14 @@ using DGGBot.Services.Twitter;
 using DGGBot.Services.Youtube;
 using DGGBot.Utilities;
 using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using Discord.WebSocket;
 using FluentScheduler;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using Serilog;
 
 namespace DGGBot
@@ -32,26 +35,35 @@ namespace DGGBot
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.Console()
-                .WriteTo.RollingFile(@"logs\{Date}.txt")
+                .WriteTo.RollingFile(Path.Combine(Directory.GetCurrentDirectory(),"logs","{Date}.txt"))
                 .CreateLogger();
 
             _services = BuildDependencies();
             _client = _services.GetRequiredService<DiscordSocketClient>();
             _commands = _services.GetRequiredService<CommandService>();
             _config = _services.GetRequiredService<IConfiguration>();
+           
         }
 
         public async Task Start()
         {
             var token = _config["DiscordToken"];
             await InstallCommands();
+            CreateScheduledJobs(_services);
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
-            CreateJobs(_services);
-            //gateway doesn't actually open when the start happens so we need to wait to be able to use the client
-            await Task.Delay(2000);
+            _client.Ready += client_Ready;
+           await Task.Delay(-1);
+        }
+
+       
+
+        private async Task client_Ready()
+        {
             await _client.SetGameAsync("!wander help");
-            await Task.Delay(-1);
+
+            
+            CreateScheduledJobs(_services);
         }
 
         private async Task InstallCommands()
@@ -61,6 +73,7 @@ namespace DGGBot
             _client.Log += HandleLog;
             _commands.Log += HandleLog;
             _client.MessageReceived += HandleCommand;
+            
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly());
         }
 
@@ -87,7 +100,7 @@ namespace DGGBot
         }
 
         //TRUMPED
-        private static void CreateJobs(IServiceProvider serviceProvider)
+        private static void CreateScheduledJobs(IServiceProvider serviceProvider)
         {
             try
             {
@@ -184,11 +197,11 @@ namespace DGGBot
             services.AddSingleton<IConfiguration>(config);
             services.AddSingleton(client);
             services.AddSingleton(httpclient);
-
+            services.AddSingleton<InteractiveService>();
             services.AddSingleton(new CommandService());
             services.AddSingleton(new TwitterService(config));
-            services.AddSingleton(new YoutubeService(client, config, new HttpClient()));
-            services.AddSingleton(new TwitchService(client, config, new HttpClient()));
+            services.AddSingleton(new YoutubeService(config, new HttpClient()));
+            services.AddSingleton(new TwitchService(config, new HttpClient()));
 
             return services.BuildServiceProvider();
         }

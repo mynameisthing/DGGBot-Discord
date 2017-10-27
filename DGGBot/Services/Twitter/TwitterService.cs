@@ -25,10 +25,13 @@ namespace DGGBot.Services.Twitter
         {
             try
             {
-                var header = new OAuthHeader(_config["Twitter:ConsumerKey"], _config["Twitter:ConsumerSecret"],
+                var header = new OAuthHeader(
+                    _config["Twitter:ConsumerKey"],
+                    _config["Twitter:ConsumerSecret"],
                     _config["Twitter:Token"],
                     _config["Twitter:TokenSecret"]);
-                var url = $"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id={userId}&count=50";
+
+                var url = $"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id={userId}&count=50&tweet_mode=extended";
                 if (sinceId.HasValue)
                 {
                     url += $"&since_id={sinceId.Value}";
@@ -59,9 +62,12 @@ namespace DGGBot.Services.Twitter
         {
             try
             {
-                var header = new OAuthHeader(_config["Twitter:ConsumerKey"], _config["Twitter:ConsumerSecret"],
+                var header = new OAuthHeader(
+                    _config["Twitter:ConsumerKey"], 
+                    _config["Twitter:ConsumerSecret"],
                     _config["Twitter:Token"],
                     _config["Twitter:TokenSecret"]);
+
                 var url = $"https://api.twitter.com/1.1/users/show.json?screen_name={handle}";
 
                 using (var client = new HttpClient())

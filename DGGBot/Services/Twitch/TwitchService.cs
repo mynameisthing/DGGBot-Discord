@@ -6,20 +6,21 @@ using DGGBot.Utilities;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace DGGBot.Services.Twitch
 {
     public class TwitchService
     {
-        private readonly DiscordSocketClient _client;
+        
         private readonly IConfiguration _config;
         private readonly HttpClient _httpClient;
         private readonly string _streamUrl = "https://api.twitch.tv/kraken/streams/";
         private readonly string _userUrl = "https://api.twitch.tv/kraken/users";
 
-        public TwitchService(DiscordSocketClient client, IConfiguration config, HttpClient httpClient)
+        public TwitchService(IConfiguration config, HttpClient httpClient)
         {
-            _client = client;
+            
             _config = config;
             _httpClient = httpClient;
 
@@ -33,6 +34,7 @@ namespace DGGBot.Services.Twitch
         {
             var response = await _httpClient.GetAsync($"{_streamUrl}{userId}");
             var responseString = await response.Content.ReadAsStringAsync();
+            Log.Information(responseString);
             var streamResponse =
                 JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse?.Stream;

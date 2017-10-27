@@ -8,6 +8,7 @@ using DGGBot.Services.Youtube;
 using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using FluentScheduler;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@ namespace DGGBot.Modules
 {
     [Group("youtube")]
     [Alias("yt")]
-    public class YoutubeModule : ModuleBase<DggCommandContext>
+    public class YoutubeModule : InteractiveBase<DggCommandContext>
     {
         private readonly IConfiguration _config;
         private readonly YoutubeService _youtubeService;

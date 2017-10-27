@@ -11,8 +11,8 @@ using System;
 namespace DGGBot.Data.Migrations
 {
     [DbContext(typeof(DggContext))]
-    [Migration("20170910183254_throttlefix")]
-    partial class throttlefix
+    [Migration("20171027153846_PrioritySupport")]
+    partial class PrioritySupport
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -65,7 +65,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 10, 18, 32, 54, 878, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 10, 27, 15, 38, 45, 966, DateTimeKind.Utc));
 
                     b.Property<DateTime?>("StopTime")
                         .HasColumnName("stop_time");
@@ -132,7 +132,7 @@ namespace DGGBot.Data.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("start_time")
-                        .HasDefaultValue(new DateTime(2017, 9, 10, 18, 32, 54, 876, DateTimeKind.Utc));
+                        .HasDefaultValue(new DateTime(2017, 10, 27, 15, 38, 45, 965, DateTimeKind.Utc));
 
                     b.Property<long>("UserId")
                         .HasColumnName("user_id");
@@ -174,6 +174,10 @@ namespace DGGBot.Data.Migrations
 
                     b.Property<bool>("PinMessage")
                         .HasColumnName("pin_message");
+
+                    b.Property<int>("Priority");
+
+                    b.Property<string>("StreamUrl");
 
                     b.HasKey("UserId");
 
@@ -239,6 +243,8 @@ namespace DGGBot.Data.Migrations
                         .IsRequired()
                         .HasColumnName("friendly_username")
                         .HasMaxLength(45);
+
+                    b.Property<int>("Priority");
 
                     b.HasKey("UserId");
 
@@ -318,6 +324,8 @@ namespace DGGBot.Data.Migrations
                         .IsRequired()
                         .HasColumnName("friendly_username")
                         .HasMaxLength(100);
+
+                    b.Property<int>("Priority");
 
                     b.HasKey("ChannelId");
 

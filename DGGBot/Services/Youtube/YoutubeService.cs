@@ -11,14 +11,14 @@ namespace DGGBot.Services.Youtube
 {
     public class YoutubeService
     {
-        private readonly DiscordSocketClient _client;
+        
         private readonly IConfiguration _config;
         private readonly HttpClient _httpClient;
         private readonly string _url = "https://www.googleapis.com/youtube/v3/";
 
-        public YoutubeService(DiscordSocketClient client, IConfiguration config, HttpClient httpClient)
+        public YoutubeService(IConfiguration config, HttpClient httpClient)
         {
-            _client = client;
+            
             _config = config;
             _httpClient = httpClient;
             _httpClient.BaseAddress = new Uri(_url);

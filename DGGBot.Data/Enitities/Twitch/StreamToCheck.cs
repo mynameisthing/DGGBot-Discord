@@ -17,10 +17,12 @@
         public bool DeleteDiscordMessage { get; set; }
 
         public bool PinMessage { get; set; }
+        public string StreamUrl { get; set; }
 
         /// <summary>
         ///     Set to 0 to disable embedding
         /// </summary>
         public int EmbedColor { get; set; }
+        public int Priority { get; set; }
     }
 }

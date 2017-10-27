@@ -61,7 +61,7 @@ namespace DGGBot.Utilities
             r = byte.Parse(hexString.Substring(start, 2), NumberStyles.HexNumber);
             g = byte.Parse(hexString.Substring(start + 2, 2), NumberStyles.HexNumber);
             b = byte.Parse(hexString.Substring(start + 4, 2), NumberStyles.HexNumber);
-
+            
             return new Color(r, g, b);
         }
     }

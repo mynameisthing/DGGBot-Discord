@@ -7,6 +7,7 @@ using DGGBot.Services.Twitter;
 using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using FluentScheduler;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,7 @@ using Serilog;
 namespace DGGBot.Modules
 {
     [Group("twitter")]
-    public class TwitterModule : ModuleBase<DggCommandContext>
+    public class TwitterModule : InteractiveBase<DggCommandContext>
     {
         private readonly TwitterService _twitterService;
 

@@ -8,6 +8,7 @@ using DGGBot.Services.Twitch;
 using DGGBot.Utilities;
 using DGGBot.Utilities.Attributes;
 using Discord;
+using Discord.Addons.Interactive;
 using Discord.Commands;
 using FluentScheduler;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +18,7 @@ namespace DGGBot.Modules
 {
     [Group("twitch")]
     [Alias("live")]
-    public class TwitchModule : ModuleBase<DggCommandContext>
+    public class TwitchModule : InteractiveBase<DggCommandContext>
     {
         private readonly TwitchService _twitchService;
 
@@ -28,22 +29,23 @@ namespace DGGBot.Modules
 
         [Command]
         [ChannelThrottle]
-        public async Task GetLive(string unused = null)
+        public async Task GetLive([Remainder]string unused = null)
         {
             StreamLastOnline lastOnline;
             StreamRecord streamRecord;
-
+            StreamToCheck streamToCheck;
             using (var db = new DggContext())
             {
-                lastOnline = await db.StreamLastOnlines.FirstOrDefaultAsync();
-                streamRecord = await db.StreamRecords.FirstOrDefaultAsync();
+                streamToCheck =  db.StreamsToCheck.Aggregate((firstStream, secondStream) => firstStream.Priority > secondStream.Priority ? firstStream : secondStream);
+                lastOnline = await db.StreamLastOnlines.FirstOrDefaultAsync(x => x.UserId == streamToCheck.UserId);
+                streamRecord = await db.StreamRecords.FirstOrDefaultAsync(x => x.UserId == streamToCheck.UserId);
             }
-
+            
             string msg;
 
             if (lastOnline == null && streamRecord == null)
             {
-                msg = $"Destiny is offline. " +
+                msg = $"{streamToCheck.FriendlyUsername} is offline. " +
                       "I'll have more info in the future, after the next time the stream goes live. " +
                       "Sorry!";
             }
@@ -52,7 +54,7 @@ namespace DGGBot.Modules
                 streamRecord.StartTime = DateTime.SpecifyKind(streamRecord.StartTime, DateTimeKind.Utc);
 
                 var duration = DateTime.UtcNow - streamRecord.StartTime;
-                msg = $"Destiny is live! <https://www.destiny.gg/bigscreen>\n" +
+                msg = $"{streamToCheck.FriendlyUsername} is live! <{streamToCheck.StreamUrl}>\n" +
                       $"Currently playing {streamRecord.CurrentGame}\n" +
                       $"Live for {duration.ToFriendlyString()}";
             }
@@ -61,28 +63,39 @@ namespace DGGBot.Modules
                 lastOnline.LastOnlineAt = DateTime.SpecifyKind(lastOnline.LastOnlineAt, DateTimeKind.Utc);
 
                 var duration = DateTime.UtcNow - lastOnline.LastOnlineAt;
-                msg = $"Destiny is offline.\n" +
+                msg = $"{streamToCheck.FriendlyUsername} is offline.\n" +
                       $"Last online {duration.ToFriendlyString()} ago, was playing {lastOnline.LastGame}.";
             }
 
             await ReplyAsync(msg);
         }
 
-        [Command("add")]
+        [Command("add",RunMode = RunMode.Async)]
         [RequireOwnerOrAdmin]
-        public async Task AddTwitch(string twitchName, IGuildChannel guildChannel, string hexColor, int checkFrequency,
+        
+        public async Task AddTwitch(string twitchName, IGuildChannel guildChannel, int checkFrequency,
             bool deleteMessage, bool pinMessage, [Remainder] string discordMessage)
         {
-            if (checkFrequency < 5)
-            {
-                await ReplyAsync("Frequency cant be less than 5");
-            }
+            
             var response = await _twitchService.GetTwitchUserAsync(twitchName);
             if (response.Users is null)
             {
-                await ReplyAsync("Unable to get info from Twitch API");
+                await ReplyAsync("Unable to get Streamer from Twitch API");
                 return;
             }
+            await ReplyAsync("Please Enter in the Embed color in Hex format e.g. #ff851b\n" +
+                             "You pick a color and get the code for here: <http://htmlcolorcodes.com>");
+            var hexMessage = await NextMessageAsync();
+            var hexColor = (int)Helpers.GetColorFromHex(hexMessage.Content).RawValue;
+
+            await ReplyAsync("Please Enter a message you would like to go along with the twitch embed. Leave blank for no message" );
+            var message = await NextMessageAsync();
+
+            await ReplyAsync("Please Enter the stream URL. leave blank to use the Twitch Stream URL");
+            var urlMessage = await NextMessageAsync();
+
+            await ReplyAsync("Please Enter a number for the priority");
+            var priorityMessage = await NextMessageAsync();
             using (var context = new DggContext())
             {
                 var user = response.Users.FirstOrDefault();
@@ -93,12 +106,14 @@ namespace DGGBot.Modules
                         DiscordChannelId = (long) guildChannel.Id,
                         DiscordServerId = (long) Context.Guild.Id,
                         UserId = user.Id,
-                        Frequency = checkFrequency,
+                        Frequency = 60,
                         FriendlyUsername = user.Name,
-                        DeleteDiscordMessage = deleteMessage,
-                        PinMessage = pinMessage,
-                        DiscordMessage = discordMessage,
-                        EmbedColor = (int) Helpers.GetColorFromHex(hexColor).RawValue
+                        DeleteDiscordMessage = false,
+                        PinMessage = true,
+                        Priority = Convert.ToInt32(priorityMessage.Content),
+                        StreamUrl = string.IsNullOrWhiteSpace(urlMessage.Content) ? $"https://twitch.tv/{user.Name}" : message.Content,
+                        DiscordMessage = message.Content,
+                        EmbedColor = hexColor
                     };
 
                     await context.StreamsToCheck.AddAsync(streamToCheck);
