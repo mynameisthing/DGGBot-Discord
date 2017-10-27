@@ -52,13 +52,9 @@ namespace DGGBot.Modules
 
         [Command("add")]
         [RequireOwnerOrAdmin]
-        public async Task AddTwitter(string twitterName, IGuildChannel guildChannel, string hexColor,
-            int checkFrequency)
+        public async Task AddTwitter(string twitterName, IGuildChannel guildChannel, string hexColor)
         {
-            if (checkFrequency < 5)
-            {
-                await ReplyAsync("Frequency cant be less than 5");
-            }
+          
             var user = await _twitterService.GetUser(twitterName);
             if (user is null)
             {
@@ -73,7 +69,7 @@ namespace DGGBot.Modules
                 {
                     user.DiscordChannelId = (long) guildChannel.Id;
                     user.DiscordServerId = (long) Context.Guild.Id;
-                    user.Frequency = checkFrequency;
+                    user.Frequency = 30;
                     user.EmbedColor = (int) Helpers.GetColorFromHex(hexColor).RawValue;
                     await context.TwittersToCheck.AddAsync(user);
                     var changes = await context.SaveChangesAsync();

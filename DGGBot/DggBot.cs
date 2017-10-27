@@ -49,7 +49,7 @@ namespace DGGBot
         {
             var token = _config["DiscordToken"];
             await InstallCommands();
-            CreateScheduledJobs(_services);
+            
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
             _client.Ready += client_Ready;

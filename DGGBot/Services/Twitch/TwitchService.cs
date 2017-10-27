@@ -34,7 +34,7 @@ namespace DGGBot.Services.Twitch
         {
             var response = await _httpClient.GetAsync($"{_streamUrl}{userId}");
             var responseString = await response.Content.ReadAsStringAsync();
-            Log.Information(responseString);
+            
             var streamResponse =
                 JsonConvert.DeserializeObject<TwitchStreamResponse>(responseString, Helpers.GetJsonSettings());
             return streamResponse?.Stream;

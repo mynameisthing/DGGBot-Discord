@@ -29,14 +29,14 @@ namespace DGGBot.Modules
 
         [Command]
         [ChannelThrottle]
-        public async Task GetLive([Remainder]string unused = null)
+        public async Task GetLive(string unused = null)
         {
             StreamLastOnline lastOnline;
             StreamRecord streamRecord;
             StreamToCheck streamToCheck;
             using (var db = new DggContext())
             {
-                streamToCheck =  db.StreamsToCheck.Aggregate((firstStream, secondStream) => firstStream.Priority > secondStream.Priority ? firstStream : secondStream);
+                streamToCheck =  (await db.StreamsToCheck.ToListAsync()).Aggregate((firstStream, secondStream) => firstStream.Priority > secondStream.Priority ? firstStream : secondStream);
                 lastOnline = await db.StreamLastOnlines.FirstOrDefaultAsync(x => x.UserId == streamToCheck.UserId);
                 streamRecord = await db.StreamRecords.FirstOrDefaultAsync(x => x.UserId == streamToCheck.UserId);
             }
@@ -73,8 +73,7 @@ namespace DGGBot.Modules
         [Command("add",RunMode = RunMode.Async)]
         [RequireOwnerOrAdmin]
         
-        public async Task AddTwitch(string twitchName, IGuildChannel guildChannel, int checkFrequency,
-            bool deleteMessage, bool pinMessage, [Remainder] string discordMessage)
+        public async Task AddTwitch(string twitchName, IGuildChannel guildChannel)
         {
             
             var response = await _twitchService.GetTwitchUserAsync(twitchName);
@@ -84,18 +83,29 @@ namespace DGGBot.Modules
                 return;
             }
             await ReplyAsync("Please Enter in the Embed color in Hex format e.g. #ff851b\n" +
-                             "You pick a color and get the code for here: <http://htmlcolorcodes.com>");
-            var hexMessage = await NextMessageAsync();
-            var hexColor = (int)Helpers.GetColorFromHex(hexMessage.Content).RawValue;
+                             "You pick a color and get the code for here: <http://htmlcolorcodes.com>\n" +
+                             "type in default to use the default color");
+            var hexMessage = await NextMessageAsync(timeout:TimeSpan.FromSeconds(30));
+            int hexColor;
+            if (hexMessage.Content.Equals("default",StringComparison.OrdinalIgnoreCase))
+            {
+                hexColor = (int)Helpers.GetColorFromHex("#010aad").RawValue; 
+            }
+            else
+            {
+                hexColor = (int)Helpers.GetColorFromHex(hexMessage.Content).RawValue;
 
-            await ReplyAsync("Please Enter a message you would like to go along with the twitch embed. Leave blank for no message" );
-            var message = await NextMessageAsync();
+            }
 
-            await ReplyAsync("Please Enter the stream URL. leave blank to use the Twitch Stream URL");
-            var urlMessage = await NextMessageAsync();
+            await ReplyAsync("Please Enter a message you would like to go along with the twitch embed. Type in default for no message" );
+            var message = await NextMessageAsync(timeout: TimeSpan.FromSeconds(30));
+            
+           
+            await ReplyAsync("Please Enter the stream URL. type in default to use twitch url");
+            var urlMessage = await NextMessageAsync(timeout: TimeSpan.FromSeconds(30));
 
             await ReplyAsync("Please Enter a number for the priority");
-            var priorityMessage = await NextMessageAsync();
+            var priorityMessage = await NextMessageAsync(timeout: TimeSpan.FromSeconds(30));
             using (var context = new DggContext())
             {
                 var user = response.Users.FirstOrDefault();
@@ -111,8 +121,8 @@ namespace DGGBot.Modules
                         DeleteDiscordMessage = false,
                         PinMessage = true,
                         Priority = Convert.ToInt32(priorityMessage.Content),
-                        StreamUrl = string.IsNullOrWhiteSpace(urlMessage.Content) ? $"https://twitch.tv/{user.Name}" : message.Content,
-                        DiscordMessage = message.Content,
+                        StreamUrl = urlMessage.Content.Equals("default", StringComparison.OrdinalIgnoreCase) ? $"https://twitch.tv/{user.Name}" : message.Content,
+                        DiscordMessage = message.Content.Equals("default", StringComparison.OrdinalIgnoreCase) ? String.Empty : message.Content,
                         EmbedColor = hexColor
                     };
 
@@ -132,7 +142,7 @@ namespace DGGBot.Modules
                     await ReplyAsync($"Unable to save youtube to database");
                     return;
                 }
-                await ReplyAsync("Youtube account already exists in the Database");
+                await ReplyAsync("Twitch account already exists in the Database");
             }
         }
 
@@ -175,6 +185,29 @@ namespace DGGBot.Modules
                     return;
                 }
                 await ReplyAsync("Unable to remove Twitch from the database");
+            }
+        }
+        [Command("priority")]
+        public async Task ChangePriority(string twitchName,int priority)
+        {
+            using (var context = new DggContext())
+            {
+                var stream = await context.StreamsToCheck.FirstOrDefaultAsync(x => x.FriendlyUsername.Equals(twitchName,StringComparison.OrdinalIgnoreCase));
+                if (stream is null)
+                {
+                    await ReplyAsync("Twitch account not found in Database");
+                    return;
+                }
+
+                stream.Priority = priority;
+                var changes = await context.SaveChangesAsync();
+                if (changes > 0)
+                {
+                    await ReplyAsync($"{twitchName} priority changed to {priority}");
+                    return;
+                }
+
+                await ReplyAsync($"Unable to change priority");
             }
         }
     }

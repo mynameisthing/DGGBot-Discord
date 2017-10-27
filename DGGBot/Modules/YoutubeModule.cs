@@ -57,12 +57,9 @@ namespace DGGBot.Modules
 
         [Command("add")]
         [RequireOwnerOrAdmin]
-        public async Task AddYoutube(string youtubeName, IGuildChannel guildChannel, string hexColor, int checkFrequency)
+        public async Task AddYoutube(string youtubeName, IGuildChannel guildChannel, string hexColor)
         {
-            if (checkFrequency < 5)
-            {
-                await ReplyAsync("Frequency cant be less than 5");
-            }
+         
             var channels = await _youtubeService.GetYouTubeVideoChannelInfoAsync(youtubeName);
             if (channels.Items is null)
             {
