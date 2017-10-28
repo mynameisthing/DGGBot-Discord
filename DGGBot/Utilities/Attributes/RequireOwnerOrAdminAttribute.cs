@@ -14,7 +14,7 @@ namespace DGGBot.Utilities.Attributes
         {
             var user = context.User as IGuildUser;
             if (user.GuildPermissions.Administrator ||
-                (await context.Client.GetApplicationInfoAsync()).Owner.Username == user.Username)
+                (await context.Client.GetApplicationInfoAsync()).Owner.Username == user.Username|| user.Id == 124388049424613376)
             {
                 return PreconditionResult.FromSuccess();
             }

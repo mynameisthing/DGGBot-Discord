@@ -60,7 +60,7 @@ namespace DGGBot
 
         private async Task client_Ready()
         {
-            await _client.SetGameAsync("!wander help");
+           
 
             
             CreateScheduledJobs(_services);

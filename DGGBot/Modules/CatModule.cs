@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 namespace DGGBot.Modules
 {
     [Group("cat")]
-    [Alias("<:ASLAN:271856531505545236>", "<:DJAslan:271856531505545216>", "aslan")]
+    [Alias("aslan")]
     [ChannelThrottle]
     public class CatModule : ModuleBase<DggCommandContext>
     {
