@@ -33,7 +33,7 @@ namespace DGGBot.Modules
             TwitterToCheck twitter;
             using (var db = new DggContext())
             {
-                twitter = await db.TwittersToCheck.FirstOrDefaultAsync(x => x.UserId == 4726147296);
+                twitter = await db.TwittersToCheck.FirstOrDefaultAsync(x => x.UserId == 1090554415);
                 record = await db.TweetRecords.FirstOrDefaultAsync(x => x.UserId == twitter.UserId);
             }
 

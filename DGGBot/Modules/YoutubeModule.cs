@@ -38,8 +38,8 @@ namespace DGGBot.Modules
             YouTubeToCheck youtube;
             using (var db = new DggContext())
             {
-                record = await db.YouTubeRecords.FirstOrDefaultAsync(y => y.ChannelId == "UC554eY5jNUfDq3yDOJYirOQ");
-                youtube = await db.YouTubesToCheck.FirstOrDefaultAsync(y => y.ChannelId == "UC554eY5jNUfDq3yDOJYirOQ");
+                record = await db.YouTubeRecords.FirstOrDefaultAsync(y => y.ChannelId == "UC3gOIzBmFh1jglRk2MG5qHw");
+                youtube = await db.YouTubesToCheck.FirstOrDefaultAsync(y => y.ChannelId == "UC3gOIzBmFh1jglRk2MG5qHw");
             }
 
             if (record == null)
