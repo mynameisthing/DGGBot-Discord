@@ -121,7 +121,7 @@ namespace DGGBot.Modules
                         DeleteDiscordMessage = false,
                         PinMessage = true,
                         Priority = Convert.ToInt32(priorityMessage.Content),
-                        StreamUrl = urlMessage.Content.Equals("default", StringComparison.OrdinalIgnoreCase) ? $"https://twitch.tv/{user.Name}" : message.Content,
+                        StreamUrl = urlMessage.Content.Equals("default", StringComparison.OrdinalIgnoreCase) ? $"https://twitch.tv/{user.Name}" : urlMessage.Content,
                         DiscordMessage = message.Content.Equals("default", StringComparison.OrdinalIgnoreCase) ? String.Empty : message.Content,
                         EmbedColor = hexColor
                     };

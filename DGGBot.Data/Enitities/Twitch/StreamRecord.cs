@@ -13,6 +13,7 @@ namespace DGGBot.Data.Enitities.Twitch
         public DateTime StartTime { get; set; }
 
         public string CurrentGame { get; set; }
+        
     }
 
     public class StreamLastOnline
