@@ -28,6 +28,7 @@ namespace DGGBot.Modules
         }
 
         [Command("game")]
+        [RequireOwnerOrAdmin]
         public async Task SetGame(string gamePlaying)
         {
             await Context.Client.SetGameAsync(gamePlaying);

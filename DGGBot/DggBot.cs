@@ -60,8 +60,6 @@ namespace DGGBot
 
         private async Task client_Ready()
         {
-           
-
             
             CreateScheduledJobs(_services);
         }
